@@ -1,0 +1,264 @@
+:root {
+    --black: #130f40;
+    --orange: #ff7800;
+    --light-color: #666;
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+}
+
+* {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: #eee;
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    font-size: 3rem;
+    opacity: 0.9;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+
+}
+
+.header .logo i {
+    color: var(--orange);
+}
+
+.header .navbar a {
+    font-size: 1.75rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background: var(--orange);
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--orange);
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*login */
+
+.header .hero {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.header .form-box {
+    width: 360px;
+    height: 400px;
+    position: relative;
+    margin: 8% 32%;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: 2%;
+    z-index: 20;
+}
+
+.header .button-box {
+    width: 220px;
+    margin: 28px auto;
+    position: relative;
+    box-shadow: 0 0 1px 1px #ff61241f;
+    border-radius: 30px;
+    display: flex;
+}
+
+.header .toggle-btn {
+    padding: 10px 28px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+
+}
+
+.header #btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: var(--orange);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.header .social-icons {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.header .social-icons img {
+    width: 40px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header .input-group {
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+}
+
+.header .input-group img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.header .input-field {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-shadow: 0 0 1px 1px #ff61241f;
+    outline: none;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.header .submit-btn {
+    width: 80%;
+    padding: 10px 28px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    background: var(--orange);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.header .check-box {
+    margin-right: 8px;
+}
+
+.header #login {
+    left: 40px;
+}
+
+.header #register {
+    left: 450px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    z-index: 10;
+}
+
