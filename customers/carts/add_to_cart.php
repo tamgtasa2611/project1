@@ -1,6 +1,7 @@
 <?php
 //    mo session
 session_start();
+$_SESSION['add-success'] = 0;
 //    lay id san pham them vao cart
 $id = $_GET['id'];
 //    kiem tra da ton tai cart tren session chua
@@ -20,5 +21,9 @@ if (isset($_SESSION['cart'])) {
     $_SESSION['cart'][$id] = 1;
 }
 
-//    ve trang index carts
-header("Location: ../furniture/index.php");
+//thong bao add success
+$_SESSION['add-success'] = 1;
+
+//    ve trang truoc do
+header('Location: ' . $_SERVER['HTTP_REFERER']);
+//header("location:javascript://history.go(-1)");

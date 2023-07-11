@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập Restoration Hardware - Nội thất Beautiful House</title>
+    <title>Collection Restoration Hardware - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -26,7 +26,7 @@ include("../../layout/header.php");
 
 <!--  TITLE  -->
 <div class="mt-5">
-    <a class="mb-sm-5 pt-sm-5"><img src="../../main/media/images/producers/header-image-of-four.jpg"
+    <a class="mb-sm-5 pt-sm-5"><img src="../../main/media/images/producers/header-image-of-five.jpg"
                                     width="1583px"
                                     height="1055.59px"></a>
     <div class="text-center text-lg-start">
@@ -38,16 +38,16 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="me-sm-5" align="justify">
-                            <span class="display-5 fw-bold">Restoration Hardware – sự trẻ trung và cá tính</span>
-                            <p class="fs-3 my-md-4">
-                                Với chất riêng trẻ trung và phá cách, BST Restoration Hardware mang đến không gian những
-                                sản phẩm nhỏ gọn, hiện đại và chất lượng
-                                với màu sắc tươi sáng, bắt mắt.
+                            <span class="display-5 fw-bold">Restoration Hardware – youth and personality</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                With a youthful and innovative personality, the Restoration Hardware Collection brings to the space the
+                                Compact, modern and quality products
+                                with bright, eye-catching colors.
                             </p>
-                            <p class="fs-3">
-                                BST với đầy đủ các sản phẩm từ phòng khách đến phòng ăn và phòng ngủ giúp bạn thoải mái
-                                lựa chọn phong cách decor
-                                ấn tượng và đồng bộ.
+                            <p class="fs-3" style="text-align: justify">
+                                Collection with a full range of products from living room to dining room and bedroom to make you comfortable
+                                Choose your decor style
+                                impressive and consistent.
                             </p>
                         </div>
                         <div>

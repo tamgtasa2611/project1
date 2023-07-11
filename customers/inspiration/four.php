@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Cách sắp xếp phòng ăn nhỏ dể tối ưu hóa không gian</title>
+    <title>How to arrange a small dining room to optimize space</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -32,16 +32,16 @@ include("../../layout/header.php");
                 <!-- HEADER -->
                 <div class="row mx-sm-4">
                     <div class="col-md-3 col-lg-3 col-xl-auto mx-auto mt-3">
-                        <span class="display-5 mx-sm-2">CÁCH SẮP XẾP PHÒNG ĂN NHỎ ĐỂ TỐI ƯU HÓA KHÔNG GIAN</span>
+                        <span class="display-5 mx-sm-2 text-uppercase">How to arrange a small dining room to optimize space</span>
 
                     </div>
-                    <p class="my-sm-5 h2 mx-sm-2">
-                        Đối với những <b class="fs-2">phòng ăn</b> có diện tích khiêm tốn, việc bài trí các vật dụng nhà
-                        bếp sao cho vừa đảm bảo
-                        công năng, vừa đáp ứng yếu tố thẩm mỹ, đồng thời, tạo cảm giác thoáng đãng cho không gian là
-                        điều không hề dễ dàng. Vì vậy
-                        hãy để <b class="fs-2">Beautiful House</b> gợi ý cho bạn một số cách sắp xếp phòng ăn nhỏ để tối
-                        ưu hóa không gian nhất nhé.
+                    <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
+                        For those <b class="fs-2">dining rooms</b> with a modest area, the arrangement of home appliances
+                        the kitchen so that it is safe
+                        function, both meeting the aesthetic factor and at the same time, creating an airy feeling for the space
+                        which is not easy. So
+                        let <b class="fs-2">Beautiful House</b> suggest you some ways to arrange a small dining room for dinner
+                        Optimize space.
                     </p>
                     <a class="mx-sm-2 mb-sm-5 pt-sm-5"><img src="../../main/media/images/inspiration/four.jpg"
                                                             width="1245px"
@@ -50,13 +50,13 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">1. Loại bỏ những đồ dùng không cần thiết</span>
-                            <p class="fs-3 my-md-4">
-                                Bước đầu tiên chúng ta nên làm để không gian phòng ăn gọn gàng hơn đó là loại bỏ bớt
-                                những đồ dùng không cần
-                                thiết. Hãy <b class="fs-3">suy nghĩ về tính hữu dụng và tần suất sử dụng, </b>
-                                sau đó cân nhắc để <b class="fs-3">di chuyển vị trí hoặc cất bớt những vật dụng đó vào
-                                    khu vực chứa đồ, nhà kho. </b>
+                            <span class="display-5 fw-bold">1. Get rid of unnecessary items</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The first step we should do to make the dining room space more tidy is to remove it
+                                Unnecessary gadgets
+                                set. <b class="fs-3">think about usefulness and frequency of use, </b>
+                                then consider having <b class="fs-3">relocate or put those items away
+                                    storage area, warehouse. </b>
                             </p>
 
                         </div>
@@ -75,21 +75,21 @@ include("../../layout/header.php");
                                     height="372.02px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">2. Tối ưu không gian bằng kệ tủ</span>
-                            <p class="fs-3 my-md-4">
-                                Đối với những gia đình thường xuyên sắm sửa đồ dùng cho phòng bếp thì việc
-                                <b class="fs-3">cất trữ đồ dùng gọn gàng và khoa học</b>
-                                nhất cần được lưu tâm. Với những không gian bếp nhỏ thì chúng ta nên thiết kế thêm các
-                                kệ tủ gắn tường để tận
-                                dụng không gian trên cao.
+                            <span class="display-5 fw-bold">2. Optimizing space with shelves</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                For families who often shop for kitchen utensils, the
+                                <b class="fs-3">storage neatly and scientifically</b>
+                                most need attention. With small kitchen spaces, we should design more
+                                wall-mounted shelves for storage
+                                use the space overhead.
                             </p>
 
-                            <p class="fs-3">
-                                Tủ bếp với những hộc kéo và ô đựng được ngăn cách riêng biệt sẽ là không gian lý tưởng
-                                cho gia chủ cất giữ đồ dùng.
-                                Những vật dụng thường xuyên sử dụng, hãy ưu tiên đặt ở vị trí dễ lấy. Còn những món đồ
-                                ít sử dụng hãy để ở khu vực
-                                khó lấy hoặc khu vực lưu trữ.
+                            <p class="fs-3" style="text-align: justify">
+                                Kitchen cabinets with separate drawers and drawers will be the ideal space
+                                for homeowners to store utensils.
+                                Items that are frequently used should be placed in an easy-to-access location. What about the items?
+                                Rarely used, please keep it in the area
+                                hard to get or storage area.
                             </p>
                         </div>
 
@@ -98,17 +98,17 @@ include("../../layout/header.php");
                     <!-- BODY 3 -->
                     <section class="mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="pb-sm-5">
-                            <span class="display-5 fw-bold">3. Sử dụng bàn ăn thông minh</span>
-                            <p class="fs-3 my-sm-4">
-                                Với khu vực phòng ăn có diện tích khiêm tốn, hãy ưu tiên sử dụng những chiếc bàn ăn
-                                thông minh cùng thiết kế có thể thu
-                                gọn và mở ra dễ dàng. Bàn ăn mở rộng với kiểu dáng tối giản sẽ đáp ứng linh hoạt nhu cầu
-                                sử dụng hằng ngày của gia đình
-                                và cả những khi có khách đến chơi.
-                                <b class="fs-3"> Kích thước mặt bàn thay đổi từ diện tích dành cho 4 – 6 người lên đến 8
-                                    – 10 người. </b>
-                                Vì vậy, không gian phòng ăn sẽ <b class="fs-3"> vừa gọn gàng, vừa tiết kiệm diện tích và
-                                    tối ưu công năng. </b>
+                            <span class="display-5 fw-bold">3. Use smart dining table</span>
+                            <p class="fs-3 my-sm-4" style="text-align: justify">
+                                With a modest dining area, give priority to the use of dining tables
+                                Smart and collectible design
+                                Compact and easy to open. Expanded dining table with minimalist design will flexibly meet needs
+                                family daily use
+                                and even when guests come to play.
+                                <b class="fs-3"> Table top size varies from area for 4-6 people up to 8
+                                    - 10 peoples. </b>
+                                Therefore, the dining room space will be <b class="fs-3"> both neat and space-saving and
+                                    performance optimization. </b>
 
                             </p>
 
@@ -123,14 +123,14 @@ include("../../layout/header.php");
                     <!-- BODY 4 -->
                     <section class="d-sm-flex mx-sm-2 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">4. Bổ sung kệ đẩy có bánh xe</span>
-                            <p class="fs-3 my-md-4">
-                                Nếu gia chủ <b class="fs-3"> vừa thích sự tiện dụng, vừa ưu tiên tính đa năng </b>
-                                thì nên cân nhắc các mẫu xe đẩy đồ ăn. Với thiết kế bánh xe có thể dịch chuyển linh
-                                hoạt, khi đặt tại khu vực
-                                phòng bếp, đây sẽ là sản phẩm dùng để đựng các đồ dùng cần thiết, còn khi gia chủ cần
-                                đưa món ăn đến khu vực
-                                bàn ăn thì đây sẽ là phương tiện vận chuyển vừa gọn nhẹ vừa tiện lợi.
+                            <span class="display-5 fw-bold">4. Additional trolley with wheels</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                If the owner <b class="fs-3"> both likes convenience and prioritizes versatility </b>
+                                then you should consider food trolley models. With movable wheel design
+                                active, when placed in the area
+                                kitchen, this will be a product used to store necessary utensils, and when the homeowner needs it
+                                bring food to the area
+                                dining table, this will be a means of transportation that is both compact and convenient.
                             </p>
 
                         </div>
@@ -149,28 +149,28 @@ include("../../layout/header.php");
                                     height="390.58px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">5. Chọn bàn ghế ăn có kích thước nhỏ gọn</span>
-                            <p class="fs-3 my-md-4">
-                                Điều tạo nên sự hài hòa trong không gian phòng ăn chính là việc cân đối kích thước của
-                                những sản phẩm bài trí trong
-                                khu vực đó. Với khu vực bếp có diện tích khiêm tốn, gia chủ nên chọn những bộ bàn ghế ăn
-                                nhỏ gọn để tạo nên sự tương
-                                hợp giữa các vật dụng.
+                            <span class="display-5 fw-bold">5. Choose a dining table and chairs with a compact size</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                What creates harmony in the dining room space is the balance of the size of the kitchen
+                                products decorated in
+                                that area. With a modest kitchen area, homeowners should choose dining tables and chairs
+                                compact to create contrast
+                                between objects.
                             </p>
 
-                            <p class="fs-3 ">
-                                Những chiếc ghế ăn được thiết kế tối giản sẽ <b class="fs-3">gián tiếp nới rộng không
-                                    gian và tiết kiệm diện tích</b> phòng ăn.
+                            <p class="fs-3 " style="text-align: justify">
+                                Will minimalist designed dining chairs <b class="fs-3">indirectly expand
+                                    space and save space</b> dining room.
                             </p>
                         </div>
                     </section>
 
-                    <p class="fs-1 mt-sm-5 pt-sm-5">
-                        Với cách bài trí vật dụng hợp lý kết hợp cùng việc sử dụng các sản phẩm bàn ăn thông minh, khu
-                        vực phòng ăn sẽ gọn gàng
-                        tươm tất hơn rất nhiều. Hãy cùng áp dụng những cách thức mà <b class="fs-1"> Beautiful
-                            House </b> đã chia sẻ trên đây để tối ưu không gian cho phòng
-                        ăn có diện tích nhỏ nhé.
+                    <p class="fs-1 mt-sm-5 pt-sm-5" style="text-align: justify">
+                        With a reasonable layout of items combined with the use of smart dining table products,
+                        The dining area will be neat
+                        much more decent. Let's apply the ways that <b class="fs-1"> Beautiful
+                            House </b> shared above to optimize space for the room
+                        Eat in a small space.
                     </p>
 
                 </div>

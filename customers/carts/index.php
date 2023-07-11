@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,85 +17,307 @@
     <link rel="stylesheet" href="../../main/css/header_style.css">
     <!--  main css file link  -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
+    <!--  cart css file link -->
+    <link rel="stylesheet" href="../../main/css/cart.css">
 
-    <title>Giỏ hàng</title>
+    <title>My cart - Beautiful House</title>
 </head>
 <body>
 <!-- Header -->
 <?php
 include("../../layout/header.php");
 
-//format vnd
+//format USD $$$
 if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ')
+    function currency_format($number, $suffix = '$')
     {
         if (!empty($number)) {
-            return number_format($number, 0, ',', '.') . "{$suffix}";
+            return "{$suffix}" . number_format($number, 2, ".", ",");
         }
     }
+}
+?>
+
+<?php
+include_once("../../connect/open.php");
+//    truong hop chua co cart tren session
+$carts = array();
+//    thanh tien mac dinh
+$total_cost = 0;
+//    lay cart tu session ve trong truong hop da co cart
+if (isset($_SESSION['cart'])) {
+    $carts = $_SESSION['cart'];
 }
 ?>
 <!-- Padding from header -->
 <div id="about"></div>
 <!--Content-->
-<form action="update_cart.php" method="post">
-    <table class="table-bordered text-center w-100">
-        <tr>
-            <td colspan="2">Sản phẩm</td>
-            <td>Đơn giá</td>
-            <td>Số lượng</td>
-            <td>Thành tiền</td>
-            <td>Thao tác</td>
-        </tr>
-        <?php
-        include_once("../../connect/open.php");
-        //    truong hop chua co cart tren session
-        $carts = array();
-        //    thanh tien mac dinh
-        $count_money = 0;
-        //    lay cart tu session ve trong truong hop da co cart
-        if (isset($_SESSION['cart'])) {
-            $carts = $_SESSION['cart'];
-        }
-        foreach ($carts as $id => $quantity) {
-            //    query lay thong tin sp theo id
-            $sql = "SELECT * FROM furnitures WHERE id = '$id'";
-            //        chay query
-            $furnitures = mysqli_query($connect, $sql);
-            //        hien thi thong tin san pham vua lay dc
-            foreach ($furnitures as $furniture) {
-                ?>
-                <tr>
-                    <td> <?= $furniture['name'] ?></td>
-                    <td><img src="../../admins/images/<?= $furniture['image'] ?>" height="100px" width="100px" alt="">
-                    </td>
-                    <td> <?= number_format($furniture['price']) ?>d</td>
-                    <td><input type="number" min="1" value="<?= $quantity; ?>" name="quantity[<?= $id; ?>]"></td>
-                    <td> <?php
-                        $money = $furniture['price'] * $quantity;
-                        $count_money += $money;
-                        echo number_format($money);
-                        ?>d
-                    </td>
-                    <td><a href="delete_one_product.php?id=<?= $id ?>">delete one product</a></td>
-                </tr>
+<div id="cart-container" class="d-flex" style="width: 81%">
+    <!--left-->
+    <div id="left-cart-container">
+        <div id="left-content-container">
+            <form action="update_cart.php" method="post">
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                    <div id="left-heading">
+                        Shopping cart
+                    </div>
+                    <div id="total-item">
+                        <?= count($carts) ?> items
+                    </div>
+                </div>
+
+                <div class="d-flex text-center justify-content-between">
+                    <div style="width: 400px">Product</div>
+                    <div style="width: 104px">Quantity</div>
+                    <div style="width: 150px">Price</div>
+                    <div style="width: 120px">Action</div>
+                </div>
+                <hr>
                 <?php
-            }
-        }
-        ?>
-        <tr>
-            <td></td>
-            <td><a href="order.php">Order</a></td>
-            <td></td>
-            <td>
-                <button>Update quantity</button>
-            </td>
-            <td><span>Count: <?= number_format($count_money) ?>d</span> <br></td>
-            <td><a href="delete_all_product.php">delete all</a></td>
-        </tr>
-    </table>
-</form>
+                if (count($carts) === 0) {
+                    ?>
+                    <div class="text-center">Your cart is empty</div>
+                    <?php
+                }
+                ?>
+                <div style="height: 48vh; overflow-y: scroll;">
+                    <?php
+                    foreach ($carts as $id => $quantity) {
+                        //    query lay thong tin sp theo id
+                        $sql = "SELECT * FROM furnitures WHERE id = '$id'";
+                        //        chay query
+                        $furnitures = mysqli_query($connect, $sql);
+                        //        hien thi thong tin san pham vua lay dc
+                        foreach ($furnitures as $furniture) {
+                            ?>
+                            <div class="d-flex justify-content-between align-items-center text-center mb-2 mt-2">
+                                <div class="d-flex align-items-center" style="width: 400px">
+                                    <div>
+                                        <a href="../furniture/furniture_detail.php?id=<?= $id ?>">
+                                            <img src="../../admins/images/<?= $furniture['image'] ?>"
+                                                 class="cart-item-img">
+                                        </a>
+                                    </div>
+                                    <div class="fw-bold w-100">
+                                        <a href="../furniture/furniture_detail.php?id=<?= $id ?>" class="text-dark">
+                                            <?= $furniture['name'] ?>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div style="width: 104px;">
+                                    <input value="<?= $quantity; ?>" name="quantity[<?= $id; ?>]"
+                                           type="number" min="1"
+                                           style="border: 1px solid lightgrey; text-align: center; width: 50%"
+                                    >
+                                </div>
+                                <div class="fw-bold" style="color: green; width: 150px">
+                                    <?php
+                                    $cost = $furniture['price'] * $quantity;
+                                    $total_cost += $cost;
+                                    echo currency_format($cost);
+                                    ?>
+                                </div>
+                                <div style="width: 103px;">
+                                    <a href="delete_one_product.php?id=<?= $id ?>">
+                                        <span class="fa-solid fa-xmark" style="color: red;"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
 
+                    ?>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <a href="../furniture/index.php">
+                            <span class="fa-solid fa-arrow-left"></span> Back to store
+                        </a>
+                    </div>
+                    <?php
+                    if (count($carts) === 0) {
+                    } else {
+                        ?>
+                        <div class="d-flex justify-content-between" style="width: 45%">
+                            <div>
+                                <button style="background-color: transparent; color: #0d6efd;">
+                                    Update quantity
+                                </button>
+                            </div>
+                            <div>
+                                <a href="delete_all_product.php" style="color: red">
+                                    Delete my cart
+                                </a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <!--right-->
+    <div id="right-cart-container">
+        <div id="right-content-container">
+            <?php
+            if (count($carts) === 0) { ?>
+            <form method="" action="">
+                <?php
+                } else { ?>
+                <form method="post" action="order.php">
+                    <?php
+                    }
+                    ?>
+                    <div class="align-left mb-5">
+                        <div id="right-heading">
+                            Summary
+                        </div>
+                    </div>
+
+                    <hr class="mb-2">
+
+                    <div>
+                        <?php
+                        $userId = "";
+                        if (isset($_SESSION['user-id'])) {
+                            $userId = $_SESSION['user-id'];
+                        }
+                        $userInfoSql = "SELECT * FROM customers WHERE id = '$userId'";
+                        $userInfo = mysqli_query($connect, $userInfoSql);
+                        foreach ($userInfo as $information) {
+                            ?>
+                            <div class="d-flex justify-content-between mb-1 align-items-center">
+                                <div>
+                                    <h4>
+                                        Receiver name:
+                                    </h4>
+                                </div>
+                                <div>
+                                    <h4>
+                                        <input type="text" class="form-control" name="re-name" id="re-name"
+                                               value="<?= $information['name'] ?>">
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-1 align-items-center">
+                                <div>
+                                    <h4>
+                                        Receiver phone:
+                                    </h4>
+                                </div>
+                                <div>
+                                    <h4>
+                                        <input type="text" class="form-control" name="re-phone" id="re-phone"
+                                               value="<?= $information['phone'] ?>">
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-1 align-items-center">
+                                <div>
+                                    <h4>
+                                        Receiver address:
+                                    </h4>
+                                </div>
+                                <div>
+                                    <h4>
+                                        <input type="text" class="form-control" name="re-address" id="re-address"
+                                               value="<?= $information['address'] ?>">
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        ?>
+
+                        <div class="d-flex justify-content-between mb-1 align-items-center">
+                            <div>
+                                <h4>
+                                    Total items:
+                                </h4>
+                            </div>
+                            <div>
+                                <h4>
+                                    <?= array_sum($carts) ?>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-1 align-items-center">
+                            <div>
+                                <h4>
+                                    Items price:
+                                </h4>
+                            </div>
+                            <div>
+                                <h4>
+                                    <?= currency_format($total_cost) ?>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-1 align-items-center">
+                            <div>
+                                <h4>
+                                    Shipping cost:
+                                </h4>
+                            </div>
+                            <div>
+                                <h4>
+                                    <?php
+                                    $shipping_cost = $total_cost / 25;
+                                    echo currency_format($shipping_cost);
+                                    ?>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2 align-items-center">
+                            <div>
+                                <h4>
+                                    Payment methods:
+                                </h4>
+                            </div>
+                            <div>
+                                <h4>
+                                    <select name="payment-method" class="form-select-lg" disabled>
+                                        <option value="0">Pay on delivery</option>
+                                    </select>
+                                </h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between mt-4 mb-2 align-items-center fw-bold">
+                        <div>
+                            <h3>
+                                Total cost:
+                            </h3>
+                        </div>
+                        <div>
+                            <?= currency_format(($total_cost + $shipping_cost)) ?>
+                        </div>
+                    </div>
+
+                    <button id="checkout-button">
+                        Order
+                    </button>
+
+                </form>
+        </div>
+    </div>
+</div>
+<?php
+include_once("../../layout/footer.php");
+?>
 </body>
 </html>

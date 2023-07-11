@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập Steelcase - Nội thất Beautiful House</title>
+    <title>Collection Steelcase - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -38,13 +38,13 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="me-sm-5" align="justify">
-                            <span class="display-5 fw-bold">Steelcase nhỏ gọn và hiện đại</span>
-                            <p class="fs-3 my-md-4">
-                                Bộ sưu tập Steelcase nhỏ gọn nhưng hiện đại và thanh lịch giúp không gian năng động và
-                                xinh xắn. Bộ sưu tập có đủ các
-                                phòng như phòng khách, phòng ăn cho đến phòng ngủ với chất liệu chủ yếu là gỗ sồi và vải
-                                bọc giúp bạn luôn cảm thấy
-                                thoải mái và dễ chịu.
+                            <span class="display-5 fw-bold">Steelcase compact and modern</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The Steelcase collection is compact yet modern and elegant for a dynamic space and
+                                beautiful. The collection is full of
+                                rooms such as living room, dining room to bedroom with mainly oak and fabric materials
+                                Wrap helps you always feel
+                                comfortable and pleasant.
                             </p>
                         </div>
                         <div>

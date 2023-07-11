@@ -55,12 +55,12 @@ $sql1 = "SELECT orders.*, customers.name as cus_name,
              LIMIT $start, $recordOnePage";
 $orders = mysqli_query($connect, $sql1);
 include_once('../../connect/close.php');
-//format vnd
+//format usd
 if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ')
+    function currency_format($number, $suffix = '$')
     {
         if (!empty($number)) {
-            return number_format($number, 0, ',', '.') . "{$suffix}";
+            return "{$suffix}" . number_format($number, 2, ".");
         }
     }
 }

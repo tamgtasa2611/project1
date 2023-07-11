@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0132)chrome-untrusted://new-tab-page/custom_background_image?url=chrome-untrusted%3A%2F%2Fnew-tab-page%2Fbackground.jpg%3Fts%3D1688446878 -->
+<html>
+<head>
+    <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+    <style>
+        html,
+        body,
+        #image,
+        #gradient {
+            height: 100%;
+            width: 100%;
+        }
+
+        #image,
+        #gradient {
+            position: fixed;
+            top: 0;
+        }
+
+        body {
+            margin: 0;
+            opacity: 0;
+            transition: opacity 700ms;
+        }
+
+        body[shown] {
+            opacity: 1;
+        }
+
+        #image {
+            background-image: url(chrome-untrusted://new-tab-page/background.jpg?ts=1688446878);
+            background-position: center center;
+            background-repeat: no-repeat no-repeat;
+            background-size: cover;
+        }
+
+        #gradient {
+            background: radial-gradient(transparent 50%, black),
+            linear-gradient(transparent, black);
+            display: inherit;
+            opacity: .2;
+        }
+    </style>
+</head>
+<body shown="">
+<script src="chrome-untrusted://new-tab-page/background_image.js"></script>
+<!-- The img tag purely exists to capture the load event. -->
+<img hidden="" onload="onImageLoad()" src="chrome-untrusted://new-tab-page/background.jpg?ts=1688446878">
+<div id="image"></div>
+<div id="gradient"></div>
+
+
+</body>
+</html>

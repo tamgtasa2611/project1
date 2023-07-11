@@ -41,7 +41,7 @@ foreach ($furnitures as $furniture) {
             ?>
 
             <div class="content-container">
-                <h4 class="content-heading">Thêm sản phẩm</h4>
+                <h4 class="content-heading">Edit</h4>
                 <form action="update.php" method="post" enctype="multipart/form-data">
                     <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                         <thead class="text-white">
@@ -86,14 +86,14 @@ foreach ($furnitures as $furniture) {
                         <tr>
                             <td>
                                 <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Dài</label>
+                                    <label class="form-label align-left">Dài (cm)</label>
                                     <input name="length" type="text" class="form-control-sm"
                                            value="<?= $furniture['length'] ?>"/>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Rộng</label>
+                                    <label class="form-label align-left">Rộng (cm)</label>
                                     <input name="width" type="text" class="form-control-sm"
                                            value="<?= $furniture['width'] ?>"/>
                                 </div>
@@ -102,7 +102,7 @@ foreach ($furnitures as $furniture) {
                         <tr>
                             <td>
                                 <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Cao</label>
+                                    <label class="form-label align-left">Cao (cm)</label>
                                     <input name="height" type="text" class="form-control-sm"
                                            value="<?= $furniture['height'] ?>"/>
                                 </div>
@@ -160,14 +160,14 @@ foreach ($furnitures as $furniture) {
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <div class="form-outline mb-2">
+                            <td colspan="0">
+                                <div class="form-outline mb-2 d-none">
                                     <label>ID</label>
                                     <input readonly name="id" type="text" class="form-control-sm"
                                            value="<?= $furniture['id'] ?>"/>
                                 </div>
                             </td>
-                            <td>
+                            <td colspan="2">
                                 <div class="form-outline mb-2">
                                     <label class="form-label align-left">Image</label>
                                     <input name="image" type="file" value="<?= $furniture['image'] ?>"/>

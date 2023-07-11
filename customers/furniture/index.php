@@ -18,24 +18,100 @@
 </head>
 <body style="background-color: white">
 <?php
+//format usd
+if (!function_exists('currency_format')) {
+    function currency_format($number, $suffix = '$')
+    {
+        if (!empty($number)) {
+            return "{$suffix}" . number_format($number, 2, ".");
+        }
+    }
+}
+?>
+
+<?php
+//search form
 $search = "";
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
 ?>
 
+<?php
+//hàm xử lý: sorting
+function sortByFunction($string): string
+{
+    $sortByString = "";
+    if ($string === "low") {
+        $sortByString = "price ASC";
+    } else if ($string === "high") {
+        $sortByString = "price DESC";
+    } else if ($string === "new") {
+        $sortByString = "id DESC";
+    }
+    return $sortByString;
+}
+
+//sort form
+$sortBy = "new";
+if (isset($_GET['sort-by'])) {
+    $sortBy = $_GET['sort-by'];
+}
+$sortByOrder = sortByFunction($sortBy);
+
+//sort nhà sản xuất
+$sortProducer = "";
+if (isset($_GET['sort-producer'])) {
+    //nếu = 0 thì ko set giá trị
+    if ($_GET['sort-producer'] > 0) {
+        $sortProducer = $_GET['sort-producer'];
+    }
+}
+
+//sort danh mục
+$sortCategory = "";
+if (isset($_GET['sort-category'])) {
+    //nếu = 0 thì ko set giá trị
+    if ($_GET['sort-category'] > 0) {
+        $sortCategory = $_GET['sort-category'];
+    }
+}
+
+//default
+$sqlQuery = "SELECT * FROM furnitures
+                    WHERE name LIKE '%$search%'
+                    ORDER BY id DESC";
+
+//kiểm tra nếu 2 biến sort đã set giá trị là id (>0)
+//cả 2 đều set
+if (is_numeric($sortProducer) and is_numeric($sortCategory)) {
+    $sqlQuery = "SELECT * FROM furnitures
+                    WHERE name LIKE '%$search%'
+                    AND producer_id = '$sortProducer'
+                    AND category_id = '$sortCategory'
+                    ORDER BY " . $sortByOrder;
+} //chỉ set nhà sản xuất
+else if (is_numeric($sortProducer) and !is_numeric($sortCategory)) {
+    $sqlQuery = "SELECT * FROM furnitures
+                    WHERE name LIKE '%$search%'
+                    AND producer_id = '$sortProducer'
+                    ORDER BY " . $sortByOrder;
+} //chỉ set danh mục
+else if (!is_numeric($sortProducer) and is_numeric($sortCategory)) {
+    $sqlQuery = "SELECT * FROM furnitures
+                    WHERE name LIKE '%$search%'
+                    AND category_id = '$sortCategory'
+                    ORDER BY " . $sortByOrder;
+} else if (!is_numeric($sortProducer) and !is_numeric($sortCategory)) {
+    $sqlQuery = "SELECT * FROM furnitures
+                    WHERE name LIKE '%$search%'
+                    ORDER BY " . $sortByOrder;
+}
+?>
+
 <!-- Header -->
 <?php
 include("../../layout/header.php");
-//format vnd
-if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ')
-    {
-        if (!empty($number)) {
-            return number_format($number, 0, ',', '.') . "{$suffix}";
-        }
-    }
-}
 ?>
 <!-- Padding from header -->
 <div id="about"></div>
@@ -49,65 +125,131 @@ if (!function_exists('currency_format')) {
     </div>
 </section>
 
-<!--  Categories  -->
+<!--Thong bao them sp vao gio hang-->
+<?php
+if (!isset($_SESSION['add-success'])) {
+    $_SESSION['add-success'] = 0;
+}
+if ($_SESSION['add-success'] === 1) {
+    echo '<div id="close-target" class="alert alert-success position-absolute success-alert" role="alert">
+              Added to cart successfully! 
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px" onclick="closeMes()"></i>
+              </div>';
+    $_SESSION['add-success'] = 0;
+}
+?>
+
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
+
+<!--  furnitures  -->
 <section id="furnitures-list">
     <div id="category-section" class="container mt-5" style="border-radius: 1rem !important;">
         <div class="d-flex justify-content-between m-5">
-            <div class="d-flex">
+            <form class="d-flex" method="get">
                 <div>
+                    <div class="d-none">
+                        <input type="text" name="search" value="<?= $search ?>" readonly>
+                    </div>
                     <div>Sort by</div>
                     <div>
-                        <select name="" id="" class="bd-gray pb-2 mt-4">
-                            <option value="">Newest</option>
-                            <option value="">Lowest price</option>
-                            <option value="">Highest price</option>
+                        <select name="sort-by" id="" class="bd-gray pb-2 mt-4">
+                            <!--                            <option value="">Default</option>       -->
+                            <option value="new"
+                                <?php
+                                if ($sortBy == "new") {
+                                    echo "selected";
+                                }
+                                ?>>Newest
+                            </option>
+                            <option value="low"
+                                <?php
+                                if ($sortBy == "low") {
+                                    echo "selected";
+                                }
+                                ?>>Lowest price
+                            </option>
+                            <option value="high"
+                                <?php
+                                if ($sortBy == "high") {
+                                    echo "selected";
+                                }
+                                ?>>Highest price
+                            </option>
                         </select>
                     </div>
                 </div>
                 <div>
                     <div>Producer</div>
                     <div>
-                        <select name="" id="" class="bd-gray pb-2 mt-4">
-                            <option value="">IKEA</option>
-                            <option value="">Herman Miller</option>
-                            <option value="">Crate & Barrel</option>
-                            <option value="">Steelcase</option>
-                            <option value="">Restoration Hardware</option>
-                            <option value="">Okamura</option>
+                        <select name="sort-producer" id="" class="bd-gray pb-2 mt-4">
+                            <option value="">Choose a producer</option>
+                            <!-- Database -->
+                            <?php
+                            include_once("../../connect/open.php");
+                            $sql2 = "SELECT * FROM producers";
+                            $producers = mysqli_query($connect, $sql2);
+                            foreach ($producers as $producer) {
+                                ?>
+                                <option value="<?= $producer['id'] ?>"
+                                    <?php
+                                    if ($producer['id'] == $sortProducer) {
+                                        echo 'selected';
+                                    }
+                                    ?>
+                                >
+                                    <?= $producer['name'] ?>
+                                </option>
+                                <?php
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>
                 <div>
                     <div>Category</div>
                     <div>
-                        <select name="" id="" class="bd-gray pb-2 mt-4">
-                            <option value="">Table</option>
-                            <option value="">Seating</option>
-                            <option value="">Bed</option>
-                            <option value="">Wardrobe</option>
-                            <option value="">Bookshelf</option>
-                            <option value="">Clock</option>
+                        <select name="sort-category" id="" class="bd-gray pb-2 mt-4">
+                            <option value="">Choose a category</option>
+                            <!-- Database -->
+                            <?php
+                            include_once("../../connect/open.php");
+                            $sql3 = "SELECT * FROM categories";
+                            $categories = mysqli_query($connect, $sql3);
+                            foreach ($categories as $category) {
+                                ?>
+                                <option value="<?= $category['id'] ?>"
+                                    <?php
+                                    if ($category['id'] == $sortCategory) {
+                                        echo "selected";
+                                    }
+                                    ?>
+                                >
+                                    <?= $category['name'] ?>
+                                </option>
+                                <?php
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>
                 <div>
-                    <button class="sort-button">Apply</button>
+                    <button class="sort-button" type="submit">Apply</button>
                 </div>
-            </div>
-            <form method="get">
-                    <input type="text" name="search"
-                           value="<?= $search; ?>"
-                           placeholder="Search here..." class="search-bar">
             </form>
-
 
         </div>
         <div class="d-flex justify-content-center flex-md-wrap">
             <!-- Database -->
             <?php
             include_once("../../connect/open.php");
-            $sql = "SELECT * FROM furnitures WHERE name LIKE '%$search%'";
-            $furnitures = mysqli_query($connect, $sql);
+            $furnitures = mysqli_query($connect, $sqlQuery);
             include_once("../../connect/close.php");
             foreach ($furnitures
 
@@ -128,14 +270,15 @@ if (!function_exists('currency_format')) {
                         <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="text-dark">
                             <div class="card-body text-center">
                                 <div class='cvp'>
-                                    <h4 class="card-title font-weight-bold"><?= $furniture['name'] ?></h4>
-                                    <p class="card-text"><?= number_format($furniture['price']) ?><span>₫</span></p>
+                                    <h4 id="itemName" class="card-title font-weight-bold"><?= $furniture['name'] ?></h4>
+                                    <p id="itemPrice" class="card-text"><?= currency_format($furniture['price']) ?></p>
                         </a>
                     </div>
                     <div class="d-flex justify-content-evenly align-items-center mt-5">
                         <a href="furniture_detail.php?id=<?= $furniture['id'] ?>">View details</a><br/>
                         <button class="btn btn-primary">
-                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>" class="text-white">
+                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>"
+                               class="text-white">
                                 Add to cart
                             </a>
                         </button>

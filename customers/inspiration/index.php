@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Góc cảm hứng - Nội thất Beautiful House</title>
+    <title>Inspiration - Beautiful House</title>
 </head>
 <body>
 <!-- Header -->
@@ -24,13 +24,13 @@ include("../../layout/header.php");
 <!-- Padding from header -->
 <div id="about"></div>
 
-<section id="section-1"
-">
-<img src="../../main/media/images/inspiration/inspiration.jpeg" alt="">
-<div id="section-1-text">
-    <h1 class="align-left text-white mb-5">GÓC CẢM HỨNG</h1>
-
-</div>
+<section class="section-default"
+         style='background-image: url("../../main/media/images/inspiration/inspiration.jpeg");
+         height: 90vh'>
+    <div class="left-container">
+        <h1 class="heading-left mb-5">INSPIRATION <span style="font-size: 48px">☻</span>
+           </h1>
+    </div>
 </section>
 
 <!-- Trang bắt đầu -->
@@ -38,7 +38,7 @@ include("../../layout/header.php");
     <div class="mx-sm-4">
         <div>
             <div class="fw-bold text-center my-5">
-                <span class="display-4">GÓC CẢM HỨNG DANH MỤC</span>
+                <span class="display-4 text-uppercase">category inspiration corner</span>
             </div>
         </div>
         <!-- HÀNG 1 -->
@@ -46,7 +46,7 @@ include("../../layout/header.php");
             <div class="d-xl-flex container">
                 <!-- ONE -->
                 <div>
-                    <div class="m-4 section-default w-s">
+                    <div class="m-4 section-default-2 w-s">
                         <a href="one.php">
                             <img src="../../main/media/images/inspiration/one.jpg"
                                  width="400px"
@@ -55,16 +55,16 @@ include("../../layout/header.php");
                     </div>
 
                     <a href="one.php" style="color: black">
-                        <p class="text-center fw-bold h2">Cách tăng trải nghiệm thị giác cho căn hộ</p>
+                        <p class="text-center fw-bold h2">How to increase the visual experience of the apartment?</p>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">Không gian sống trong căn hộ hoàn toàn có thể biến thành một tác phẩm
+                        <p class="text-center ">The living space in the apartment can completely turn into a work
                             [...]</p>
                     </a>
                 </div>
 
                 <!-- TWO -->
                 <div>
-                    <div class="m-4 section-default w-s">
+                    <div class="m-4 section-default-2 w-s">
                         <a href="two.php">
                             <img src="../../main/media/images/inspiration/two.jpg"
                                  width="400px"
@@ -73,16 +73,16 @@ include("../../layout/header.php");
                     </div>
 
                     <a href="two.php" style="color: black">
-                        <div class="text-center fw-bold h2">Bí quyết chọn mua hàng trang trí</div>
+                        <div class="text-center fw-bold h2">The secret to choosing to buy decorative goods</div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">Những món đồ trang trí luôn giúp cho không gian có thêm sức sống, đồng
+                        <p class="text-center ">The decorations always help the space have more life, copper
                             [...]</p>
                     </a>
                 </div>
 
                 <!-- THREE -->
                 <div>
-                    <div class="m-4 section-default w-s">
+                    <div class="m-4 section-default-2 w-s">
                         <a href="three.php">
                             <img src="../../main/media/images/inspiration/three.jpg"
                                  width="400px"
@@ -90,9 +90,9 @@ include("../../layout/header.php");
                         </a>
                     </div>
                     <a href="three.php" style="color: black">
-                        <div class="text-center fw-bold h2">Những ý tưởng nâng cấp không gian sống</div>
+                        <div class="text-center fw-bold h2">Ideas to upgrade living space</div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">Sau những ngày dài "bán mình cho tư bản", con người lại càng có nhu cầu
+                        <p class="text-center ">After long days of "selling yourself to capital", people have more and more needs
                             [...]</p>
                     </a>
                 </div>
@@ -104,7 +104,7 @@ include("../../layout/header.php");
             <div class="d-xl-flex container my-md-4">
                 <!-- FOUR -->
                 <div>
-                    <div class="m-4 section-default w-s">
+                    <div class="m-4 section-default-2 w-s">
                         <a href="four.php">
                             <img src="../../main/media/images/inspiration/four.jpg"
                                  width="400px"
@@ -112,16 +112,16 @@ include("../../layout/header.php");
                         </>
                     </div>
                     <a href="four.php" style="color: black">
-                        <div class="text-center fw-bold h2">Cách sắp xếp phòng ăn nhỏ để tối ưu hóa không gian</div>
+                        <div class="text-center fw-bold h2">How to arrange a small dining room to optimize space</div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">Đối với những phòng ăn có diện tích khiêm tốn, việc bài trí các vật
+                        <p class="text-center ">For dining rooms with a modest area, the arrangement of objects
                             [...]</p>
                     </a>
                 </div>
 
                 <!-- FIVE -->
                 <div>
-                    <div class="m-4 section-default w-s">
+                    <div class="m-4 section-default-2 w-s">
                         <a href="five.php">
                             <img src="../../main/media/images/inspiration/five.jpg"
                                  width="400px"
@@ -129,16 +129,16 @@ include("../../layout/header.php");
                         </a>
                     </div>
                     <a href="five.php" style="color: black">
-                        <div class="text-center fw-bold h2">5 gợi ý thiết kế nội thất hiện đại sang trọng cho căn hộ
+                        <div class="text-center fw-bold h2">5 suggestions for luxurious modern interior design for apartments
                         </div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">5 gợi ý thiết kế nội thất hiện đại sang trọng cho căn hộ chung [...]</p>
+                        <p class="text-center ">5 suggestions for luxurious modern interior design for shared apartments [...]</p>
                     </a>
                 </div>
 
                 <!-- SIX -->
                 <div>
-                    <div class="m-4 section-default w-s">
+                    <div class="m-4 section-default-2 w-s">
                         <a href="six.php">
                             <img src="../../main/media/images/inspiration/six.jpg"
                                  width="400px"
@@ -146,9 +146,9 @@ include("../../layout/header.php");
                         </a>
                     </div>
                     <a href="six.php" style="color: black">
-                        <div class="text-center fw-bold h2">Những lợi ích khi dùng bàn ăn thông minh</div>
+                        <div class="text-center fw-bold h2">The benefits of using a smart dining table</div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">Phòng ăn là nơi tạo cảm giác ấm cúng cho căn hộ, vì thế, sự [...]</p>
+                        <p class="text-center ">The dining room is the place to create a cozy feeling for the apartment, so the [...]</p>
                     </a>
                 </div>
             </div>

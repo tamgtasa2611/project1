@@ -14,9 +14,9 @@
     <!--  main css file link  -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
 
-    <title>Về chúng tôi</title>
+    <title>About us - Beautiful House</title>
 </head>
-<body>
+<body style="background-color: #FFFFFF">
 <!-- Header -->
 <?php
 include("../../layout/header.php");
@@ -25,7 +25,7 @@ include("../../layout/header.php");
 <div id="about"></div>
 <!-- ABOUT -->
 <div class="bg-secondary ps-5 row-cols-5">
-    <p class="col-2 logo text-light m-auto fs-1">Giới thiệu</p>
+    <p class="col-2 logo text-light m-auto display-4 ">Introduce</p>
 
 </div>
 <div class="p-2">
@@ -45,50 +45,50 @@ include("../../layout/header.php");
                     <div class="mx-4 col-md-5 ms-5">
                         <a href="../furniture/index.php"> <img src="../../main/media/images/about/2.jpg"> </a>
                     </div>
-                    <div class="text-start col-md-5 mx-3">
+                    <div class="text-start col-md-5 mx-3" style="text-align: justify">
                         <div class="h1">
-                            <span class="fw-bold h1">Về chúng tôi<br>
+                            <span class="fw-bold h1">About us<br>
                                 <span class="mb-sm-5 h1 text-danger">Beautiful  House</span></span></div>
-                        <h2 class="mb-sm-5">Chào mừng bạn đến với trang web bán hàng nội thất của chúng tôi! Chúng tôi
-                            tự hào là địa chỉ tin cậy để mang đến cho bạn những giải pháp thiết kế nội thất tuyệt vời
-                            cho ngôi nhà của bạn.</h2>
-                        <h2 class="mb-sm-5">Với một tầm nhìn đam mê về không gian sống và sự sáng tạo vô tận, chúng tôi
-                            cam kết cung cấp cho bạn những sản phẩm nội thất chất lượng cao và dịch vụ tốt nhất. Với một
-                            đội ngũ giàu kinh nghiệm và sự hiểu biết sâu sắc về các xu hướng thiết kế, chúng tôi đảm bảo
-                            rằng bạn sẽ tìm thấy những sản phẩm phù hợp với phong cách và nhu cầu của riêng bạn.</h2>
-                        <h2 class="mb-sm-5">Trên trang web của chúng tôi, bạn sẽ khám phá một bộ sưu tập đa dạng và
-                            phong phú của nội thất từ các danh mục như phòng khách, phòng ngủ, phòng ăn, phòng làm việc
-                            và nhiều hơn nữa. Chúng tôi không chỉ cung cấp những sản phẩm chất lượng cao, mà còn đảm bảo
-                            rằng mỗi mẫu mã đều thể hiện phong cách độc đáo và sự tinh tế.</h2>
-                        <h1 class="mb-sm-5">Đến năm 2023 trở thành:</h1>
-                        <span CLASS="text-danger h1">CÔNG TY TRÁCH NHIỆM HỮU HẠN 2 NGƯỜI</span>
+                        <h2 class="mb-sm-5" style="text-align: justify">Welcome to our furniture sales website! We
+                            proud to be a reliable address to bring you great interior design solutions
+                            for your home.</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">With a passionate vision of living spaces and endless creativity, we
+                            Committed to providing you with high quality furniture products and best service. With one
+                            Experienced team and deep understanding of design trends, we guarantee
+                            that you will find products that suit your own style and needs.</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">On our website you will discover a diverse collection and
+                            Abundance of furniture from categories such as living room, bedroom, dining room, office
+                            and more. We not only provide high quality products, but also guarantee
+                            that each model embodies unique style and sophistication.</h2>
+                        <h1 class="mb-sm-5">By 2023 to become:</h1>
+                        <span CLASS="text-danger h1">2 MEMBER LIMITED LIABILITY COMPANY</span>
                     </div>
                 </div>
                 <!-- Body 2 -->
                 <div class="d-sm-flex pt-sm-5 ">
                     <div class="text-start col-md-8 mx-3 ms-sm-5">
-                        <h2 class="mb-sm-5">Ngoài ra, chúng tôi hiểu rằng việc chọn nội thất phù hợp có thể là một quá
-                            trình phức tạp. Vì vậy, chúng tôi cung cấp cho bạn những hướng dẫn và gợi ý từ các chuyên
-                            gia thiết kế để giúp bạn tạo ra không gian sống hoàn hảo. Chúng tôi luôn sẵn sàng lắng nghe
-                            và đáp ứng mọi yêu cầu của bạn, đảm bảo rằng trải nghiệm mua sắm của bạn sẽ được thực hiện
-                            một cách suôn sẻ và thú vị.</h2>
-                        <h2 class="mb-sm-5">Với cam kết về chất lượng, sự đa dạng và dịch vụ tận tâm, chúng tôi hy vọng
-                            rằng bạn sẽ tìm thấy những món đồ nội thất ưng ý và mang đến cho ngôi nhà của bạn sự hoàn
-                            thiện và thoải mái tuyệt đối. Hãy khám phá trang web của chúng tôi ngay bây giờ và bắt đầu
-                            trải nghiệm một không gian sống tuyệt vời!</h2>
-                        <h2 class="mb-sm-5">Với tiêu chí lấy con người làm trọng tâm cho việc thiết kế dự án. BH thay
-                            đổi bất kỳ môi trường nào thành một nơi làm việc lý tưởng, đồng thời luôn đảm bảo sự hài hòa
-                            cao nhất giữa môi trường làm việc với môi trường xung quanh.</h2>
-                        <h2 class="mb-sm-5">Công ty sử dụng các nguyên vật liệu thô được mua từ các nhà cung cấp có uy
-                            tín, chất lượng & được thẩm định định kỳ… do đó, sản phẩm BH có thể đáp ứng những đòi hỏi
-                            nghiêm ngặt nhất về chất lượng theo chuẩn của châu Âu & thế giới.</h2>
-                        <h2 class="mb-sm-5">Hệ thống sản xuất của BH được xây dựng trên nền tảng tùy biến linh hoạt với
-                            hiệu suất đáp ứng cao. Với bộ máy sản xuất đó, công ty có thể rất linh hoạt trong việc đáp
-                            ứng các nhu cầu cao thấp khác nhau của khách hàng. Từ việc tùy biến để đáp ứng các đơn hàng
-                            theo số lượng & thời gian đến việc tùy biến các sản phẩm theo nhu cầu thiết kế đặc thù của
-                            khách hàng…Mỗi sản phẩm của trước khi xuất xưởng bắt buộc phải trải qua những quy trình từ
-                            thử nghiệm đến kiểm tra nghiêm ngặt, từ khâu thiết kế, lựa chọn nguyên vật việu phù hợp, sản
-                            xuất…để đạt được mức chuẩn chất lượng toàn cầu cao nhất.</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">Also, we understand that choosing the right furniture can be a process
+                            complex process. So we provide you with guidance and suggestions from the experts
+                            designers to help you create the perfect living space. We are always ready to listen
+                            and fulfill all your requirements, ensuring that your shopping experience will be fulfilled
+                            smoothly and enjoyable.</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">With a commitment to quality, variety and dedicated service, we hope
+                            that you will find the right furniture and give your home a complete look
+                            perfect and comfortable. Explore our website now and get started
+                            Experience a wonderful living space!</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">With human-centered criteria for project design. replacement insurance
+                            Transform any environment into an ideal workplace, while ensuring harmony at all times
+                            the highest level between the working environment and the surrounding environment.</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">The company uses raw materials purchased from reputable suppliers
+                            credibility, quality & is periodically appraised… so the insurance product can meet the requirements
+                            strictest quality standards of Europe & the world.</h2>
+                        <h2 class="mb-sm-5" style="text-align: justify">BH's production system is built on a flexible customization platform with
+                            high response performance. With that production machine, the company can be very flexible in responding to
+                            meet the different high and low needs of customers. From customization to fulfilling orders
+                            From quantity & time to customizing products according to your specific design needs
+                            customers...Each of our products before being shipped must go through processes from
+                            testing to rigorous inspection, from design, selection of suitable materials, products,
+                            ...to achieve the highest level of global quality standards.</h2>
                     </div>
                     <div class="col-md-5 mx-3">
                         <a href="../furniture/index.php"> <img src="../../main/media/images/about/3.jpg"> </a>

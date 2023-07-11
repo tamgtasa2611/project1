@@ -58,12 +58,13 @@ $sql = "SELECT furnitures.*, categories.name as category_name, producers.name as
         LIMIT $start, $recordOnePage";
 $furnitures = mysqli_query($connect, $sql);
 include_once('../../connect/close.php');
-//format vnd
+
+//format USD $$$
 if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ')
+    function currency_format($number, $suffix = '$')
     {
         if (!empty($number)) {
-            return number_format($number, 0, ',', '.') . "{$suffix}";
+            return "{$suffix}" . number_format($number, 2, ".");
         }
     }
 }
@@ -84,9 +85,9 @@ if (!function_exists('currency_format')) {
                     <th>Tồn kho</th>
                     <th>Giá</th>
                     <th>Chất liệu</th>
-                    <th>Dài</th>
-                    <th>Rộng</th>
-                    <th>Cao</th>
+                    <th>Dài (cm)</th>
+                    <th>Rộng (cm)</th>
+                    <th>Cao (cm)</th>
                     <th>Phòng</th>
                     <th>Danh mục</th>
                     <th>Nhà sản suất</th>

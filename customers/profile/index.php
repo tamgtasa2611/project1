@@ -1,7 +1,7 @@
 <?php
 //    chay session
 session_start();
-if (!isset($_SESSION['user-email'])) {
+if (!isset($_SESSION['user-id'])) {
     header("Location: ../login_logout/login.php");
 }
 ?>
@@ -21,10 +21,19 @@ if (!isset($_SESSION['user-email'])) {
     <link rel="stylesheet" href="../../main/css/header_style.css">
     <!--  main css file link  -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
+    <!--    profile css file link   -->
+    <link rel="stylesheet" href="../../main/css/profile.css">
 
-    <title>Tài khoản của tôi</title>
+    <title>My account - Beautiful House</title>
 </head>
 <body>
+<?php
+$userId = $_SESSION['user-id'];
+include_once("../../connect/open.php");
+$sql = "SELECT * FROM customers WHERE id = '$userId'";
+$customers = mysqli_query($connect, $sql);
+?>
+
 <!-- Header -->
 <?php
 include("../../layout/header.php");
@@ -32,14 +41,92 @@ include("../../layout/header.php");
 <!-- Padding from header -->
 <div id="about"></div>
 <!--Content -->
-<div>
-    <?php
-    include_once("../../layout/customer_profile.php");
-    ?>
-    <div>
-        a
+<div id="main-container" class="mt-5">
+    <div id="left-container">
+        <?php
+        include_once("../../layout/customer_profile.php");
+        ?>
+
+    </div>
+
+    <div id="right-container">
+        <form action="update.php" method="post">
+            <div style="height: auto; margin: 40px">
+                <div>
+                    <h2>
+                        My profile
+                    </h2>
+                    <h4 style="color: slategray; margin-bottom: 40px">
+                        Manage profile information for account security
+                    </h4>
+                    <hr>
+                </div>
+
+                <?php
+                foreach ($customers as $customer) {
+                    ?>
+                    <div class="d-flex justify-content-between" style="margin-top: 28px">
+                        <div style="width: 40%;">
+                            <div class="padding-nice d-flex justify-content-between align-items-center">
+                                Name: <input type="text" name="name" value="<?= $customer['name'] ?>">
+                            </div>
+
+                            <div class="padding-nice d-flex justify-content-between align-items-center">
+                                Email: <input type="email" name="email" value="<?= $customer['email'] ?>">
+                            </div>
+
+                            <div class="padding-nice d-flex justify-content-between align-items-center">
+                                Phone number: <input type="text" name="phone" value="<?= $customer['phone'] ?>">
+                            </div>
+
+                            <div class="padding-nice d-flex justify-content-between align-items-center">
+                                Gender:
+                                <div class="d-flex justify-content-evenly" style="width: 240px">
+                                    <input type="radio" class="radio-input" name="gender" value="male"
+                                        <?php
+                                        if ($customer['gender'] == 1) {
+                                            echo "checked";
+                                        }
+                                        ?>
+                                    >Male
+
+                                    <input type="radio" class="radio-input" name="gender" value="female"
+                                        <?php
+                                        if ($customer['gender'] == 0) {
+                                            echo "checked";
+                                        }
+                                        ?>
+                                    >Female
+                                </div>
+                            </div>
+
+                            <div class="padding-nice d-flex justify-content-between align-items-center">
+                                Address: <input type="text" name="address" value="<?= $customer['address'] ?>">
+                            </div>
+
+                        </div>
+
+                        <div style="width: 40%">
+                            avatar
+                        </div>
+                    </div>
+
+                    <?php
+                }
+                include_once("../../connect/close.php");
+                ?>
+
+                <div style="margin-top: 9.4%" class="d-flex justify-content-center">
+                    <button id="save-btn">Save</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
+<!--footer-->
+<?php
+include_once("../../layout/footer.php");
+?>
 </body>
 </html>

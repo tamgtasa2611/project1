@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập Okamura - Nội thất Beautiful House</title>
+    <title>Collection Okamura - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -38,20 +38,20 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div align="justify" class="mt-sm-5">
-                            <span class="display-5 fw-bold">Okamura – sự kết hợp tuyệt hảo giữa gỗ và kim loại</span>
-                            <p class="fs-3 my-md-4">
-                                Gỗ và kim loại không phải là sự kết hợp quá mới lạ nhưng ở Okamura, sự kết hợp được nâng
-                                lên mức tuyệt vời khi gỗ
-                                Sổi nâu Hi Tech Veneer đi cùng chân kim loại copper, sự kết hợp này góp phần tạo ra sự
-                                sang trọng tinh tế cho bộ
-                                sưu tập. Cooper là một màu sắc mà được sử dụng rất phổ biến cho vua chúa vào thế kỷ thứ
-                                7, trong thế giới hiện đại,
-                                nó cũng được dùng cho các công trình ngoài trời nổi tiếng như Jurassic Museum of
-                                Asturias hay Oak Park Public Library…
+                            <span class="display-5 fw-bold">Okamura – The perfect combination of wood and metal</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Wood and metal is not a new combination, but in Okamura, the combination is enhanced
+                                to great levels when wood
+                                Hi Tech Veneer comes with copper metal legs, this combination contributes to the
+                                Exquisite elegance for the set
+                                collect. Cooper is a color that was very popular for kings in the 5th century
+                                7, in the modern world,
+                                It is also used for famous outdoor buildings such as the Jurassic Museum of
+                                Asturias or Oak Park Public Library…
                             </p>
-                            <p class="fs-3">
-                                Bộ sưu tập Okamura gồm đầy đủ 3 phòng: Phòng khách – Phòng ăn – Phòng ngủ với thiết về,
-                                màu sắc đồng nhất.
+                            <p class="fs-3" style="text-align: justify">
+                                The Okamura collection consists of 3 full rooms: Living room - Dining room - Bedroom with furniture,
+                                uniform color.
                             </p>
                         </div>
                         <div>
@@ -69,15 +69,15 @@ include("../../layout/header.php");
                                     height="819px"></a>
                         </div>
                         <div class="ms-sm-5 m-sm-auto w-100" align="justify">
-                            <span class="display-5 fw-bold">Tràn đầy sức sống với những tinh hoa nghệ thuật</span>
-                            <p class="fs-3 my-md-4">
-                                Gỗ sồi được sử dụng làm thành phần chính của bộ sưu tập. Mang lại một gam màu trầm ấm và
-                                thanh lịch, loại gỗ này góp
-                                phần làm cho không gian sinh hoạt thêm ấm cúng, gần gũi và sống động hơn, tạo sự gắn kết
-                                cho các thành viên trong gia
-                                đình. Những đường vân gỗ hoa mỹ giúp tổng thể chung của thiết kế thêm đặc sắc, tạo điểm
-                                nhấn giúp bố cục thêm đẹp mắt
-                                và hài hòa.
+                            <span class="display-5 fw-bold">Full of life with artistic quintessence</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Oak is used as the main component of the collection. Brings a warm color and
+                                elegant, this wood contributes
+                                The part makes the living space more cozy, closer and more lively, creating cohesion
+                                for family members
+                                family. Ornate wood grain lines make the overall design more unique, creating points
+                                Click to make the layout more beautiful
+                                and harmony.
                             </p>
                         </div>
                     </section>

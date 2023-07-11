@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bí quyết chọn mua hàng trang trí</title>
+    <title>The secret to choosing to buy decorative goods</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -32,18 +32,19 @@ include("../../layout/header.php");
                 <!-- HEADER -->
                 <div class="row mx-sm-4">
                     <div class="col-md-3 col-lg-3 col-xl-auto mx-auto mt-3">
-                        <span class="display-5 mx-sm-2">BÍ QUYẾT CHỌN MUA HÀNG TRANG TRÍ</span>
+                        <span class="display-5 mx-sm-2 text-uppercase">The secret to choosing to buy decorative goods</span>
 
                     </div>
-                    <p class="my-sm-5 h2 mx-sm-2">Những món đồ trang trí luôn giúp cho không gian có thêm sức sống, đồng
-                        thời đáp ứng linh hoạt
-                        nhu cầu và sở thích của mỗi cá nhân. Một sản phẩm trang trí hoàn hảo khi đó là món đồ phù hợp
-                        với không gian, mang màu
-                        sắc hài hòa với đường nét sắc sảo và tinh tế. Ngoài ra, trong quá trình bài trí không gian, khả
-                        năng sáng tạo và trí
-                        tưởng tượng của bạn cũng được kích hoạt tối đa. Vậy bí quyết để chọn mua <b class="fs-2">hàng
-                            trang trí</b> chất lượng và
-                        độc đáo là gì? Hãy cùng theo dõi bài viết dưới đây của <b class="fs-2">Beautiful House</b> nhé.
+                    <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
+                        The decorations always help the space have more life, copper
+                        flexible response time
+                        needs and preferences of each individual. A perfect decoration when it's the right item
+                        with space, bring color
+                        harmony with sharp and delicate lines. In addition, in the process of spatial arrangement,
+                        creativity and intelligence
+                        Your imagination is also maximized. So the secret to choosing to buy <b class="fs-2">goods
+                            decoration</b> quality and
+                        What is unique? Let's follow the article below of <b class="fs-2">Beautiful House</b>.
                     </p>
                     <a class="mx-sm-2 mb-sm-5 pt-sm-5"><img src="../../main/media/images/inspiration/two.jpg"
                                                             width="1245px"
@@ -52,17 +53,19 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">1. Lựa chọn theo nhu cầu</span>
-                            <p class="fs-3 my-md-4">Bước đầu tiên và cũng là bước quan trọng nhất. Hãy <b class="fs-3">cân
-                                    nhắc thật kỹ nhu cầu sử dụng của bản thân và gia đình. </b>
-                                Trong quá trình sinh hoạt thường ngày, bạn có thể đặt câu hỏi: “Mình có thật sự cần đến
-                                món đồ ấy không?”, hoặc
-                                “Nếu không có món đồ ấy, mình có thể sinh hoạt bình thường được không?”.
+                            <span class="display-5 fw-bold">1. Choose according to your needs</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The first and most important step. Please <b class="fs-3">weigh
+                                    Carefully consider the needs of yourself and your family. </b>
+                                In the course of daily life, you can ask the question: “Do I really need
+                                the item?”, or
+                                "If I don't have that item, can I have a normal life?"
                             </p>
 
-                            <p class="fs-3">Nếu câu trả lời là “không”, bạn không cần thiết phải mua sắm thêm. Còn nếu
-                                bạn ở mức lưng chừng,
-                                vẫn có nhu cầu muốn mua thì hãy tiếp tục đọc bài viết này.
+                            <p class="fs-3">
+                                If the answer is "no", you don't need to buy more. Even if
+                                you're in the middle,
+                                If you still want to buy, then continue reading this article.
                             </p>
                         </div>
                         <div>
@@ -80,23 +83,23 @@ include("../../layout/header.php");
                                     height="372.02px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">2. Xác định phong cách</span>
-                            <p class="fs-3 my-md-4">
-                                Dựa trên sở thích của cá nhân hoặc gia đình, bạn nên <b class="fs-3">xác định phong
-                                    cách.</b>
-                                mà căn hộ hướng đến <b class="fs-3">để cụ thể hóa kiểu dáng và màu sắc</b> của món đồ
-                                trang trí. Đây sẽ là
-                                bước đệm để bạn <b class="fs-3">tiết kiệm thời gian mà vẫn đáp ứng tốt nhu cầu mua
-                                    sắm.</b>
+                            <span class="display-5 fw-bold">2. Define your style</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Based on personal or family preferences, you should <b class="fs-3">define your style
+                                    way.</b>
+                                that the apartment aims to <b class="fs-3">to specify the style and color</b> of the item
+                                decorate. This will be
+                                a stepping stone for you to <b class="fs-3">save time and still meet your buying needs
+                                    shop.</b>
                             </p>
 
-                            <p class="fs-3">
-                                Ví dụ không gian theo phong cách tối giản sẽ ưu tiên những món đồ trang trí đơn giản với
-                                tông màu trung tính,
-                                còn căn hộ hiện đại sẽ hướng đến những mặt hàng trang trí cao cấp, sang trọng với đường
-                                nét sắc sảo. Vì thế,
-                                việc xác định phong cách là điều cần thiết trước khi quyết định mua bất kỳ sản phẩm
-                                trang trí nào.
+                            <p class="fs-3" style="text-align: justify">
+                                For example, the space in the minimalist style will prioritize simple decorations with
+                                neutral tones,
+                                Modern apartments will focus on high-class and luxurious decorative items with sugar
+                                sharp features. Therefore,
+                                Determining the style is essential before deciding to buy any product
+                                any decoration.
                             </p>
                         </div>
 
@@ -105,21 +108,21 @@ include("../../layout/header.php");
                     <!-- BODY 3 -->
                     <section class="mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="pb-sm-5">
-                            <span class="display-5 fw-bold">3. Nghiên cứu và tìm hiểu về sản phẩm</span>
-                            <p class="fs-3 my-sm-4">
-                                Sau khi đã xác định được phong cách căn hộ, hãy <b class="fs-3">nghiêm túc tìm hiểu và
-                                    chọn lọc những thông tin chất lượng về mặt hàng đó.</b>,
-                                Bạn có thể tìm hiểu về các dòng sản phẩm cùng loại và tất cả thương hiệu hiện đang phân
-                                phối mặt hàng đó trên thị
-                                trường. Hãy đọc ngấu nghiến những gì mà bạn thu thập được, vì tất cả thông tin ấy chính
-                                là những mảnh ghép để bạn
-                                phác họa nên bức tranh thị trường, để từ đó có lựa chọn đúng đắn. </p>
+                            <span class="display-5 fw-bold">3. Research and learn about the product</span>
+                            <p class="fs-3 my-sm-4" style="text-align: justify">
+                                After determining the style of the apartment, <b class="fs-3"> seriously learn and
+                                    select quality information about that item.</b>,
+                                You can find out about the product lines of the same category and all the brands currently available
+                                distribute the item in the market
+                                school. Read through what you can gather, because all that information is
+                                are the pieces for you
+                                sketch a picture of the market, from which to make the right choice. </p>
 
-                            <p class="fs-3">
-                                <b class="fs-3">Chất liệu sản phẩm là yếu tố bạn nên tìm hiểu kĩ,</b> ưu tiên những chất
-                                liệu bền bỉ, dễ vệ sinh và bảo quản.
-                                Nếu có thể, hãy hạn chế việc sử dụng các vật liệu còn tồn dư các hoạt chất gây ảnh hưởng
-                                đến sức khỏe.
+                            <p class="fs-3" style="text-align: justify">
+                                <b class="fs-3">Product material is a factor you should carefully study,</b> prioritize the
+                                Durable, easy to clean and maintain.
+                                If possible, limit the use of materials with residual active ingredients
+                                to health.
                             </p>
                         </div>
                         <div class="mt-sm-5">
@@ -132,23 +135,24 @@ include("../../layout/header.php");
                     <!-- BODY 4 -->
                     <section class="d-sm-flex mx-sm-2 pt-sm-5">
                         <div class="pe-5">
-                            <span class="display-5 fw-bold">4. Thương hiệu đáng tin cậy</span>
-                            <p class="fs-3 my-sm-4">
-                                Những thương hiệu nổi tiếng và đáng tin cậy trong ngành nội thất sẽ là lựa chọn hợp lý
-                                nhất. Vì họ thường
-                                có sự <b class="fs-3">cam kết về chất lượng,</b> cũng như có <b class="fs-3">dịch vụ
-                                    chăm sóc khách hàng chu đáo sau khi mua sản phẩm.</b>
-                                Một <b class="fs-3">chế độ bảo hành tốt sẽ giúp người dùng an tâm hơn</b> trong quá
-                                trình sử dụng.
+                            <span class="display-5 fw-bold">4. Trusted Brand</span>
+                            <p class="fs-3 my-sm-4" style="text-align: justify">
+                                Famous and reliable brands in the furniture industry will be a reasonable choice
+                                best. Because they usually
+                                there is a <b class="fs-3">commitment to quality,</b> as well as a <b class="fs-3">service
+                                    attentive customer care after purchasing the product.</b>
+                                A <b class="fs-3">good warranty will help users feel more secure</b> in the process
+                                user program.
                             </p>
 
-                            <p class="fs-3">Việc chọn ra những thương hiệu nổi tiếng và đáng tin cậy trong ngành nội
-                                thất sẽ giúp quá trình mua sắm của
-                                bạn diễn ra suôn sẻ hơn, vì họ luôn quan tâm đến nhu cầu và quyền lợi của khách hàng.
-                                Một
-                                <b class="fs-3">quy trình vận hành chuyên nghiệp cùng đội ngũ tư vấn và chăm sóc tận
-                                    tình,</b> chắc chắn bạn sẽ có một
-                                <b class="fs-3">trải nghiệm mua sắm tốt nhất.</b>
+                            <p class="fs-3" style="text-align: justify">
+                                The selection of famous and reliable brands in the domestic industry
+                                Furniture will help your shopping process
+                                You go more smoothly, because they always care about the needs and interests of the customer.
+                                One
+                                <b class="fs-3">professional operation process with a team of advice and care
+                                    love,</b> you will definitely have a
+                                <b class="fs-3">best shopping experience.</b>
                             </p>
 
                             <a><img src="../../main/media/images/inspiration/body-4-of-two.jpg"
@@ -172,23 +176,25 @@ include("../../layout/header.php");
                                     height="419.58px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">5. Thử nghiệm và cảm nhận trực tiếp</span>
-                            <p class="fs-3 my-md-4">
-                                Sau khi đã chọn ra được thương hiệu nội thất uy tín hàng đầu, bạn nên
-                                <b class="fs-3">đến cửa hàng để trải nghiệm trực tiếp sản phẩm</b> trước khi quyết định
-                                mua. Bạn sẽ có được
-                                cảm nhận chân thực trong quá trình kiểm tra, nắm rõ kích thước thực tế, quan sát tận mắt
-                                mẫu mã để có ý tưởng
-                                trang trí và <b class="fs-3">cân nhắc khả năng phù hợp với không gian.</b>
+                            <span class="display-5 fw-bold">5. Test and feel it firsthand</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                After choosing the leading prestigious furniture brand, you should
+                                <b class="fs-3">come to the store to experience the product in person</b> before deciding
+                                buy. You will get
+                                Real feel during inspection, know the actual size, observe with your own eyes
+                                Sample code to get an idea
+                                decoration and <b class="fs-3">consideration for space suitability.</b>
                             </p>
                         </div>
                     </section>
 
-                    <p class="fs-1 mt-sm-5 pt-sm-5">Trong <b class="fs-1">“Tuần lễ hàng trang trí”</b> tại Beautiful
-                        House, với hàng ngàn sản phẩm khác nhau, bạn
-                        có thể thoải mái lựa chọn bất kì phong cách và kiểu dáng nào cho căn hộ. Nếu bạn đang muốn làm
-                        mới tổ ấm của mình, hãy
-                        đến ngay <b class="fs-1">Beautiful House</b> nhé.</p>
+                    <p class="fs-1 mt-sm-5 pt-sm-5" style="text-align: justify">
+                        In <b class="fs-1">“Decoration Week”</b> at Beautiful
+                        House, with thousands of different products, you
+                        You can freely choose any style and design for the apartment. If you are looking to do
+                        new home, let's
+                        Come to <b class="fs-1">Beautiful House</b> now.
+                    </p>
 
                 </div>
             </section>

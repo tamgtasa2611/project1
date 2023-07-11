@@ -4,34 +4,6 @@ session_start();
 if (isset($_SESSION['user-email'])) {
     header("Location: ../start/index.php");
 }
-/*
-//kiem tra login
-$login = 0;
-$invalid = 0;
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include_once '../../connect/open.php';
-    $userEmail = $_POST['user-email'];
-    $userPassword = $_POST['user-password'];
-//query tim account
-    $sql = "SELECT *, COUNT(id) as count_account FROM customers 
-                    WHERE email = '$userEmail' AND password = '$userPassword'";
-    $results = mysqli_query($connect, $sql);
-
-    foreach($results as $result) {
-        $userId = $result['id'];
-    }
-//
-    if ($results) {
-        $num = mysqli_num_rows($results);
-        if ($num > 0) {
-            $login = 1;
-        } else {
-            $invalid = 1;
-        }
-    }
-}
-*/
 ?>
 
 <!doctype html>
@@ -52,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!--    main    -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
 
-    <title>Đăng ký</title>
+    <title>Login - Beautiful House</title>
 </head>
 <body>
 <!-- Header -->
@@ -68,7 +40,7 @@ include("../../layout/header.php");
     <?php
     if (isset($_SESSION['error-msg'])) {
         echo '<div class="alert alert-danger position-absolute error-alert" role="alert">
-              Email hoặc mật khẩu không tồn tại!
+              Wrong email or password!
               </div>';
     }
     ?>
@@ -76,11 +48,11 @@ include("../../layout/header.php");
     <div class="login-page">
         <div class="form">
             <form class="register-form" method="post" action="loginProcess.php">
-                <input type="text" name="user-email" placeholder="Địa chỉ email" required/>
-                <input type="password" name="user-password" placeholder="Mật khẩu" required/>
+                <input type="text" name="user-email" placeholder="Email" required/>
+                <input type="password" name="user-password" placeholder="Password" required/>
 
-                <button type="submit">ĐĂNG NHẬP</button>
-                <p class="message">Chưa có tài khoản? <a href="register.php">Đăng ký</a></p>
+                <button type="submit">Login</button>
+                <p class="message">New to Beautiful House? <a href="register.php">Register</a></p>
             </form>
 
         </div>

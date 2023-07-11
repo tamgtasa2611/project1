@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập Herman Miller - Nội thất Beautiful House</title>
+    <title>Collection Herman Miller - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -38,27 +38,27 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="me-sm-5" align="justify">
-                            <span class="display-5 fw-bold">Herman Miller – Vẻ đẹp thanh lịch và tinh tế</span>
-                            <p class="fs-3 my-md-4">
-                                Sau thời gian dài ấp ủ, Beautiful House ra mắt bộ sưu tập mới Herman Miller từ nhà thiết
-                                kế nổi tiếng người Đan Mạch Mr. Hans
-                                Sandgren Jakobsen*. Lấy cảm hứng từ nội thất tinh xảo, nhẹ nhàng, nền nã nhưng đơn giản
-                                Herman Miller là sự kết hợp tuyệt
-                                hảo giữa sự bền chắc và trọng lượng tối giản. Những chiếc ghế ăn được cấu tạo từ gỗ tần
-                                bì Mỹ với phương pháp ghép gỗ
-                                đặc biệt kết hợp dây thừng được nhập từ Đức, thành phẩm chỉ vỏn vẹn 2.1 kg kết hợp cùng
-                                bàn ăn thiết kế tinh tế sẽ là
-                                điểm nhấn trong bất kỳ không gian nội thất nào.
+                            <span class="display-5 fw-bold">Herman Miller – Elegant and sophisticated beauty</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                After a long time of cherishing, Beautiful House launches a new collection of Herman Miller from designer
+                                Famous Danish designer Mr. Hans
+                                Sandgren Jakobsen*. Inspired by sophisticated, light, basic but simple interiors
+                                Herman Miller is a great combination
+                                The perfect balance between ruggedness and minimal weight. The dining chairs are made of pine wood
+                                American skin with wood grafting method
+                                especially combining ropes imported from Germany, the finished product is only 2.1 kg combined with
+                                Exquisitely designed dining table will be
+                                accent in any interior space.
                             </p>
-                            <p class="fs-3">
-                                Trong bộ sưu tập các sản phẩm của dòng Herman Miller, ngoài những chiếc ghế chúng tôi
-                                còn có các sản phẩm khác bao gồm: Bàn
-                                ăn, Bench, Sofa, Bàn cà phê và Tủ Tivi.
+                            <p class="fs-3" style="text-align: justify">
+                                In the collection of products of the Herman Miller line, in addition to the chairs we
+                                Other products also include: Tables
+                                Dining, Bench, Sofa, Coffee Table and TV Cabinet.
                             </p>
-                            <p class="fs-3">
-                                Có thể nói bộ sưu tập Herman Miller là thước đo hoàn hảo cho sự kết hợp hài hòa giữa độ
-                                bền, độ nhẹ, sự thoải mái và tính thẩm mỹ
-                                của sản phẩm.
+                            <p class="fs-3" style="text-align: justify">
+                                It can be said that the Herman Miller collection is the perfect measure for the harmonious combination of
+                                Durability, Lightness, Comfort and Aesthetics
+                                of the product.
                             </p>
                         </div>
                         <div>
@@ -102,25 +102,27 @@ include("../../layout/header.php");
                                     height="600px"></a>
                         </div>
                         <div class="ms-md-5" align="justify">
-                            <span class="display-5 fw-bold">Nhà thiết kế Đan Mạch Mr. Hans Sandgren Jakobsen</span>
-                            <p class="fs-3 my-md-4">
-                                Nhà thiết kế người Đan Mạch được biết đến khi thắng nhiều giải thưởng thiết kế cho bộ
-                                sưu tập ghế cho Fredericia
-                                vào năm 1998 như giải 2000 Good Design Award tại Nhật, Forsnäs Prize tại Thụy Điển và
-                                giải 1998 Architectural Review
-                                Award for Product Excellence at Spectrum tại vương quốc Anh. Ông nổi tiếng với các thiết
-                                kế theo phong cách
-                                Scandinavian lịch lãm và sang trọng. Tại Việt Nam, Beautiful House cũng đang có một bộ
-                                sưu tập cực kỳ ấn tượng của ông đó
-                                là bộ Bridge với các chi tiết được hoàn thiện một cách hoàn hảo và tuyệt vời.
+                            <span class="display-5 fw-bold">Danish designer Mr. Hans Sandgren Jakobsen</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Danish designer known for winning numerous design awards for his sets
+                                chair collection for Fredericia
+                                in 1998 such as 2000 Good Design Award in Japan, Forsnäs Prize in Sweden and
+                                1998 Architectural Review
+                                Award for Product Excellence at Spectrum in the UK. He is famous for his devices
+                                style design
+                                Scandinavian elegance and luxury. In Vietnam, Beautiful House is also having a set
+                                That's his amazing collection
+                                is a Bridge set with perfectly finished and wonderful details.
                             </p>
                         </div>
                     </section>
 
                     <section id="section-1" class="ms-sm-3 mt-sm-5">
-                        <img src="../../main/media/images/producers/body-4-of-two.jpg" alt="">
+                        <img src="../../main/media/images/producers/body-4-of-two.jpg"
+                                        width="1240px"
+                                        height="850px">
                         <div id="section-1-text">
-                            <h1 class="align-left text-white mb-5">Vẻ đẹp thanh lịch</h1>
+                            <h1 class="align-left text-white mb-5">Elegant beauty</h1>
                         </div>
                     </section>
 

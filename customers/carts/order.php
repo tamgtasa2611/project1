@@ -1,6 +1,8 @@
 <?php
 //    chay session
 session_start();
+
+//kiem tra da login chua
 if (!isset($_SESSION['user-email'])) {
     header("Location: ../login_logout/login.php");
 } else {
@@ -11,13 +13,18 @@ if (!isset($_SESSION['user-email'])) {
     $status = 0;
     //lay id cua customer
     $customer_id = $_SESSION['user-id'];
+    //thong tin nhan hang
+    $re_name = $_POST['re-name'];
+    $re_phone = $_POST['re-phone'];
+    $re_address = $_POST['re-address'];
 
     //mo ket noi
     include_once("../../connect/open.php");
 
     //query insert vao bang orders
-    $sqlInsertOrder = "INSERT INTO orders(date_buy, status, customer_id) 
-                        VALUES ('$dateBuy', '$status', '$customer_id')";
+    $sqlInsertOrder =
+        "INSERT INTO orders(date_buy, status, customer_id, receiver_name, receiver_phone, receiver_address) 
+        VALUES ('$dateBuy', '$status', '$customer_id', '$re_name', '$re_phone', '$re_address')";
     mysqli_query($connect, $sqlInsertOrder);
 
     //query la order_id lon nhat cua customer dang login hien tai
@@ -46,10 +53,11 @@ if (!isset($_SESSION['user-email'])) {
         //chay query insert order_details
         mysqli_query($connect, $sqlInsertOrderDetail);
     }
+
     //xoa cart
     unset($_SESSION['cart']);
     //quay ve trang gio hang
-    header("Location: index.php");
+    header("Location: send_email.php");
 }
 
 

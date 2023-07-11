@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>5 gợi ý thiết kế nội thất hiện đại sang trọng cho căn hộ</title>
+    <title>5 suggestions for luxurious modern interior design for apartments</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -32,32 +32,32 @@ include("../../layout/header.php");
                 <!-- HEADER -->
                 <div class="row mx-sm-4">
                     <div class="col-md-3 col-lg-3 col-xl-auto mx-auto mt-3">
-                        <span class="display-5 mx-sm-2">5 GỢI Ý THIẾT KẾ NỘI THẤT HIỆN ĐẠI SANG TRỌNG CHO CĂN HỘ</span>
+                        <span class="display-5 mx-sm-2 text-uppercase">5 suggestions for luxurious modern interior design for apartments</span>
 
                     </div>
 
-                    <p class="my-sm-5 h2 mx-sm-2">
-                        Việc đầu tư cho <b class="fs-2"> thiết kế nội thất </b> hiện đại sang trọng để nâng cấp căn hộ
-                        trở nên thật cao cấp chắc chắn là điều mà nhiều
-                        gia chủ mong muốn khi sở hữu một căn hộ tầm trung hoặc cao. Nhưng bắt đầu từ đâu? Với 5 gợi ý
-                        dưới đây, bạn sẽ dễ dàng
-                        định hình một ý tưởng thiết kế phù hợp với gu thẩm mỹ và cá tính để thực hiện căn hộ hiện đại
-                        sang trọng của riêng bạn.
+                    <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
+                        The investment for <b class="fs-2"> interior design </b> modern luxury to upgrade the apartment
+                        Being really high-class is definitely something that many people
+                        Homeowners want when owning a mid-range or high-rise apartment. But where to start? With 5 hints
+                        below, you will easily
+                        shape a design idea that is suitable for aesthetic taste and personality to implement a modern apartment
+                        your own luxury.
                     </p>
 
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">Tạo điểm nhấn cho phòng khách sang trọng với vật liệu ánh kim</span>
-                            <p class="fs-3 my-md-4">
-                                Khi nhắc đến sự sang trọng, cao cấp thì nhiều người nghĩ đến những chi tiết ánh kim. Quả
-                                thực là nhiều thiết kế nội
-                                thất đã trở nên sang trọng hơn khi vận dụng các chất liệu này. Những phần chân kim loại
-                                mạ vàng hay viền nhũ ánh kim
-                                khi kết hợp cùng màu gỗ sẽ giúp căn phòng lấp lánh và nổi bật. Đặc biệt, <b
-                                        class="fs-3">phòng khách</b> thường gần ban công nên sẽ tận
-                                dụng cực kỳ tốt nguồn ánh sáng tự nhiên, khi tận dụng bày trí các sản phẩm nội thất lấp
-                                lánh ánh kim sẽ tạo điểm nhấn
-                                cho căn hộ của bạn.
+                            <span class="display-5 fw-bold">Create a focal point for a luxurious living room with metallic materials</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                When it comes to luxury and high-class, many people think of metallic details. Fruit
+                                actually a lot of interior design
+                                Furniture has become more luxurious when using these materials. Metal legs
+                                Gold plated or metallic rim
+                                When combined with wood color will help the room sparkle and stand out. In particular, <b
+                                        class="fs-3">living room</b> is usually near the balcony, so it will be used
+                                make extremely good use of natural light sources, when making use of the decoration of interior products
+                                metallic glitter will create accents
+                                for your apartment.
                             </p>
 
                         </div>
@@ -80,19 +80,19 @@ include("../../layout/header.php");
                                     height="605.19px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">Phòng ăn hiện đại trang bị sản phẩm công năng</span>
-                            <p class="fs-3 my-md-4">
-                                Nhà bếp thường được chú trọng với sự hiện đại về công năng, bởi vì đây chính là trái tim
-                                của ngôi nhà. Do đó, bạn
-                                nên tham khảo ý kiến từ chuyên gia tư vấn để không gian này thật sự hài hòa và tiện dụng
-                                nhất. Riêng về bàn ăn,
-                                bạn có thể lựa chọn những sản phẩm phù hợp với sở thích của mình mà vẫn giữ được chất
-                                sang trọng, thẩm mỹ. Bàn ăn
-                                mở rộng là một lựa chọn tuyệt vời theo xu hướng gần đây cho không gian căn hộ, bởi thiết
-                                kế hiện đại, linh hoạt
-                                trong sử dụng, dễ dàng thay đổi kích thước mặt bàn theo nhu cầu. Bên cạnh đó, lựa chọn
-                                <b class="fs-3">ghế ăn</b> kết hợp với chủ đề
-                                phòng khách sẽ giúp không gian có sự kết nối và xuyên suốt về ý tưởng thiết kế.
+                            <span class="display-5 fw-bold">Modern dining room equipped with functional products</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The kitchen is often focused on modernity in terms of function, because this is the heart
+                                of the House. Therefore, you
+                                should consult with a consultant to make this space really harmonious and convenient
+                                best. As for the dining table,
+                                You can choose products that suit your preferences and still retain the quality
+                                luxury, aesthetics. Dinner table
+                                Expansion is a great option following recent trends for apartment spaces, because of its design
+                                Modern, flexible design
+                                In use, it is easy to change the size of the table top according to your needs. Besides, choose
+                                <b class="fs-3">dining chair</b> combined with the theme
+                                The living room will help the space to have a connection and transparency in terms of design ideas.
                             </p>
 
                         </div>
@@ -101,19 +101,19 @@ include("../../layout/header.php");
                     <!-- BODY 2 -->
                     <section class="d-sm-flex mx-sm-2 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">Không gian phòng ngủ tone màu trung tính với đồ nội thất sang trọng nhã nhặn</span>
-                            <p class="fs-3 my-md-4">
-                                Không gian riêng tư như phòng ngủ luôn cần sự nhẹ nhàng và thoải mái, khi sử dụng tone
-                                màu trung tính giúp bạn cảm
-                                thấy thư giãn hơn hẳn. Nhưng không phải vì thế mà trang trí <b class="fs-3">nội thất
-                                    phòng ngủ</b> lại trở nên nhạt nhòa: màu tường trầm
-                                kết hợp nội thất đơn giản sẽ là lựa chọn phong cách chủ đạo tối ưu, các chi tiết đầu
-                                giường hay bàn đầu giường cách
-                                điệu sẽ làm điểm nhấn độc đáo cho toàn bộ căn phòng. Bạn có thể chọn một chiếc giường
-                                bọc vải êm ái với nút nhấn đầu
-                                giường, đi kèm một chiếc tủ nhỏ nhắn tiện dụng, kết hợp tranh treo tường để giúp căn
-                                phòng thoải mái nhưng cũng đầy
-                                sự riêng tư.
+                            <span class="display-5 fw-bold">The bedroom space is neutral in color with elegant and luxurious furniture</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                A private space like a bedroom always needs lightness and comfort, when using tones
+                                Neutral colors make you feel
+                                feel more relaxed. But that's not why <b class="fs-3">interior decoration
+                                    the bedroom</b> becomes faded again: dark wall color
+                                Simple interior combination will be the optimal mainstream style choice, the first details
+                                bed or bedside table
+                                The melody will make a unique highlight for the whole room. You can choose a bed
+                                Soft fabric cover with push button
+                                bed, comes with a handy small cabinet, combined with wall paintings to help the room
+                                the room is comfortable but also full
+                                Privacy.
                             </p>
 
                         </div>
@@ -144,19 +144,19 @@ include("../../layout/header.php");
                         </div>
 
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">Chi tiết trang trí bắt mắt, vừa phải nâng tầm nội thất cao cấp</span>
+                            <span class="display-5 fw-bold">Eye-catching decorative details, just to raise the level of high-class furniture</span>
                             <p class="fs-3 my-md-4">
-                                Càng nhiều đồ thì càng sang trọng? Đó là một tư tưởng sai lầm đấy!
+                                The more items, the more luxurious? That is a misconception!
                             </p>
 
-                            <p class="fs-3">
-                                Không gian của bạn sẽ thật sự sang trọng và hiện đại nếu mọi thứ được sắp xếp và bố trí
-                                hợp lý, vừa phải với việc
-                                tận dụng tối đa công năng của chúng, nhất là trong các căn hộ chung cư với diện tích
-                                không gian không quá lớn. Các
-                                món đồ trang trí cần được đặt ở những vị trí vừa tầm mắt, số lượng vừa đủ và phù hợp với
-                                không gian. Như thế nội
-                                thất căn phòng sẽ không gây cảm giác gò bó mà trở nên thông thoáng, nhẹ nhàng.
+                            <p class="fs-3" style="text-align: justify">
+                                Your space will be really luxurious and modern if everything is arranged and arranged
+                                reasonable, just right with the work
+                                make the most of their functions, especially in apartments with a large area
+                                The space is not too big. The
+                                Decorative items should be placed at eye-level positions, in sufficient quantity and suitable for
+                                space. Like this
+                                The interior of the room will not cause a feeling of constriction, but will become airy and light.
                             </p>
                         </div>
                     </section>
@@ -183,16 +183,16 @@ include("../../layout/header.php");
                     <!-- BODY 5 -->
                     <section class="d-sm-flex mx-sm-2 mt-sm-5 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">Sử dụng đồ nội thất hiện đại sang trọng chất lượng cao</span>
-                            <p class="fs-3 my-md-4">
-                                Không gian nội thất hiện đại sang trọng luôn có sự song hành giữa chất lượng bên trong
-                                và diện mạo bên ngoài.
-                                Đẹp thôi chưa đủ, các món đồ trang trí nội thất còn cần phải thật bền chắc. Vì vậy, lựa
-                                chọn sản phẩm từ các nhà
-                                cung cấp nội thất uy tín và chất lượng sẽ giúp không gian sang trọng, đúng nghĩa “tốt cả
-                                gỗ lẫn nước sơn”. Các món
-                                đồ có thể sử dụng lâu dài sẽ giúp bạn tiết kiệm một khoản chi phí lớn, đây cũng là một
-                                sự đầu tư xứng đáng cho căn nhà.
+                            <span class="display-5 fw-bold">Using high quality luxury modern furniture</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The luxurious modern interior space always has a parallel between the quality inside
+                                and external appearance.
+                                Beautiful is not enough, interior decorations also need to be very durable. So choose
+                                Choose products from the house
+                                Providing prestigious and quality furniture will help the space to be luxurious, literally "good for all".
+                                wood and paint". Dishes
+                                Items that can be used for a long time will save you a great deal of money, this is also a
+                                Worthwhile investment for the home.
                             </p>
 
                         </div>

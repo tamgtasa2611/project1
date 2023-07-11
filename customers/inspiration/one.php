@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Cách tăng trải nghiệm thị giác cho căn hộ</title>
+    <title>How to increase the visual experience of the apartment?</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -32,17 +32,18 @@ include("../../layout/header.php");
                 <!-- HEADER -->
                 <div class="row mx-sm-4">
                     <div class="col-md-3 col-lg-3 col-xl-auto mx-auto mt-3">
-                        <span class="display-5 mx-sm-2">CÁCH TĂNG TRẢI NGHIỆM THỊ GIÁC CHO CĂN HỘ</span>
+                        <span class="display-5 mx-sm-2">How to increase the visual experience of the apartment?</span>
 
                     </div>
-                    <p class="my-sm-5 h2 mx-sm-2">Không gian sống trong căn hộ hoàn toàn có thể biến thành một tác phẩm
-                        nghệ thuật,
-                        để tổ ấm luôn là nơi khơi nguồn cảm hứng mới và đa dạng hóa cung bậc cảm xúc của mỗi
-                        thành viên. Chúng ta có thể bắt tay vào bài trí căn hộ để gia tăng trải nghiệm thị
-                        giác cũng như nâng cao chất lượng cuộc sống bằng việc tận dụng một số món <b class="fs-2">hàng
-                            trang trí</b>.
-                        Vậy có những phương thức nào để thực hiện? Hãy cùng theo dõi bài viết dưới đây của <b
-                                class="fs-2">Beautiful House</b> nhé.
+                    <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
+                        The living space in the apartment can completely turn into a work
+                        art,
+                        so that the home is always a place to inspire new inspiration and diversify each person's emotions
+                        member. We can begin to decorate the apartment to increase the market experience
+                        sense as well as improve the quality of life by taking advantage of some <b class="fs-2">goods
+                            decoration</b>.
+                        So what are the ways to do it? Please follow the article below of <b
+                                class="fs-2">Beautiful House</b> okay.
                     </p>
                     <a class="mx-sm-2"><img src="../../main/media/images/inspiration/one.jpg"
                                             width="1270px"
@@ -51,21 +52,25 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">1. Lắp đặt hệ thống đèn chiếu sáng cho từng không gian</span>
-                            <p class="fs-3 mt-md-4">Việc lắp đặt đèn trong mỗi không gian thường để <b class="fs-3">đáp
-                                    ứng nhiều mục đích khác nhau.</b>
-                                Đa số mục đích chính là tận dụng nguồn sáng để phục vụ cho các hoạt động trong gia đình,
-                                đó sẽ là loại ánh sáng chiếu đều, rõ nét.</p>
+                            <span class="display-5 fw-bold">1. Install lighting system for each space</span>
+                            <p class="fs-3 mt-md-4" style="text-align: justify">
+                                The installation of lights in each space is usually to <b class="fs-3">answer
+                                    serve many different purposes.</b>
+                                Most of the main purposes are to take advantage of the light source to serve family activities,
+                                That will be the kind of light that shines evenly and clearly.
+                            </p>
 
-                            <p class="fs-3">Để cải tiến không gian, bạn có thể sử dụng các loại đèn <b class="fs-3">chiếu
-                                    sáng tập trung khi
-                                    muốn ẩn dụ một cảm xúc khác vào không gian</b>. Ví dụ như bức tranh treo tường sẽ
-                                đẹp hơn khi kết
-                                hợp cùng nguồn sáng mờ ảo, không rõ ràng để làm nổi bật ẩn ý nghệ thuật của tác phẩm.
-                                Lúc này,
-                                bạn có thể bố trí ánh sáng theo góc từ trên xuống hoặc từ dưới lên. Đó sẽ là sự đan xen,
-                                pha
-                                trộn giữa ánh sáng và màu sắc.</p>
+                            <p class="fs-3" style="text-align: justify">
+                                To improve the space, you can use lamps <b class="fs-3">projection
+                                    morning focus when
+                                    want to metaphorize another emotion into space</b>. For example, the wall painting will
+                                more beautiful when finished
+                                combined with a dim, unclear light source to highlight the artistic meaning of the work.
+                                At this moment,
+                                You can arrange the light in an angle from the top down or from the bottom up. That would be the interweaving,
+                                phase
+                                Mixing light and color.
+                            </p>
                         </div>
                         <div>
                             <a><img src="../../main/media/images/inspiration/body-1-of-one.jpg"
@@ -83,14 +88,16 @@ include("../../layout/header.php");
                         </div>
                         <div>
                             <span class="display-5"></span>
-                            <p class="fs-3">Ánh sáng không đơn thuần chỉ phục vụ cho việc soi rõ các vật dụng trong nhà
-                                nữa,
-                                mà đó <b class="fs-3">là công cụ để tạo nên bản hòa điệu giữa màu sắc và ánh sáng</b>.
-                                Nếu biết kết hợp tài tình
-                                cùng cảm quan tinh tế, căn hộ của bạn sẽ tựa như một không gian triển lãm. Nơi đó bạn có
-                                thể
-                                <b class="fs-3">thỏa sức ngắm nhìn, chiêm ngưỡng và tận hưởng không gian sống động đầy
-                                    thi vị.</b></p>
+                            <p class="fs-3" style="text-align: justify">
+                                Light is not only for illuminating the objects in the house
+                                again,
+                                where <b class="fs-3">is a tool to create a harmony between color and light</b>.
+                                If you know how to combine skillfully
+                                With a sophisticated feel, your apartment will be like an exhibition space. Where you have
+                                can
+                                <b class="fs-3">Enjoy watching, admiring and enjoying the lively space full of
+                                    poetic.</b>
+                            </p>
                         </div>
 
                     </section>
@@ -98,20 +105,24 @@ include("../../layout/header.php");
                     <!-- BODY 3 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">2. Bài trí khung gương</span>
-                            <p class="fs-3 mt-sm-4">Những bức tường trống trong nhà là khu vực lý tưởng để cân nhắc việc
-                                bài trí
-                                khung gương. Ngoài công dụng giúp <b class="fs-3">nới rộng và tăng chiều sâu cho không
-                                    gian</b>, gương trang
-                                trí với các đường nét uyển chuyển cùng nhiều họa tiết khác nhau còn làm căn hộ thêm độc
-                                đáo. </p>
+                            <span class="display-5 fw-bold">2. Mirror frame decoration</span>
+                            <p class="fs-3 mt-sm-4" style="text-align: justify">
+                                Empty walls in the home are ideal areas to consider
+                                arrange
+                                mirror frame. In addition to the use of helping <b class="fs-3">expand and increase the depth for free
+                                    space</b>, mirror
+                                The decoration with flexible lines and many different textures also makes the apartment more unique
+                                unique.
+                            </p>
 
-                            <p class="fs-3">Thay vì nhìn ngắm một bức tường trơn tru, khi lắp đặt thêm các khung gương,
-                                bạn sẽ được <b class="fs-3">quan sát không gian dưới nhiều góc độ khác nhau</b>. Khung
-                                gương có thể phản
-                                chiếu lại bất kỳ nguồn sáng nào chiếu vào chúng, vì thế căn hộ sẽ thêm phần lung linh
-                                và đặc sắc. Có thể bài trí khung gương ở <b class="fs-3">phòng khách, phòng ăn, phòng
-                                    làm việc, phòng tắm</b>,…</p>
+                            <p class="fs-3" style="text-align: justify">
+                                Instead of looking at a smooth wall, when installing additional mirror frames,
+                                you will be <b class="fs-3">observe space under many different angles</b>. Frame
+                                mirror can reflect
+                                Reflect any light that falls on them, so the apartment will be more shimmering
+                                and special. Mirror frames can be arranged in <b class="fs-3">living room, dining room, room
+                                    work, bathroom</b>,…
+                            </p>
                         </div>
                         <div class="ms-sm-5">
                             <a><img src="../../main/media/images/inspiration/body-3-of-one.jpg"
@@ -122,32 +133,38 @@ include("../../layout/header.php");
 
                     <!-- BODY 4 -->
                     <div class="my-sm-4">
-                        <span class="display-5 fw-bold">3. Thêm tranh treo tường</span>
+                        <span class="display-5 fw-bold">3. More wall paintings</span>
                     </div>
                     <div class="mb-sm-5">
-                        <p class="fs-3">Cuối cùng, để không gian thêm đặc sắc, bạn có thể kết hợp các bức tranh để treo
-                            lên bức tường trống nào đó trong nhà. Tùy thuộc gu thẩm mỹ của mỗi gia chủ, có thể sáng tạo
-                            theo nhiều cách khác nhau. Điều này sẽ <b class="fs-3">giúp tổ ấm thú vị hơn, có thêm câu
-                                chuyện và có điểm
-                                nhấn độc đáo</b>.</p>
+                        <p class="fs-3" style="text-align: justify">
+                            Finally, to make the space more special, you can combine pictures to hang
+                            on some empty wall in the house. Depending on the aesthetic taste of each homeowner, you can be creative
+                            in many different ways. This will <b class="fs-3">make the home more interesting, with more sentences
+                                stories and points
+                                unique press</b>.
+                        </p>
                     </div>
                     <section class="d-sm-flex mx-sm-2">
                         <div>
-                            <p class="fs-3">Ví dụ <b class="fs-3">treo tranh theo trình tự để kể về câu chuyện nào
-                                    đó</b>, khi mọi người đi dạo
-                                trong nhà theo một tiến trình nhất định thì có thể xuôi theo một câu chuyện, <b
-                                        class="fs-3">tựa như tiến
-                                    trình tham quan triển lãm</b>, tất cả đều được xâu chuỗi với nhau để làm nổi bật lên
-                                thông điệp
-                                mà chủ nhân muốn truyền tải.</p>
+                            <p class="fs-3" style="text-align: justify">
+                                For example <b class="fs-3">hang pictures in order to tell what story
+                                    there</b>, when people go for a walk
+                                in the house according to a certain process can follow a story, <b
+                                        class="fs-3">same as progress
+                                    exhibition tour</b>, all strung together to make it stand out
+                                message
+                                that the owner wants to transmit.
+                            </p>
 
-                            <p class="fs-3">Hoặc bạn có thể <b class="fs-3">kết hợp bức tranh dựa vào kết cấu tường</b>,
-                                nếu bức tường được thiết
-                                kế sần sùi, lồi lõm với nhiều dụng ý nghệ thuật thì bạn sẽ kết hợp cùng bức tranh tối
-                                giản để
-                                làm nổi bật bức tường. Hoặc ngược lại, bạn kết hợp cùng tranh trừu tượng để bức tường
-                                làm nền
-                                nhằm thúc đẩy ý đồ nghệ thuật của bức tranh.</p>
+                            <p class="fs-3" style="text-align: justify">
+                                Or you can <b class="fs-3">combine the picture based on the wall texture</b>,
+                                if the wall is set
+                                rough, convex design with many artistic intentions, you will combine with the dark picture
+                                simple to
+                                highlight the wall. Or vice versa, you combine with abstract paintings to the wall
+                                background
+                                to promote the artistic intent of the painting.
+                            </p>
                         </div>
                         <div>
                             <a><img src="../../main/media/images/inspiration/body-4-of-one.jpg"
@@ -156,9 +173,11 @@ include("../../layout/header.php");
                         </div>
                     </section>
 
-                    <p class="fs-1 mt-sm-5">Hy vọng với những gợi ý của <b class="fs-1">Beautiful House</b>, bạn có thể
-                        bài trí căn hộ với các mặt <b class="fs-1">hàng trang trí</b> để mỗi không gian là một câu
-                        chuyện thú vị.</p>
+                    <p class="fs-1 mt-sm-5" style="text-align: justify">
+                        Hopefully with the suggestions of <b class="fs-1">Beautiful House</b>, you can
+                        Decorate the apartment with <b class="fs-1">decorative items</b> so that each space is a sentence
+                        interesting story.
+                    </p>
 
                 </div>
             </section>

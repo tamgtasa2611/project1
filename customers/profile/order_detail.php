@@ -1,7 +1,7 @@
 <?php
 //    chay session
 session_start();
-if (!isset($_SESSION['user-email'])) {
+if (!isset($_SESSION['user-id'])) {
     header("Location: ../login_logout/login.php");
 }
 ?>
@@ -17,26 +17,35 @@ if (!isset($_SESSION['user-email'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- bootstrap file link -->
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
+    <script src="../../main/js/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
     <!--  main css file link  -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
+    <!--    profile css file link   -->
+    <link rel="stylesheet" href="../../main/css/profile.css">
 
-    <title>Chi tiết đơn hàng</title>
+    <title>Order details - Beautiful House</title>
 </head>
 <body>
 <?php
 include_once("../../connect/open.php");
 $orderId = $_GET['id'];
-$sql = "SELECT * FROM order_details WHERE order_id = '$orderId'";
+$sql = "SELECT order_details.*, furnitures.name as furniture_name, furnitures.image as furniture_image  
+        FROM order_details 
+        INNER JOIN furnitures ON order_details.furniture_id = furnitures.id
+        WHERE order_id = '$orderId'";
 $orderDetails = mysqli_query($connect, $sql);
-include_once("../../connect/close.php");
-//format vnd
+
+//format usd
 if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ')
+    function currency_format($number, $suffix = '$')
     {
         if (!empty($number)) {
-            return number_format($number, 0, ',', '.') . "{$suffix}";
+            return "{$suffix}" . number_format($number, 2, ".");
         }
     }
 }
@@ -49,42 +58,172 @@ include("../../layout/header.php");
 ?>
 <!-- Padding from header -->
 <div id="about"></div>
+
 <!-- Content -->
-<table class="table">
-    <thead>
-    <tr>
-        <td>ID sp</td>
-        <td>So luong</td>
-        <td>Gia</td>
-        <td>Thanh tien</td>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    foreach ($orderDetails as $orderDetail) {
-        ?>
-        <tr>
-            <td><?= $orderDetail['furniture_id'] ?></td>
-            <td><?= $orderDetail['quantity'] ?></td>
-            <td><?= currency_format($orderDetail['price']) ?></td>
-            <td>
-                <?php
-                $sub_total = $orderDetail['quantity'] * $orderDetail['price'];
-                $total_money += $sub_total;
-                echo currency_format($sub_total);
-                ?></td>
-        </tr>
+
+<div id="main-container" class="mt-5">
+    <div id="left-container">
         <?php
-    }
-    ?>
-    <tr>
-        <td colspan="2"></td>
-        <td>Tổng cộng:</td>
-        <td><?= currency_format($total_money) ?></td>
-    </tr>
-    </tbody>
-</table>
+        include_once("../../layout/customer_profile.php");
+        ?>
 
+    </div>
 
+    <div id="right-container" class="position-relative">
+        <div style="height: auto; margin: 40px">
+            <div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h2>
+                            Order details
+                        </h2>
+                        <h4 style="color: slategray; margin-bottom: 30px">
+                            #<?= $orderId ?>
+                        </h4>
+                    </div>
+                    <div>
+                        <?php
+                        $orderStatusQuery = "SELECT status FROM orders WHERE id = '$orderId'";
+                        $statusOrders = mysqli_query($connect, $orderStatusQuery);
+                        foreach ($statusOrders as $statusOrder) {
+                            if ($statusOrder['status'] == 0) {
+                                ?>
+                                <a href="#"
+                                   class="btn btn-danger">
+                                    <span>Pending</span>
+                                </a>
+                                <?php
+                            } else if ($statusOrder['status'] == 1) {
+                                ?>
+                                <a href="#"
+                                   class="btn btn-success">
+                                    <span>Confirmed</span>
+                                </a>
+                                <?php
+                            } else if ($statusOrder['status'] == 2) {
+                                ?>
+                                <a href="#"
+                                   class="btn btn-primary">
+                                    <span>Delivering</span>
+                                </a>
+                                <?php
+                            } else if ($statusOrder['status'] == 3) {
+                                ?>
+                                <a href="#"
+                                   class="btn btn-success">
+                                    <span>Completed</span>
+                                </a>
+                                <?php
+                            } else if ($statusOrder['status'] == 4) {
+                                ?>
+                                <a href="#"
+                                   class="btn btn-danger">
+                                    <span>Cancelled</span>
+                                </a>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+                <hr>
+
+                <div style="margin-top: 28px; width: 100%; border: 1px solid lightgrey">
+                    <div class="d-flex justify-content-center text-center align-items-center"
+                         style="background-color: #303036; color: #fff; height: 60px">
+                        <div style="width: 500px">Product</div>
+                        <div style="width: 150px">Price</div>
+                        <div style="width: 100px">Quantity</div>
+                        <div style="width: 153px">Total cost</div>
+                    </div>
+
+                    <div style="height: 280px; display: block; overflow-y: scroll;">
+                        <?php
+                        foreach ($orderDetails as $orderDetail) {
+                            ?>
+                            <div class="d-flex justify-content-center text-center align-items-center"
+                                 style="padding: 20px 0px;">
+                                <div style="width: 500px" class="d-flex  align-items-center">
+                                    <div class="w-50"><?= $orderDetail['furniture_name'] ?></div>
+                                    <div class="w-50">
+                                        <img
+                                                src="../../admins/images/<?= $orderDetail['furniture_image'] ?>" alt=""
+                                                height="100px">
+                                    </div>
+                                </div>
+                                <div style="width: 150px">
+                                    <?= currency_format($orderDetail['price']) ?>
+                                </div>
+                                <div style="width: 100px">
+                                    <?= $orderDetail['quantity'] ?>
+                                </div>
+                                <div style="width: 136px">
+                                    <?php
+                                    $sub_total = $orderDetail['quantity'] * $orderDetail['price'];
+                                    $total_money += $sub_total;
+                                    echo currency_format($sub_total);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        ?>
+
+                    </div>
+
+                </div>
+
+                <?php
+                include_once("../../connect/close.php");
+                ?>
+
+                <div class="d-flex justify-content-between" style="margin-top: 28px;">
+                    <a href="order_history.php" class="btn btn-primary"
+                       style="font-size: 16px; padding-left :24px; padding-right: 24px">
+                        Back
+                    </a>
+                    <?php
+                    foreach ($statusOrders as $statusOrder) {
+                        if ($statusOrder['status'] == 0) {
+                            ?>
+                            <a href="#demo-modal" class="btn btn-danger"
+                               style="font-size: 16px; padding-left :24px; padding-right: 24px">
+                                Cancel order
+                            </a>
+                            <?php
+                        }
+                    }
+                    ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+include_once("../../layout/footer.php");
+?>
+<!--          modal          -->
+<div id="demo-modal" class="my-modal">
+    <div class="modal__content">
+        <h2>Confirm cancellation</h2>
+
+        <p>
+            Do you really want to cancel this order?
+        </p>
+
+        <div class="modal__footer">
+            <div>
+                <a href="cancel_order.php?id=<?= $orderId ?>" class="btn btn-danger" style="font-size: 16px;">
+                    Cancel order</a>
+            </div>
+        </div>
+
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+<!--          end modal          -->
 </body>
 </html>

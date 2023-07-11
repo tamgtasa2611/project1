@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập IKEA - Nội thất Beautiful House</title>
+    <title>Collection IKEA - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -38,11 +38,11 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div align="justify">
-                            <span class="display-5 fw-bold">IKEA – Nghệ thuật trong phong cách thiết kế</span>
-                            <p class="fs-3 my-md-4">
-                                Làm mới căn nhà của bạn bằng việc pha trộn một chút trữ tình cùng bộ sưu tập IKEA, tô
-                                điểm nét hiện đại và thơ
-                                mộng của Nhật Bản, tạo nên một không gian sống độc đáo đầy sang trọng.
+                            <span class="display-5 fw-bold">IKEA – Art in design style</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Refresh your home by mixing a bit of lyricism with the IKEA collection
+                                Modern and poetic features
+                                dream of Japan, creating a unique and luxurious living space.
                             </p>
 
                         </div>
@@ -70,15 +70,15 @@ include("../../layout/header.php");
                                     height="556.45px"></a>
                         </div>
                         <div class="ms-md-5" align="justify">
-                            <span class="display-5 fw-bold">Tràn đầy sức sống với những tinh hoa nghệ thuật</span>
-                            <p class="fs-3 my-md-4">
-                                Gỗ sồi được sử dụng làm thành phần chính của bộ sưu tập. Mang lại một gam màu trầm ấm và
-                                thanh lịch, loại gỗ này góp
-                                phần làm cho không gian sinh hoạt thêm ấm cúng, gần gũi và sống động hơn, tạo sự gắn kết
-                                cho các thành viên trong gia
-                                đình. Những đường vân gỗ hoa mỹ giúp tổng thể chung của thiết kế thêm đặc sắc, tạo điểm
-                                nhấn giúp bố cục thêm đẹp mắt
-                                và hài hòa.
+                            <span class="display-5 fw-bold">Full of life with artistic quintessence</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Oak is used as the main component of the collection. Brings a warm color and
+                                elegant, this wood contributes
+                                The part makes the living space more cozy, closer and more lively, creating cohesion
+                                for family members
+                                family. Ornate wood grain lines make the overall design more unique, creating points
+                                Click to make the layout more beautiful
+                                and harmony.
                             </p>
                         </div>
                     </section>
@@ -86,13 +86,13 @@ include("../../layout/header.php");
                     <!-- BODY 4 -->
                     <section class="mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="pb-sm-5" align="justify">
-                            <p class="fs-3 my-sm-4">
-                                Những phần viền cạnh và tay nắm của bộ sưu tập được các nghệ nhân khoác lên một màu ánh
-                                kim nổi bật. Chính chi tiết
-                                này đã đem lại vẻ sang trọng và trang nhã cho mọi sản phẩm cùng chủ đề, tạo nên một bộ
-                                sưu tập Osaka vừa mạnh mẽ và
-                                vững chắc, vừa mang tính thẩm mỹ cao và đem lại cho bạn một không gian sống mà bạn hằng
-                                mong muốn.
+                            <p class="fs-3 my-sm-4" style="text-align: justify">
+                                The edges and handles of the collection are painted in a sheen by the artisans
+                                prominent needle. Main details
+                                This product has brought a luxurious and elegant look to all products with the same theme, creating a set
+                                Osaka collection is both strong and
+                                sturdy, both aesthetically pleasing and gives you a living space that you always
+                                desire.
                             </p>
 
                         </div>
@@ -112,12 +112,12 @@ include("../../layout/header.php");
                     <section class="d-sm-flex mx-sm-2 pt-sm-5">
                         <div align="justify">
                             <span class="display-5 fw-bold"></span>
-                            <p class="fs-3 my-md-4">
-                                Điểm đặc biệt của bộ sưu tập này đến từ mẫu thiết kế đặc biệt của phần tay nắm cửa và
-                                ngăn tủ. Với thiết kế này,
-                                phần tay nắm sẽ trở thành một điểm nhấn đẹp mắt cho sản phẩm, giúp sản phẩm trở nên độc
-                                đáo và lạ mắt, tạo nên
-                                sự xen kẽ nghệ thuật giữa phần gỗ cổ điển với kim loại ánh kim.
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The special feature of this collection comes from the special design of the door handles and
+                                drawer. With this design,
+                                The handle will become a beautiful highlight for the product, making the product
+                                unique and fancy, creating
+                                artistic interlacing between classic wood and metallic metal.
                             </p>
 
                         </div>
@@ -131,18 +131,18 @@ include("../../layout/header.php");
                     <!-- BODY 6 -->
                     <section class=" mx-sm-2 mt-sm-5 pt-sm-5">
                         <div align="justify">
-                            <div class="text-center"><span class="display-5 fw-bold text-center">Sáng tạo và phá cách trong từng đường nét</span>
+                            <div class="text-center"><span class="display-5 fw-bold text-center">Creative and innovative in every line</span>
                             </div>
-                            <p class="fs-3 my-md-4">
-                                Những hình khối đều đặn là những thiết kế cơ bản và khá đơn giản mà ít thiết kế nào có
-                                thể khai thác được nó.
-                                Tuy nhiên, qua bộ sưu tập IKEA, chúng ta hoàn toàn có thể thấy một cái nhìn khác đầy
-                                thẩm mỹ từ chính những nét
-                                cơ bản này. Cách tạo hình đầy sáng tạo, những góc vuông toát lên vẻ hiện đại và thời
-                                thượng, sự kết hợp hài hòa
-                                giữa hình dáng và màu sắc,… Tất cả đã tạo nên một IKEA đầy tinh tế và trang nhã, thổi
-                                bừng sức sống và làm nổi
-                                bật cá tính cũng như phong cách của chính người sở hữu.
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Regular shapes are basic and fairly simple designs that few designs have
+                                can exploit it.
+                                However, through the IKEA collection, we can see a completely different look
+                                Aesthetics from the strokes
+                                this basic. Creative way of shaping, square corners exude a modern and trendy look
+                                superior, harmonious combination
+                                between shape and color… All have created a delicate and elegant IKEA, blowing
+                                energize and make up
+                                Turn on the personality and style of the owner himself.
                             </p>
                         </div>
 

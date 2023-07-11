@@ -12,19 +12,16 @@
                     />
                 </a>
 
-                <hr class="w-100 clearfix d-md-none">
                 <!--MENU-->
-                <nav class="navbar col-6 m-auto">
+                <nav class="navbar col-5">
                     <a href="../category/index.php">Categories</a>
                     <a href="../furniture/index.php">Products</a>
                     <a href="../producer/index.php">Collection</a>
                     <a href="../inspiration/index.php">Inspiration</a>
-                    <a href="../start/about.php">About us</a>
                 </nav>
 
-                <hr class="w-100 clearfix d-md-none">
                 <!--CART & ACCOUNT-->
-                <div class="icons col-2 m-auto">
+                <div class="icons col-1 m-auto d-flex justify-content-between">
                     <a href="../carts/index.php">
                         <div class="fas fa-shopping-cart" id="cart-btn"></div>
                     </a>
@@ -52,7 +49,25 @@
                     ?>
 
                 </div>
-
+                <!--  SEARCH BAR -->
+                <?php
+                //search form
+                $search = "";
+                if (isset($_GET['search'])) {
+                    $search = $_GET['search'];
+                }
+                ?>
+                <div class="col-2 m-auto wrap">
+                    <form action="../furniture/search.php" method="get">
+                        <div class="search">
+                            <input type="text" class="searchTerm" name="search" placeholder="Search here..."
+                                   value="<?= $search ?>">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </div>

@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Những lợi ích khi dùng bàn ăn thông minh</title>
+    <title>The benefits of using a smart dining table</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -32,17 +32,17 @@ include("../../layout/header.php");
                 <!-- HEADER -->
                 <div class="row mx-sm-4">
                     <div class="col-md-3 col-lg-3 col-xl-auto mx-auto mt-3">
-                        <span class="display-5 mx-sm-2">NHỮNG LỢI ÍCH KHI DÙNG BÀN ĂN THÔNG MINH</span>
+                        <span class="display-5 mx-sm-2 text-uppercase">The benefits of using a smart dining table</span>
 
                     </div>
-                    <p class="my-sm-5 h2 mx-sm-2">
-                        <b class="fs-2">Phòng ăn</b> là nơi tạo cảm giác ấm cúng cho căn hộ, vì thế, sự tiện nghi ở khu
-                        vực này luôn được ưu tiên
-                        hàng đầu. Những mẫu <b class="fs-2">bàn ăn</b> thông minh được tích hợp nhiều tính năng và sử
-                        dụng trong đa dạng không gian
-                        đang là lựa chọn được chú ý hiện nay. Vậy mẫu bàn ăn thông minh có ưu điểm gì so với bàn ăn
-                        truyền thống? Hãy cùng theo dõi
-                        bài viết dưới đây của <b class="fs-2">Beautiful House</b> nhé.
+                    <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
+                        <b class="fs-2">Dining room</b> is the place to create a cozy feeling for the apartment, so the comfort in the area
+                        This area is always a priority
+                        Top. Smart <b class="fs-2">dining table</b> models are packed with features and use
+                        Used in a variety of spaces
+                        is a popular choice right now. So what are the advantages of a smart dining table compared to a dining table?
+                        traditional? Let's follow
+                        Below is the article of <b class="fs-2">Beautiful House</b>.
                     </p>
                     <a class="mx-sm-2 mb-sm-5 pt-sm-5"><img src="../../main/media/images/inspiration/six.jpg"
                                                             width="1245px"
@@ -51,16 +51,16 @@ include("../../layout/header.php");
                     <!-- BODY 1.1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">1. Chất liệu và kiểu dáng đa dạng</span>
-                            <p class="fs-3 my-md-4">
-                                Hiện nay có rất nhiều mẫu bàn ăn thông minh được ra mắt nhằm đáp ứng nhu cầu khách hàng.
-                                Với
-                                <b class="fs-3">nhiều chất liệu, màu sắc và kiểu dáng, </b> gia chủ hoàn toàn dễ dàng
-                                chọn được sản phẩm phù
-                                hợp với không gian căn hộ. Có rất nhiều kiểu dáng bàn ăn thông minh như <b class="fs-3">bàn
-                                    mở rộng hình bầu dục, hình chữ nhật, hình tròn,… </b>
-                                Gia chủ có thể lựa chọn các chất liệu khác nhau như bàn mở rộng <b class="fs-3"> mặt đá,
-                                    ceramic, gỗ,... </b>
+                            <span class="display-5 fw-bold">1. Various materials and designs</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Currently, there are many smart dining table models launched to meet the needs of customers.
+                                With
+                                <b class="fs-3">many materials, colors and designs, </b> completely easy for homeowners
+                                choose the right product
+                                suitable for apartment space. There are many smart dining table designs like <b class="fs-3">table
+                                    expand ovals, rectangles, circles,… </b>
+                                Homeowners can choose from different materials such as extended tables <b class="fs-3"> stone top,
+                                    ceramic, wood,... </b>
                             </p>
 
                         </div>
@@ -78,15 +78,15 @@ include("../../layout/header.php");
                                     height="372.02px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <p class="fs-3 my-md-4">
-                                Hình dạng sau khi mở rộng của mỗi kiểu dáng cũng khác nhau. Thông thường, các mẫu bàn ăn
-                                hiện nay có hai hình thức mở rộng. Một là,
-                                <b class="fs-3">mở rộng ngay bên trong khu vực trung tâm,</b>tức là sau khi thao tác,
-                                diện tích mặt bàn cố định sẽ tỏa đều ra để
-                                nhường chỗ cho phần mở rộng ở chính giữa. Hai là, <b class="fs-3">mở rộng ở khu vực xung
-                                    quanh,</b> diện tích bàn ăn được nới rộng nhờ vào sự dịch chuyển
-                                bề mặt tại khu vực mép bàn. Vì thế, <b class="fs-3">mỗi hình dáng sẽ có kết cấu hoạt
-                                    động khác nhau.</b>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                The expanded shape of each style is also different. Usually, the dining table models
+                                Currently there are two forms of extension. One is,
+                                <b class="fs-3">expands just inside the center area,</b>ie after manipulation,
+                                The fixed tabletop area will spread evenly to
+                                make room for an extension in the middle. Second, <b class="fs-3">extends in the surrounding area
+                                    around,</b> the dining area is enlarged thanks to the displacement
+                                surface at the edge of the table. So <b class="fs-3">each shape will have an animated texture
+                                    different movements.</b>
                             </p>
                         </div>
 
@@ -100,15 +100,15 @@ include("../../layout/header.php");
                                     height="372.02px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">2. Tiết kiệm không gian</span>
-                            <p class="fs-3 my-md-4">
-                                Đối với những hộ gia đình có không gian nhà bếp khiêm tốn thì bàn ăn thông minh là lựa
-                                chọn tối ưu nhất. Bàn ăn thông minh có thể
-                                <b class="fs-3">linh hoạt điều chỉnh kích thước tùy thuộc vào nhu cầu sử dụng</b>
-                                của gia chủ, ví dụ mặt bàn có thể mở rộng diện tích từ 4 – 6 người lên đến 8 – 10 người.
-                                Bởi vậy, khu vực
-                                <b class="fs-3"> phòng ăn sẽ luôn gọn gàng và việc đi lại trong gian bếp sẽ thoải mái
-                                    hơn. </b>
+                            <span class="display-5 fw-bold">2. Space saving</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                For households with modest kitchen space, a smart dining table is the choice
+                                choose the most optimal. Smart dining table can
+                                <b class="fs-3">flexibly adjust the size depending on the needs of use</b>
+                                of the homeowner, for example, the table top can expand from 4-6 people up to 8-10 people.
+                                Therefore, the area
+                                <b class="fs-3"> the dining room will always be tidy and walking in the kitchen will be comfortable
+                                    than. </b>
                             </p>
 
                         </div>
@@ -118,25 +118,25 @@ include("../../layout/header.php");
                     <!-- BODY 3 -->
                     <section class="mx-sm-2 my-sm-5 pt-sm-5">
                         <div class="pb-sm-5">
-                            <span class="display-5 fw-bold">3. Thao tác đơn giản</span>
-                            <p class="fs-3 my-sm-4">
-                                Thao tác sử dụng rất đơn giản, sau khi mở các mối khóa bên dưới mặt bàn, chúng ta chỉ
-                                cần
-                                <b class="fs-3"> xoay nhẹ các khớp nối </b>thì các đường rãnh bên dưới sẽ
-                                <b class="fs-3"> dịch chuyển và liên kết </b> các mối nối lại với nhau,
-                                <b class="fs-3"> tạo thành một mặt phẳng rộng rãi và chắc chắn. </b>Ví dụ như bàn ăn
-                                hình tròn, sau khi di chuyển
-                                các mối nối, những đường cắt trên mặt bàn tự động liên kết với nhau thành một mặt phẳng
-                                đồng nhất mà không có sự
-                                khác biệt về màu sắc và kết cấu bề mặt.
+                            <span class="display-5 fw-bold">3. Simple operation</span>
+                            <p class="fs-3 my-sm-4" style="text-align: justify">
+                                The operation is very simple, after opening the locks under the table, we just
+                                need
+                                <b class="fs-3"> rotate the joints slightly </b>then the grooves below will
+                                <b class="fs-3"> move and link </b> joints together,
+                                <b class="fs-3"> forms a broad and solid plane. </b>For example, the dining table
+                                circle, after moving
+                                the joints, the cuts on the tabletop are automatically linked together into a plane
+                                uniform without the
+                                differences in color and surface texture.
                             </p>
 
-                            <p class="fs-3 ">
-                                Bàn ăn thông minh với <b class="fs-3"> những mắt xích liền kề được thiết kế đơn
-                                    giản, </b> gọn gàng,
-                                <b class="fs-3"> chỉ cần một chuyển động nhẹ nhàng, </b> bạn đã có thể gia tăng diện
-                                tích sử dụng từ chiếc bàn ăn nhỏ gọn
-                                thành khu vực bàn ăn rộng rãi.
+                            <p class="fs-3 " style="text-align: justify">
+                                Smart dining table with <b class="fs-3"> single designed adjacent links
+                                    simple, </b> neat,
+                                <b class="fs-3"> just a gentle movement, </b> you can increase the area
+                                usable from a compact dining table
+                                into a spacious dining area.
                             </p>
                         </div>
                         <div class="mt-sm-5 ">
@@ -149,17 +149,17 @@ include("../../layout/header.php");
                     <!-- BODY 4 -->
                     <section class="d-sm-flex mx-sm-2 pt-sm-5">
                         <div>
-                            <span class="display-5 fw-bold">4. Giảm thiểu chi phí</span>
-                            <p class="fs-3 my-md-4">
-                                Các loại bàn ăn thông minh hiện nay đều được <b class="fs-3"> tích hợp rất nhiều tiện
-                                    ích. </b>
-                                Gia chủ có thể giảm chi phí mua kệ chén bát vì một số <b> bàn ăn đã được kết hợp cùng vị
-                                    trí để chén. </b>
-                                Ngoài ra, còn có các mẫu bàn ăn được thiết kế sao cho <b> khi gấp gọn có thể sử dụng như
-                                    một giá sách hoặc kệ trang trí. </b>
-                                Trong trường hợp gia đình không còn nhu cầu dùng loại bàn ăn này, hoặc muốn nâng cấp lên
-                                một dòng sản phẩm tốt hơn thì có thể
-                                <b> tận dụng chiếc bàn cũ </b> làm kệ sách, giúp tiết kiệm chi phí.
+                            <span class="display-5 fw-bold">4. Cost reduction</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                All kinds of smart dining tables are now integrated with many conveniences by <b class="fs-3">
+                                    useful. </b>
+                                Homeowners can reduce the cost of buying shelves because some dining tables have been combined with the same taste
+                                cup holder. </b>
+                                In addition, there are models of dining tables designed so that <b> when folded can be used as
+                                    a bookshelf or decorative shelf. </b>
+                                In case the family no longer needs this type of dining table, or wants to upgrade it
+                                a better product line is possible
+                                <b>use the old table</b> as a bookshelf, saving costs.
                             </p>
 
                         </div>
@@ -178,33 +178,33 @@ include("../../layout/header.php");
                                     height="390.58px"></a>
                         </div>
                         <div class="ms-md-5">
-                            <span class="display-5 fw-bold">5. Công năng tiện lợi</span>
-                            <p class="fs-3 my-md-4">
-                                Với nhiều kiểu bàn ăn được thiết kế liền mạch với tủ bếp, tủ rượu, kệ trang trí hoặc bàn
-                                ăn gắn tường. Không gian bếp sẽ được
-                                quy hoạch có tổ chức với cách sắp xếp khoa học, <b class="fs-3"> đảm bảo tiện ích, tối
-                                    ưu công năng. </b>
+                            <span class="display-5 fw-bold">5. Convenient function</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                With a variety of dining tables designed seamlessly with kitchen cabinets, wine cabinets, decorative shelves or tables
+                                wall eat. The kitchen space will be
+                                Organized planning with scientific arrangement, <b class="fs-3"> ensures convenience, maximum
+                                    function advantage. </b>
                             </p>
 
-                            <p class="fs-3 ">
-                                Một số loại bàn ăn mở rộng khi thu gọn có thể làm bàn trà để tiếp khách. Vì thế,
-                                <b class="fs-3">một số nhà sản xuất sẽ ưu tiên chú ý đến trọng lượng</b> sản phẩm để
-                                khách hàng
-                                <b class="fs-3"> thuận tiện hơn trong việc di chuyển </b> bàn ăn đến những khu vực khác
-                                nhau,
-                                <b class="fs-3"> nhằm phục vụ nhiều mục đích sử dụng. </b>
+                            <p class="fs-3 " style="text-align: justify">
+                                Some types of extended dining tables when collapsible can be used as tea tables to receive guests. Therefore,
+                                <b class="fs-3">some manufacturers will give priority to weight</b> products to
+                                client
+                                <b class="fs-3"> more convenient in moving </b> dining table to other areas
+                                together,
+                                <b class="fs-3"> is intended for multiple uses. </b>
                             </p>
                         </div>
                     </section>
 
-                    <p class="fs-1 mt-sm-5 pt-sm-5">
-                        <b class="fs-1"> Bàn ăn </b> thông minh sẽ là một lựa chọn tuyệt vời cho không gian <b
-                                class="fs-1"> phòng ăn </b>
-                        hiện đại. Với thiết kế sang trọng và đa ứng dụng, bàn ăn mở rộng sẽ đáp ứng đầy đủ các nhu cầu
-                        của hầu hết gia đình.
-                        Hy vọng với những lợi ích mà
-                        <b class="fs-1"> Beautiful House </b> cung cấp, bạn đã có những thông tin cần thiết về chiếc bàn
-                        ăn thông minh này.
+                    <p class="fs-1 mt-sm-5 pt-sm-5" style="text-align: justify">
+                        <b class="fs-1"> Smart dining table </b> will be a great choice for <b
+                            class="fs-1"> space dining room </b>
+                        modern. With a luxurious design and multi-application, the extended dining table will fully meet the needs
+                        of most families.
+                        Hope with the benefits that
+                        <b class="fs-1"> Beautiful House </b> provides, you already have the necessary information about the table
+                        eat this smart.
                     </p>
 
                 </div>

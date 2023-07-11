@@ -53,29 +53,29 @@ include("../../layout/header.php");
                             <!-- BODY 1 -->
                             <div class="ms-md-5 d-sm-flex mt-md-5">
                                 <!-- ONE -->
-                                <div class="me-md-5 section-default-2 w-50">
+                                <div class="me-md-5  w-50">
                                     <a href="one.php " style="color: #2c3034">
                                         <img src="../../main/media/images/producers/one.jpg" class="bd-rd"
                                              width="420px"
-                                             height="240px">
-                                        <p class="fw-bold text-center mt-md-4">Bộ sưu tập IKEA</p>
+                                             height="270px">
+                                        <p class="fw-bold text-center mt-md-4">Collection IKEA</p>
                                         <div class="is-diviver"></div>
-                                        <p>Với nguồn cảm hứng từ những đường khối vuông vức, BST IKEA mang đến vẻ đẹp
-                                            vững chắc và mạnh [...]</p>
+                                        <p>With its inspiration from square lines, the IKEA collection brings beauty
+                                            firm and strong [...]</p>
                                     </a>
 
                                 </div>
 
                                 <!-- TWO -->
-                                <div class="section-default-2 w-50">
+                                <div class=" w-50">
                                     <a href="two.php " style="color: #2c3034">
                                         <img src="../../main/media/images/producers/two.jpg" class="bd-rd"
                                              width="420px"
-                                             height="240px">
-                                        <p class="fw-bold text-center mt-md-4">Bộ sưu tập Herman Miller</p>
+                                             height="270px">
+                                        <p class="fw-bold text-center mt-md-4">Collection Herman Miller</p>
                                         <div class="is-diviver"></div>
-                                        <p>Lấy cảm hứng từ nội thất tinh xảo, nhẹ nhàng, nền nã nhưng đơn giản Herman
-                                            Miller là sự kết hợp [...]</p>
+                                        <p>Inspired by sophisticated, light, simple yet elegant interiors Herman
+                                            Miller is a combination [...]</p>
                                     </a>
                                 </div>
                             </div>
@@ -83,28 +83,28 @@ include("../../layout/header.php");
                             <!-- BODY 2 -->
                             <div class="ms-md-5 d-sm-flex mt-md-5">
                                 <!-- THREE -->
-                                <div class="me-md-5 section-default-2 w-50">
+                                <div class="me-md-5  w-50">
                                     <a href="three.php " style="color: #2c3034">
                                         <img src="../../main/media/images/producers/three.jpg" class="bd-rd"
                                              width="420px"
-                                             height="240px">
-                                        <p class="fw-bold text-center mt-md-4">Bộ sưu tập Crate & Barrel</p>
+                                             height="270px">
+                                        <p class="fw-bold text-center mt-md-4">Collection Crate & Barrel</p>
                                         <div class="is-diviver"></div>
-                                        <p>Nhà thiết kế Huy Lân bắt nguồn cho những cảm hứng của mình từ nét đẹp tinh
-                                            xảo của những [...]</p>
+                                        <p>Designer Huy Lan derives her inspirations from pure beauty
+                                            the trick of the [...]</p>
                                     </a>
                                 </div>
 
                                 <!-- FOUR -->
-                                <div class="section-default-2 w-50">
+                                <div class=" w-50">
                                     <a href="four.php " style="color: #2c3034">
                                         <img src="../../main/media/images/producers/four.jpg" class="bd-rd"
                                              width="420px"
-                                             height="240px">
-                                        <p class="fw-bold text-center mt-md-4">Bộ sưu tập Steelcase</p>
+                                             height="270px">
+                                        <p class="fw-bold text-center mt-md-4">Collection Steelcase</p>
                                         <div class="is-diviver"></div>
-                                        <p>Bộ sưu tập Steelcase nhỏ gọn nhưng hiện đại và thanh lịch giúp không gian
-                                            năng động và xinh xắn [...]</p>
+                                        <p>Compact yet modern and elegant Steelcase collection helps space
+                                            Active and pretty [...]</p>
                                     </a>
                                 </div>
                             </div>
@@ -112,27 +112,27 @@ include("../../layout/header.php");
                             <!-- BODY 3 -->
                             <div class="ms-md-5 d-sm-flex mt-md-5">
                                 <!-- FIVE -->
-                                <div class="me-md-5 section-default-2 w-50">
+                                <div class="me-md-5  w-50">
                                     <a href="five.php " style="color: #2c3034">
                                         <img src="../../main/media/images/producers/six.jpg" class="bd-rd"
                                              width="420px"
-                                             height="240px">
-                                        <p class="fw-bold text-center mt-md-4">Bộ sưu tập Restoration Hardware</p>
+                                             height="270px">
+                                        <p class="fw-bold text-center mt-md-4">Collection Restoration Hardware</p>
                                         <div class="is-diviver"></div>
-                                        <p>Với chất riêng trẻ trung và phá cách, BST Restoration Hardware mang đến không
-                                            gian những sản phẩm nhỏ gọn, hiện [...]</p>
+                                        <p>With its own youthful and innovative quality, the Restoration Hardware collection brings to
+                                            The products are compact, modern [...]</p>
                                     </a>
                                 </div>
 
-                                <div class="me-md-5 section-default-2 w-50">
+                                <div class="me-md-5 w-50">
                                     <a href="six.php " style="color: #2c3034">
                                         <img src="../../main/media/images/producers/five.jpg" class="bd-rd"
                                              width="420px"
-                                             height="240px">
-                                        <p class="fw-bold text-center mt-md-4">Bộ sưu tập Okamura</p>
+                                             height="270px">
+                                        <p class="fw-bold text-center mt-md-4">Collection Okamura</p>
                                         <div class="is-diviver"></div>
-                                        <p>Sự kết hợp độc đáo giữa gỗ Sồi nâu Hi Tech Veneer và chân kim loại cooper
-                                            giúp bộ sưu [...]</p>
+                                        <p>Unique combination of Hi Tech Veneer Brown Oak and cooper metal legs
+                                            help collection [...]</p>
                                     </a>
                                 </div>
                             </div>

@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập Crate & Barrel - Nội thất Beautiful House</title>
+    <title>Collection Crate & Barrel - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -38,17 +38,17 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div align="justify">
-                            <span class="display-5 fw-bold">Crate & Barrel – Sự lôi cuốn kỳ diệu</span>
-                            <p class="fs-3 my-md-4">
-                                Ngay chính từ tên gọi, bộ sưu tập Crate & Barrel của nhà thiết kế Nguyễn Huy Lân đang
-                                được trưng bày ở các showroom
-                                Beautiful House đã gợi mở cho tôi biết bao điều thú vị. Nói đến phong cách Crate &
-                                Barrel là nói đến sự hòa trộn phong cách giữa
-                                thẩm mỹ của Anh và Pháp, phong cách Crate & Barrel thể hiện nét tinh tế, lộng lẫy và cực
-                                kì sang trọng. Xuất hiện khá
-                                nhiều ở các nước phương Tây, phong cách này là tượng trưng cho thời đại Crate & Barrel,
-                                giàu có, đa dạng về văn hóa và
-                                chiều sâu lịch sử.
+                            <span class="display-5 fw-bold">Crate & Barrel – Magical charm</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Right from the name, the Crate & Barrel collection of designer Nguyen Huy Lan is
+                                displayed in showrooms
+                                Beautiful House has revealed many interesting things to me. Speaking of Crate style &
+                                Barrel refers to a stylish blend of
+                                Aesthetically British and French, the Crate & Barrel style embodies sophistication, splendor and extreme
+                                luxury period. Pretty good appearance
+                                many in western countries, this style is symbolic of the Crate & Barrel era,
+                                rich, culturally diverse and
+                                historical depth.
                             </p>
 
                         </div>
@@ -67,21 +67,21 @@ include("../../layout/header.php");
                                     height="1065px"></a>
                         </div>
                         <div class="ms-md-5 mt-sm-5" align="justify">
-                            <span class="display-5 fw-bold">Nét thanh lịch sang trọng</span>
-                            <p class="fs-3 my-md-4">
-                                Nhà thiết kế Huy Lân bắt nguồn cho những cảm hứng của mình từ nét đẹp tinh xảo của những
-                                hoa văn chạm khắc mang
-                                phong cách cổ điển phương Tây để tạo ra một bộ sưu tập Crate & Barrel – một không gian
-                                nội thất trang nhã và tinh tế
-                                trong gam màu trắng nhẹ nhàng. Kiểu mẫu sang trọng, dáng vẻ quý phái, sản phẩm thuộc bộ
-                                sưu tập Crate & Barrel mang đậm
-                                phong cách cổ điển với những nét chạm trổ cầu kì, tỉ mỉ và đặc sắc vô cùng. Sự thanh
-                                lịch, vẻ đẹp thiết thực, tiện
-                                nghi, thoải mái là nét nổi bật trong bộ sưu tập này. Anh đã từng chia sẻ với chúng tôi
-                                rằng với sự ảnh hưởng của
-                                kiến trúc hiện đại, để giữ nguyên nét đặc sắc của sự phong phú, giàu có về chi tiết, đa
-                                dạng về màu sắc thì cái khó
-                                nhất là phải làm cho phong cách Crate & Barrel “hiện hình” dưới muôn hình, vạn trạng.
+                            <span class="display-5 fw-bold">Elegant elegance</span>
+                            <p class="fs-3 my-md-4" style="text-align: justify">
+                                Designer Huy Lan derives his inspiration from the sophisticated beauty of the
+                                bear carving pattern
+                                Classic Western style to create a Crate & Barrel collection – one space
+                                elegant and sophisticated interior
+                                in soft white color. Luxurious model, noble appearance, products of the series
+                                bold Crate & Barrel collection
+                                Classic style with elaborate carvings, meticulous and extremely unique. serenity
+                                calendar, practical beauty, convenience
+                                Comfort and comfort are the hallmarks of this collection. You used to share with us
+                                that with the influence of
+                                modern architecture, in order to keep the characteristics of richness, rich in details,
+                                The form of color is difficult
+                                especially to make the Crate & Barrel style "appear" in all shapes and sizes.
                             </p>
                         </div>
                     </section>

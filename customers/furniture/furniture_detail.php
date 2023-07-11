@@ -23,6 +23,18 @@
 <?php
 include("../../layout/header.php");
 ?>
+<?php
+//format usd
+if (!function_exists('currency_format')) {
+    function currency_format($number, $suffix = '$')
+    {
+        if (!empty($number)) {
+            return "{$suffix}" . number_format($number, 2, ".");
+        }
+    }
+}
+?>
+
 <!-- Padding from header -->
 <div id="about"></div>
 
@@ -64,7 +76,7 @@ foreach ($furnitures as $furniture) {
             </div>
 
             <div class="">
-                <span class=""><?= $furniture['price'] ?>đ</span>
+                <span class=""><?= currency_format($furniture['price']) ?></span>
             </div>
 
             <div class="">

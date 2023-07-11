@@ -78,13 +78,13 @@ include_once("../../connect/close.php");
                     <tr>
                         <td>
                             <div class="form-outline mb-2">
-                                <label class="form-label align-left">Dài</label>
+                                <label class="form-label align-left">Dài (cm)</label>
                                 <input name="length" type="text" class="form-control-sm"/>
                             </div>
                         </td>
                         <td>
                             <div class="form-outline mb-2">
-                                <label class="form-label align-left">Rộng</label>
+                                <label class="form-label align-left">Rộng (cm)</label>
                                 <input name="width" type="text" class="form-control-sm"/>
                             </div>
                         </td>
@@ -92,7 +92,7 @@ include_once("../../connect/close.php");
                     <tr>
                         <td>
                             <div class="form-outline mb-2">
-                                <label class="form-label align-left">Cao</label>
+                                <label class="form-label align-left">Cao (cm)</label>
                                 <input name="height" type="text" class="form-control-sm"/>
                             </div>
                         </td>

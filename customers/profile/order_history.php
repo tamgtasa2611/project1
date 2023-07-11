@@ -1,7 +1,7 @@
 <?php
 //    chay session
 session_start();
-if (!isset($_SESSION['user-email'])) {
+if (!isset($_SESSION['user-id'])) {
     header("Location: ../login_logout/login.php");
 }
 ?>
@@ -21,24 +21,50 @@ if (!isset($_SESSION['user-email'])) {
     <link rel="stylesheet" href="../../main/css/header_style.css">
     <!--  main css file link  -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
+    <!--    profile css file link   -->
+    <link rel="stylesheet" href="../../main/css/profile.css">
 
-    <title>Lịch sử đặt hàng</title>
+    <title>Order history - Beautiful House</title>
 </head>
 <body>
 <?php
 include_once("../../connect/open.php");
 $userId = $_SESSION['user-id'];
+
+//pagination
+$recordOnePage = 5;
+$sqlCountRecord = "SELECT COUNT(*) as count_record FROM orders 
+                   INNER JOIN customers ON orders.customer_id = customers.id
+                   WHERE orders.customer_id = '$userId'";
+
+$countRecords = mysqli_query($connect, $sqlCountRecord);
+foreach ($countRecords as $countRecord) {
+    $records = $countRecord['count_record'];
+}
+
+$countPage = ceil($records / $recordOnePage);
+
+$page = 1;
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+}
+
+$start = ($page - 1) * $recordOnePage;
+
+//main
 $sql = "SELECT orders.*, (SELECT SUM(quantity * price) FROM order_details 
             WHERE order_id = orders.id) AS total_cost
-       FROM orders WHERE customer_id = '$userId'";
+            FROM orders WHERE customer_id = '$userId'
+            ORDER BY orders.id
+            LIMIT $start, $recordOnePage";
 $orderLists = mysqli_query($connect, $sql);
-include_once("../../connect/close.php");
-//format vnd
+
+//format usd
 if (!function_exists('currency_format')) {
-    function currency_format($number, $suffix = 'đ')
+    function currency_format($number, $suffix = '$')
     {
         if (!empty($number)) {
-            return number_format($number, 0, ',', '.') . "{$suffix}";
+            return "{$suffix}" . number_format($number, 2, ".");
         }
     }
 }
@@ -51,73 +77,133 @@ include("../../layout/header.php");
 <!-- Padding from header -->
 <div id="about"></div>
 <!-- Content -->
-<table class="table">
-    <thead>
-    <tr>
-        <td>ID don hang</td>
-        <td>Ngay mua</td>
-        <td>Trang thai</td>
-        <td>Gia tien</td>
-        <td>Chi tiet</td>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    foreach ($orderLists as $orderList) {
-        ?>
-        <tr>
-            <td><?= $orderList['id'] ?></td>
-            <td><?= $orderList['date_buy'] ?></td>
-            <td>
-                <?php
-                if ($orderList['status'] == 0) {
-                    ?>
-                    <a href="#"
-                       class="btn btn-danger">
-                        <span>Chờ xác nhận</span>
-                    </a>
-                    <?php
-                } else if ($orderList['status'] == 1) {
-                    ?>
-                    <a href="#"
-                       class="btn btn-success">
-                        <span>Đã xác nhận</span>
-                    </a>
-                    <?php
-                } else if ($orderList['status'] == 2) {
-                    ?>
-                    <a href="#"
-                       class="btn btn-primary">
-                        <span>Đang giao hàng</span>
-                    </a>
-                    <?php
-                } else if ($orderList['status'] == 3) {
-                    ?>
-                    <a href="#"
-                       class="btn btn-success">
-                        <span>Đã giao hàng</span>
-                    </a>
-                    <?php
-                } else if ($orderList['status'] == 4) {
-                    ?>
-                    <a href="#"
-                       class="btn btn-danger">
-                        <span>Đã hủy</span>
-                    </a>
-                    <?php
-                }
-                ?>
-            </td>
-            <td><?= currency_format($orderList['total_cost']) ?></td>
-            <td>
-                <a href="order_detail.php?id=<?= $orderList['id'] ?>" class="btn btn-primary">Xem</a>
-            </td>
-        </tr>
+
+<div id="main-container" class="mt-5">
+    <div id="left-container">
         <?php
-    }
-    ?>
-    </tbody>
-</table>
+        include_once("../../layout/customer_profile.php");
+        ?>
+
+    </div>
+
+    <div id="right-container" class="position-relative">
+        <div style="height: auto; margin: 40px">
+            <div>
+                <h2>
+                    My orders
+                </h2>
+                <h4 style="color: slategray; margin-bottom: 40px">
+                    View and manage your order history
+                </h4>
+                <hr>
+            </div>
+
+            <div style="margin-top: 28px; width: 100%">
+                <table class="table table-striped table-bordered align-middle w-100">
+                    <thead class="fw-bold table-dark align-middle" style="height: 60px">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Purchase date</th>
+                        <th>Status</th>
+                        <th>Total cost</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+
+                    <tbody style="height: 280px">
+                    <?php
+                    foreach ($orderLists as $orderList) {
+                        ?>
+                        <tr class="p-5">
+                            <td><?= $orderList['id'] ?></td>
+                            <td><?= $orderList['date_buy'] ?></td>
+                            <td>
+                                <?php
+                                if ($orderList['status'] == 0) {
+                                    ?>
+                                    <a href="#"
+                                       class="btn btn-danger">
+                                        <span>Pending</span>
+                                    </a>
+                                    <?php
+                                } else if ($orderList['status'] == 1) {
+                                    ?>
+                                    <a href="#"
+                                       class="btn btn-success">
+                                        <span>Confirmed</span>
+                                    </a>
+                                    <?php
+                                } else if ($orderList['status'] == 2) {
+                                    ?>
+                                    <a href="#"
+                                       class="btn btn-primary">
+                                        <span>Delivering</span>
+                                    </a>
+                                    <?php
+                                } else if ($orderList['status'] == 3) {
+                                    ?>
+                                    <a href="#"
+                                       class="btn btn-success">
+                                        <span>Completed</span>
+                                    </a>
+                                    <?php
+                                } else if ($orderList['status'] == 4) {
+                                    ?>
+                                    <a href="#"
+                                       class="btn btn-danger">
+                                        <span>Cancelled</span>
+                                    </a>
+                                    <?php
+                                }
+                                ?>
+                            </td>
+                            <td>
+                                <?php
+                                $totalCost = $orderList['total_cost'] + ($orderList['total_cost'] / 25);
+                                echo currency_format($totalCost) ?>
+                            </td>
+                            <td>
+                                <a href="order_detail.php?id=<?= $orderList['id'] ?>"
+                                   class="fa-solid fa-pen-to-square"
+                                   style="font-size: 24px; color: darkslategrey">
+                                </a>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!-- for de hien thi so trang -->
+            <div class="text-center position-absolute" style="left: 0; right: 0; bottom: 50px">
+                <ul class="pagination justify-content-center">
+                    <?php
+                    for ($i = 1; $i <= $countPage; $i++) {
+                        ?>
+                        <li class="page-item">
+                            <a class="page-link" href="?page=<?= $i ?>">
+                                <?= $i ?>
+                            </a>
+                        </li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+
+            <?php
+            include_once("../../connect/close.php");
+            ?>
+        </div>
+    </div>
+</div>
+
+<?php
+include_once("../../layout/footer.php");
+?>
 
 </body>
 </html>
