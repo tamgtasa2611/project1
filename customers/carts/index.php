@@ -270,10 +270,7 @@ if (isset($_SESSION['cart'])) {
                             </div>
                             <div>
                                 <h4>
-                                    <?php
-                                    $shipping_cost = $total_cost / 25;
-                                    echo currency_format($shipping_cost);
-                                    ?>
+                                    Free
                                 </h4>
                             </div>
                         </div>
@@ -304,7 +301,7 @@ if (isset($_SESSION['cart'])) {
                             </h3>
                         </div>
                         <div>
-                            <?= currency_format(($total_cost + $shipping_cost)) ?>
+                            <?= currency_format($total_cost) ?>
                         </div>
                     </div>
 

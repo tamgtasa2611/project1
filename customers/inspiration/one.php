@@ -38,7 +38,8 @@ include("../../layout/header.php");
                     <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
                         The living space in the apartment can completely turn into a work
                         art,
-                        so that the home is always a place to inspire new inspiration and diversify each person's emotions
+                        so that the home is always a place to inspire new inspiration and diversify each person's
+                        emotions
                         member. We can begin to decorate the apartment to increase the market experience
                         sense as well as improve the quality of life by taking advantage of some <b class="fs-2">goods
                             decoration</b>.
@@ -56,18 +57,21 @@ include("../../layout/header.php");
                             <p class="fs-3 mt-md-4" style="text-align: justify">
                                 The installation of lights in each space is usually to <b class="fs-3">answer
                                     serve many different purposes.</b>
-                                Most of the main purposes are to take advantage of the light source to serve family activities,
+                                Most of the main purposes are to take advantage of the light source to serve family
+                                activities,
                                 That will be the kind of light that shines evenly and clearly.
                             </p>
 
                             <p class="fs-3" style="text-align: justify">
                                 To improve the space, you can use lamps <b class="fs-3">projection
                                     morning focus when
-                                    want to metaphorize another emotion into space</b>. For example, the wall painting will
+                                    want to metaphorize another emotion into space</b>. For example, the wall painting
+                                will
                                 more beautiful when finished
                                 combined with a dim, unclear light source to highlight the artistic meaning of the work.
                                 At this moment,
-                                You can arrange the light in an angle from the top down or from the bottom up. That would be the interweaving,
+                                You can arrange the light in an angle from the top down or from the bottom up. That
+                                would be the interweaving,
                                 phase
                                 Mixing light and color.
                             </p>
@@ -93,7 +97,8 @@ include("../../layout/header.php");
                                 again,
                                 where <b class="fs-3">is a tool to create a harmony between color and light</b>.
                                 If you know how to combine skillfully
-                                With a sophisticated feel, your apartment will be like an exhibition space. Where you have
+                                With a sophisticated feel, your apartment will be like an exhibition space. Where you
+                                have
                                 can
                                 <b class="fs-3">Enjoy watching, admiring and enjoying the lively space full of
                                     poetic.</b>
@@ -109,9 +114,11 @@ include("../../layout/header.php");
                             <p class="fs-3 mt-sm-4" style="text-align: justify">
                                 Empty walls in the home are ideal areas to consider
                                 arrange
-                                mirror frame. In addition to the use of helping <b class="fs-3">expand and increase the depth for free
+                                mirror frame. In addition to the use of helping <b class="fs-3">expand and increase the
+                                    depth for free
                                     space</b>, mirror
-                                The decoration with flexible lines and many different textures also makes the apartment more unique
+                                The decoration with flexible lines and many different textures also makes the apartment
+                                more unique
                                 unique.
                             </p>
 
@@ -120,7 +127,8 @@ include("../../layout/header.php");
                                 you will be <b class="fs-3">observe space under many different angles</b>. Frame
                                 mirror can reflect
                                 Reflect any light that falls on them, so the apartment will be more shimmering
-                                and special. Mirror frames can be arranged in <b class="fs-3">living room, dining room, room
+                                and special. Mirror frames can be arranged in <b class="fs-3">living room, dining room,
+                                    room
                                     work, bathroom</b>,…
                             </p>
                         </div>
@@ -138,8 +146,10 @@ include("../../layout/header.php");
                     <div class="mb-sm-5">
                         <p class="fs-3" style="text-align: justify">
                             Finally, to make the space more special, you can combine pictures to hang
-                            on some empty wall in the house. Depending on the aesthetic taste of each homeowner, you can be creative
-                            in many different ways. This will <b class="fs-3">make the home more interesting, with more sentences
+                            on some empty wall in the house. Depending on the aesthetic taste of each homeowner, you can
+                            be creative
+                            in many different ways. This will <b class="fs-3">make the home more interesting, with more
+                                sentences
                                 stories and points
                                 unique press</b>.
                         </p>
@@ -159,7 +169,8 @@ include("../../layout/header.php");
                             <p class="fs-3" style="text-align: justify">
                                 Or you can <b class="fs-3">combine the picture based on the wall texture</b>,
                                 if the wall is set
-                                rough, convex design with many artistic intentions, you will combine with the dark picture
+                                rough, convex design with many artistic intentions, you will combine with the dark
+                                picture
                                 simple to
                                 highlight the wall. Or vice versa, you combine with abstract paintings to the wall
                                 background
@@ -175,7 +186,8 @@ include("../../layout/header.php");
 
                     <p class="fs-1 mt-sm-5" style="text-align: justify">
                         Hopefully with the suggestions of <b class="fs-1">Beautiful House</b>, you can
-                        Decorate the apartment with <b class="fs-1">decorative items</b> so that each space is a sentence
+                        Decorate the apartment with <b class="fs-1">decorative items</b> so that each space is a
+                        sentence
                         interesting story.
                     </p>
 

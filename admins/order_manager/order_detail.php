@@ -18,13 +18,13 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
-    <title>Chi tiết đơn hàng</title>
+    <title>Order details</title>
 </head>
 <body>
 <?php
 $id = $_GET['id'];
 $total_money = 0;
-
+$total_item = 0;
 include_once("../../connect/open.php");
 $sql = "SELECT order_details.*, furnitures.image as furniture_image, furnitures.name as furniture_name
             FROM order_details
@@ -53,15 +53,15 @@ if (!function_exists('currency_format')) {
         </div>
         <!--  content  -->
         <div class="content-container">
-            <h4 class="content-heading">Chi tiết đơn hàng #<?= $id ?></h4>
+            <h4 class="content-heading">Order #<?= $id ?></h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
-                    <th>Sản phẩm</th>
+                    <th>Product</th>
                     <th>Image</th>
-                    <th>Số lượng</th>
-                    <th>Giá</th>
-                    <th>Thành tiền</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total price</th>
                 </tr>
                 </thead>
                 <tbody style="overflow-y: auto">
@@ -90,15 +90,15 @@ if (!function_exists('currency_format')) {
                 ?>
                 <tr>
                     <td colspan="3"></td>
-                    <td>Tổng cộng:</td>
+                    <td>Total cost:</td>
                     <td>
                         <?= currency_format($total_money) ?>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <div style="margin-bottom: 40px">
-                <a href="index.php" class="btn btn-primary nice-box-shadow">Quay lại</a>
+            <div style="margin-bottom: 40px; color: white" class="d-flex justify-content-between">
+                <a onclick="window.history.go(-1)" class="btn btn-primary nice-box-shadow">Back</a>
             </div>
         </div>
     </div>

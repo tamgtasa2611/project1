@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['direction'] = "index.php";
 if (!isset($_SESSION['email'])) {
     header("Location: ../login_logout/login.php");
 }
@@ -15,10 +16,11 @@ if (!isset($_SESSION['email'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
-    <title>Quản lý đơn hàng</title>
+    <title>Order manager</title>
 </head>
 <body>
 <?php
@@ -51,8 +53,10 @@ $sql1 = "SELECT orders.*, customers.name as cus_name,
             WHERE order_id = orders.id) AS total_cost
             FROM orders 
             INNER JOIN customers ON orders.customer_id = customers.id
-             WHERE customers.name LIKE '%$search%' ORDER BY orders.id  
+             WHERE customers.name LIKE '%$search%' 
+             ORDER BY orders.status ASC, orders.date_buy ASC
              LIMIT $start, $recordOnePage";
+
 $orders = mysqli_query($connect, $sql1);
 include_once('../../connect/close.php');
 //format usd
@@ -68,21 +72,26 @@ if (!function_exists('currency_format')) {
 
 <div id="content" class="">
     <div class="wrapper d-flex align-items-stretch">
-        <?php
-        include("../../layout/admin_menu.php");
-        ?>
+        <div style="width: 250px"></div>
+        <div class="position-fixed" style="height: 100%">
+            <?php
+            include("../../layout/admin_menu.php");
+            ?>
+        </div>
+
+        <!--  content  -->
 
         <div class="content-container">
-            <h4 class="content-heading">Danh sách đơn hàng</h4>
+            <h4 class="content-heading">Order list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
                     <th>ID</th>
-                    <th>Tên khách hàng</th>
-                    <th>Ngày mua</th>
-                    <th>Trạng thái</th>
-                    <th>Thành tiền</th>
-                    <th>Chi tiết</th>
+                    <th>Customer name</th>
+                    <th>Purchase date</th>
+                    <th>Order status</th>
+                    <th>Total cost</th>
+                    <th>Detail</th>
                 </tr>
                 </thead>
                 <?php
@@ -99,35 +108,35 @@ if (!function_exists('currency_format')) {
                                 ?>
                                 <a href="edit.php?id=<?= $order['id'] ?>"
                                    class="btn btn-danger">
-                                    <span>Chờ xác nhận</span>
+                                    <span>Pending</span>
                                 </a>
                                 <?php
                             } else if ($order['status'] == 1) {
                                 ?>
                                 <a href="edit.php?id=<?= $order['id'] ?>"
                                    class="btn btn-success">
-                                    <span>Đã xác nhận</span>
+                                    <span>Confirmed</span>
                                 </a>
                                 <?php
                             } else if ($order['status'] == 2) {
                                 ?>
                                 <a href="edit.php?id=<?= $order['id'] ?>"
                                    class="btn btn-primary">
-                                    <span>Đang giao hàng</span>
+                                    <span>Delivering</span>
                                 </a>
                                 <?php
                             } else if ($order['status'] == 3) {
                                 ?>
                                 <a href="edit.php?id=<?= $order['id'] ?>"
                                    class="btn btn-success">
-                                    <span>Đã giao hàng</span>
+                                    <span>Completed</span>
                                 </a>
                                 <?php
                             } else if ($order['status'] == 4) {
                                 ?>
                                 <a href="edit.php?id=<?= $order['id'] ?>"
                                    class="btn btn-danger">
-                                    <span>Đã hủy</span>
+                                    <span>Cancelled</span>
                                 </a>
                                 <?php
                             }
@@ -137,10 +146,10 @@ if (!function_exists('currency_format')) {
                             <?= currency_format($order['total_cost']) ?>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary">
-                                <a href="order_detail.php?id=<?= $order['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Xem</a>
-                            </button>
+                            <a href="order_detail.php?id=<?= $order['id'] ?>"
+                               class="fa-solid fa-pen-to-square"
+                               style="font-size: 24px; color: darkslategrey">
+                            </a>
                         </td>
                     </tr>
                     <?php
@@ -151,27 +160,64 @@ if (!function_exists('currency_format')) {
 
             <div style="display: flex; justify-content: space-between">
                 <button type="button" class="btn btn-primary nice-box-shadow">
-                    <a href="create.php" class="text-white" style="text-decoration: none">Thêm đơn hàng</a>
+                    <a href="create.php" class="text-white" style="text-decoration: none">Add an order</a>
                 </button>
                 <!-- for de hien thi so trang -->
-                <div class="text-center">
+                <div class="text-center" style="height: 38px">
+                    <!--
                     <ul class="pagination justify-content-center">
                         <?php
-                        for ($i = 1; $i <= $countPage; $i++) {
-                            ?>
+                    for ($i = 1; $i <= $countPage; $i++) {
+                        ?>
                             <a class="page-link" href="?page=<?= $i ?> & search=<?= $search ?>">
                                 <?= $i; ?>
                             </a>
                             <?php
-                        }
-                        ?>
+                    }
+                    ?>
+                    </ul>
+-->
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item" style="width: 40px">
+                            <a class="page-link"
+                                <?php
+                                if ($page == 1) {
+                                    echo 'href="#"';
+                                } else {
+                                    echo 'href="?page=' . ($page - 1) . ' & search=' . $search . '"';
+                                }
+                                ?>>
+                                <span class="fa-solid fa-caret-left"></span>
+                            </a>
+                        </li>
+                        <li class="page-item" style="width: 120px">
+                            <?php
+                            for ($i = 1; $i <= $countPage; $i++) {
+                            }
+                            ?>
+                            <span class="page-link">
+                            Page <?= $page ?>/<?= ($i - 1) ?>
+                        </span>
+                        </li>
+                        <li class="page-item" style="width: 40px">
+                            <a class="page-link"
+                                <?php
+                                if ($page == ($i - 1)) {
+                                    echo 'href="#"';
+                                } else {
+                                    echo 'href="?page=' . ($page + 1) . ' & search=' . $search . '"';
+                                }
+                                ?>>
+                                <span class="fa-solid fa-caret-right"></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <form class="search-form" action="" method="get">
-                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Tìm kiếm tại đây..."
+                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."
                            class="form-outline">
-                    <button type="submit" class="btn btn-primary nice-box-shadow">
-                        <a href="" class="text-white" style="text-decoration: none">Tìm kiếm</a>
+                    <button type="submit" class="btn btn-primary nice-box-shadow text-white">
+                        Search
                     </button>
                 </form>
             </div>

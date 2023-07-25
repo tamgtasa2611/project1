@@ -87,7 +87,8 @@ include("../../layout/header.php");
                             <p class="fs-3 my-md-4" style="text-align: justify">
                                 Based on personal or family preferences, you should <b class="fs-3">define your style
                                     way.</b>
-                                that the apartment aims to <b class="fs-3">to specify the style and color</b> of the item
+                                that the apartment aims to <b class="fs-3">to specify the style and color</b> of the
+                                item
                                 decorate. This will be
                                 a stepping stone for you to <b class="fs-3">save time and still meet your buying needs
                                     shop.</b>
@@ -112,14 +113,16 @@ include("../../layout/header.php");
                             <p class="fs-3 my-sm-4" style="text-align: justify">
                                 After determining the style of the apartment, <b class="fs-3"> seriously learn and
                                     select quality information about that item.</b>,
-                                You can find out about the product lines of the same category and all the brands currently available
+                                You can find out about the product lines of the same category and all the brands
+                                currently available
                                 distribute the item in the market
                                 school. Read through what you can gather, because all that information is
                                 are the pieces for you
                                 sketch a picture of the market, from which to make the right choice. </p>
 
                             <p class="fs-3" style="text-align: justify">
-                                <b class="fs-3">Product material is a factor you should carefully study,</b> prioritize the
+                                <b class="fs-3">Product material is a factor you should carefully study,</b> prioritize
+                                the
                                 Durable, easy to clean and maintain.
                                 If possible, limit the use of materials with residual active ingredients
                                 to health.
@@ -148,7 +151,8 @@ include("../../layout/header.php");
                             <p class="fs-3" style="text-align: justify">
                                 The selection of famous and reliable brands in the domestic industry
                                 Furniture will help your shopping process
-                                You go more smoothly, because they always care about the needs and interests of the customer.
+                                You go more smoothly, because they always care about the needs and interests of the
+                                customer.
                                 One
                                 <b class="fs-3">professional operation process with a team of advice and care
                                     love,</b> you will definitely have a
@@ -179,7 +183,8 @@ include("../../layout/header.php");
                             <span class="display-5 fw-bold">5. Test and feel it firsthand</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
                                 After choosing the leading prestigious furniture brand, you should
-                                <b class="fs-3">come to the store to experience the product in person</b> before deciding
+                                <b class="fs-3">come to the store to experience the product in person</b> before
+                                deciding
                                 buy. You will get
                                 Real feel during inspection, know the actual size, observe with your own eyes
                                 Sample code to get an idea

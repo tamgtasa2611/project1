@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
 
-    <title>Quản lý nhà sản xuất</title>
+    <title>Producer manager</title>
 </head>
 <body>
 <?php
@@ -57,13 +57,13 @@ include_once('../../connect/close.php');
         ?>
         <!--  content  -->
         <div class="content-container">
-            <h4 class="content-heading">Danh sách nhà sản xuất</h4>
+            <h4 class="content-heading">Producer list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
                     <th>ID</th>
-                    <th>Tên nhà sản xuất</th>
-                    <th>Thao tác</th>
+                    <th>Name</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <?php
@@ -75,11 +75,11 @@ include_once('../../connect/close.php');
                         <td>
                             <button type="button" class="btn btn-primary">
                                 <a href="edit.php?id=<?= $producer['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Sửa</a>
+                                   style="text-decoration: none">Edit</a>
                             </button>
                             <button type="button" class="btn bg-danger border-danger">
                                 <a href="destroy.php?id=<?= $producer['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Xóa</a>
+                                   style="text-decoration: none">Delete</a>
                             </button>
                         </td>
                     </tr>
@@ -90,7 +90,7 @@ include_once('../../connect/close.php');
 
             <div style="display: flex; justify-content: space-between">
                 <button type="button" class="btn btn-primary nice-box-shadow">
-                    <a href="create.php" class="text-white" style="text-decoration: none">Thêm nhà sản xuất</a>
+                    <a href="create.php" class="text-white" style="text-decoration: none">Add a producer</a>
                 </button>
                 <!-- for de hien thi so trang -->
                 <div class="text-center">
@@ -107,10 +107,10 @@ include_once('../../connect/close.php');
                     </ul>
                 </div>
                 <form class="search-form" action="" method="get">
-                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Tìm kiếm tại đây..."
+                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."
                            class="form-outline">
                     <button type="submit" class="btn btn-primary nice-box-shadow">
-                        <a href="" class="text-white" style="text-decoration: none">Tìm kiếm</a>
+                        <a href="" class="text-white" style="text-decoration: none">Search</a>
                     </button>
                 </form>
             </div>

@@ -44,7 +44,8 @@ include("../../layout/header.php");
                                 displayed in showrooms
                                 Beautiful House has revealed many interesting things to me. Speaking of Crate style &
                                 Barrel refers to a stylish blend of
-                                Aesthetically British and French, the Crate & Barrel style embodies sophistication, splendor and extreme
+                                Aesthetically British and French, the Crate & Barrel style embodies sophistication,
+                                splendor and extreme
                                 luxury period. Pretty good appearance
                                 many in western countries, this style is symbolic of the Crate & Barrel era,
                                 rich, culturally diverse and

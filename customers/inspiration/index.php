@@ -28,8 +28,8 @@ include("../../layout/header.php");
          style='background-image: url("../../main/media/images/inspiration/inspiration.jpeg");
          height: 90vh'>
     <div class="left-container">
-        <h1 class="heading-left mb-5">INSPIRATION <span style="font-size: 48px">☻</span>
-           </h1>
+        <h1 class="heading-left mb-5">INSPIRATION
+        </h1>
     </div>
 </section>
 
@@ -92,7 +92,8 @@ include("../../layout/header.php");
                     <a href="three.php" style="color: black">
                         <div class="text-center fw-bold h2">Ideas to upgrade living space</div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">After long days of "selling yourself to capital", people have more and more needs
+                        <p class="text-center ">After long days of "selling yourself to capital", people have more and
+                            more needs
                             [...]</p>
                     </a>
                 </div>
@@ -129,10 +130,12 @@ include("../../layout/header.php");
                         </a>
                     </div>
                     <a href="five.php" style="color: black">
-                        <div class="text-center fw-bold h2">5 suggestions for luxurious modern interior design for apartments
+                        <div class="text-center fw-bold h2">5 suggestions for luxurious modern interior design for
+                            apartments
                         </div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">5 suggestions for luxurious modern interior design for shared apartments [...]</p>
+                        <p class="text-center ">5 suggestions for luxurious modern interior design for shared apartments
+                            [...]</p>
                     </a>
                 </div>
 
@@ -148,46 +151,13 @@ include("../../layout/header.php");
                     <a href="six.php" style="color: black">
                         <div class="text-center fw-bold h2">The benefits of using a smart dining table</div>
                         <div class="is-diviver"></div>
-                        <p class="text-center ">The dining room is the place to create a cozy feeling for the apartment, so the [...]</p>
+                        <p class="text-center ">The dining room is the place to create a cozy feeling for the apartment,
+                            so the [...]</p>
                     </a>
                 </div>
             </div>
         </section>
-        <!-- HÀNG 3 -->
-        <section>
-            <div class="d-xl-flex container">
-                <div>
-                    <div class="m-4">
-                        <a>
-                            <img src="../../main/media/images/"
-                                 width="400px"
-                                 height="240px">
-                        </a>
-                    </div>
-                    <div class="text-center fw-bold h2">Tại sao nên bọc lại sofa cũ</div>
-                </div>
-                <div>
-                    <div class="m-4">
-                        <a>
-                            <img src="../../main/media/images/"
-                                 width="400px"
-                                 height="240px">
-                        </a>
-                    </div>
-                    <div class="text-center fw-bold h2">5 lý do nên chọn sofa da cho phòng khách</div>
-                </div>
-                <div>
-                    <div class="m-4">
-                        <a>
-                            <img src="../../main/media/images/"
-                                 width="400px"
-                                 height="240px">
-                        </a>
-                    </div>
-                    <div class="text-center fw-bold h2">Top 5 sofa được ưa chuộng nhất tại Beautiful House</div>
-                </div>
-            </div>
-        </section>
+
     </div>
 </div>
 <!-- Footer -->

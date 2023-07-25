@@ -50,7 +50,8 @@ include("../../layout/header.php");
                                 Asturias or Oak Park Public Library…
                             </p>
                             <p class="fs-3" style="text-align: justify">
-                                The Okamura collection consists of 3 full rooms: Living room - Dining room - Bedroom with furniture,
+                                The Okamura collection consists of 3 full rooms: Living room - Dining room - Bedroom
+                                with furniture,
                                 uniform color.
                             </p>
                         </div>

@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
 
-    <title>Quản lý sản phẩm</title>
+    <title>Furniture manager</title>
 </head>
 <body>
 <?php
@@ -29,7 +29,7 @@ if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
 //khai bao so ban ghi 1 trang
-$recordOnePage = 3;
+$recordOnePage = 5;
 //sql de lay so ban ghi
 $sqlCountRecord = "SELECT COUNT(*) as count_record FROM furnitures WHERE name LIKE '%$search%'";
 //chay query lay so ban ghi
@@ -69,30 +69,35 @@ if (!function_exists('currency_format')) {
     }
 }
 ?>
-<div id="content" class="">
-    <div class="wrapper d-flex align-items-stretch">
-        <?php
-        include("../../layout/admin_menu.php");
-        ?>
 
+<div id="content">
+    <div class="wrapper d-flex align-items-stretch">
+        <div style="width: 250px"></div>
+        <div class="position-fixed" style="height: 100%">
+            <?php
+            include("../../layout/admin_menu.php");
+            ?>
+        </div>
+
+        <!--  content  -->
         <div class="content-container">
-            <h4 class="content-heading">Danh sách sản phẩm</h4>
+            <h4 class="content-heading">Furniture list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
                     <th>ID</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Tồn kho</th>
-                    <th>Giá</th>
-                    <th>Chất liệu</th>
-                    <th>Dài (cm)</th>
-                    <th>Rộng (cm)</th>
-                    <th>Cao (cm)</th>
-                    <th>Phòng</th>
-                    <th>Danh mục</th>
-                    <th>Nhà sản suất</th>
-                    <th>Ảnh</th>
-                    <th>Thao tác</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>In stock</th>
+                    <th>Price</th>
+                    <th>Material</th>
+                    <th>Length (cm)</th>
+                    <th>Width (cm)</th>
+                    <th>Height (cm)</th>
+                    <th>Room</th>
+                    <th>Category</th>
+                    <th>Producer</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <?php
@@ -101,6 +106,9 @@ if (!function_exists('currency_format')) {
                     <tr>
                         <td><?= $furniture['id'] ?></td>
                         <td> <?= $furniture['name'] ?> </td>
+                        <td>
+                            <img height="60px" src="../images/<?= $furniture['image'] ?>" alt="">
+                        </td>
                         <td> <?= $furniture['quantity'] ?> </td>
                         <td> <?= currency_format($furniture['price']) ?> </td>
                         <td> <?= $furniture['material'] ?> </td>
@@ -111,16 +119,13 @@ if (!function_exists('currency_format')) {
                         <td> <?= $furniture['category_name'] ?> </td>
                         <td> <?= $furniture['producer_name'] ?> </td>
                         <td>
-                            <img height="100px" src="../images/<?= $furniture['image'] ?>" alt="">
-                        </td>
-                        <td>
                             <button type="button" class="btn btn-primary mb-1">
                                 <a href="edit.php?id=<?= $furniture['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Sửa</a>
+                                   style="text-decoration: none">Edit</a>
                             </button>
                             <button type="button" class="btn bg-danger border-danger">
                                 <a href="destroy.php?id=<?= $furniture['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Xóa</a>
+                                   style="text-decoration: none">Delete</a>
                             </button>
                         </td>
                     </tr>
@@ -129,32 +134,37 @@ if (!function_exists('currency_format')) {
                 ?>
             </table>
 
-            <div style="display: flex; justify-content: space-between">
+            <div style="display: flex; justify-content: space-between;">
                 <button type="button" class="btn btn-primary nice-box-shadow">
-                    <a href="create.php" class="text-white" style="text-decoration: none">Thêm sản phẩm</a>
+                    <a href="create.php" class="text-white" style="text-decoration: none">Add a furniture</a>
                 </button>
                 <!-- for de hien thi so trang -->
                 <div class="text-center">
-                    <ul class="pagination justify-content-center">
+                    <ul class="pagination pagination-sm justify-content-center"
+                        style="width: 60%; margin: auto">
                         <?php
                         for ($i = 1; $i <= $countPage; $i++) {
                             ?>
-                            <a class="page-link" href="?page=<?= $i ?> & search=<?= $search ?>">
-                                <?= $i; ?>
-                            </a>
+                            <li class="page-item text-center">
+                                <a class="page-link text-center" style="border-radius: 10px; width: 30px; height: 30px"
+                                   href="?page=<?= $i ?> & search=<?= $search ?>">
+                                    <?= $i; ?>
+                                </a>
+                            </li>
                             <?php
                         }
                         ?>
                     </ul>
                 </div>
                 <form class="search-form" action="" method="get">
-                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Tìm kiếm tại đây..."
+                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."
                            class="form-outline">
                     <button type="submit" class="btn btn-primary nice-box-shadow">
-                        <a href="" class="text-white" style="text-decoration: none">Tìm kiếm</a>
+                        <a href="" class="text-white" style="text-decoration: none">Search</a>
                     </button>
                 </form>
             </div>
+            <div style="height: 42px"></div>
         </div>
     </div>
 </div>

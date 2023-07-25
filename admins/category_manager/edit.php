@@ -32,10 +32,14 @@ foreach ($categories as $category) {
 
     <div id="content" class="">
         <div class="wrapper d-flex align-items-stretch">
-            <?php
-            include("../../layout/admin_menu.php");
-            ?>
+            <div style="width: 250px"></div>
+            <div class="position-fixed" style="height: 100%">
+                <?php
+                include("../../layout/admin_menu.php");
+                ?>
+            </div>
 
+            <!--  content  -->
             <div class="content-container">
                 <h4 class="content-heading">Sửa danh mục</h4>
                 <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">

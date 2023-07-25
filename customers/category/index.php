@@ -27,42 +27,42 @@ include("../../layout/header.php");
 
 <!-- category -->
 <section>
-    <div class="section-default mb-5 "
+    <div class="section-default mb-5 box-shadow-category"
          style='background-image: url("../../main/media/images/category-main/category_ban.jpg");'>
         <a class="text-decoration-none text-white" href="table.php">
             <h1 class="heading-center category-zoom">Table</h1>
         </a>
     </div>
 
-    <div class="section-default mb-5 "
+    <div class="section-default mb-5 box-shadow-category"
          style='background-image: url("../../main/media/images/category-main/category_ghe.jpg");'>
         <a class="text-decoration-none text-white" href="seating.php">
             <h1 class="heading-center category-zoom">Seating</h1>
         </a>
     </div>
 
-    <div class="section-default mb-5 "
+    <div class="section-default mb-5 box-shadow-category"
          style='background-image: url("../../main/media/images/category-main/category_giuong.jpg");'>
         <a class="text-decoration-none text-white" href="bed.php">
             <h1 class="heading-center category-zoom">Bed</h1>
         </a>
     </div>
 
-    <div class="section-default mb-5 "
+    <div class="section-default mb-5 box-shadow-category"
          style='background-image: url("../../main/media/images/category-main/category_tuquanao.jpg");'>
         <a class="text-decoration-none text-white" href="wardrobe.php">
             <h1 class="heading-center category-zoom">Wardrobe</h1>
         </a>
     </div>
 
-    <div class="section-default mb-5 "
+    <div class="section-default mb-5 box-shadow-category"
          style='background-image: url("../../main/media/images/category-main/category_kesach.jpg");'>
         <a class="text-decoration-none text-white" href="bookshelf.php">
             <h1 class="heading-center category-zoom">Bookshelf</h1>
         </a>
     </div>
 
-    <div class="section-default mb-5 "
+    <div class="section-default mb-5 box-shadow-category"
          style='background-image: url("../../main/media/images/category-main/category_dongho.jpg");'>
         <a class="text-decoration-none text-white" href="clock.php">
             <h1 class="heading-center category-zoom">Clock</h1>

@@ -30,7 +30,7 @@ include("../../layout/header.php");
          style="background-color: white; width: 25%; height: 400px; margin: auto; border-radius: 12px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
         <div style="background-color: yellowgreen; height: 50%; width: 100%; border-radius: 12px 12px 0px 0px"
-        class="d-flex flex-column justify-content-end">
+             class="d-flex flex-column justify-content-end">
             <span class="fa-regular fa-circle-check w-100"
                   style="color: #ffffff; height: 50%; font-size: 80px">
             </span>
@@ -40,8 +40,8 @@ include("../../layout/header.php");
         </div>
         <div style="height: 50%; width: 100%" class="d-flex flex-column align-items-center justify-content-center">
             <div style="height: 40%">
-                We received your purchase request <br>
-                We'll be in touch shortly!
+                We received your purchase request! <br>
+                We'll be in touch soon...
             </div>
             <a href="../start/index.php" class="btn btn-order-success">
                 Go back home</a>

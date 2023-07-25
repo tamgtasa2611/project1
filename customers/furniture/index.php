@@ -47,7 +47,7 @@ function sortByFunction($string): string
     } else if ($string === "high") {
         $sortByString = "price DESC";
     } else if ($string === "new") {
-        $sortByString = "id DESC";
+        $sortByString = "id ASC";
     }
     return $sortByString;
 }
@@ -80,7 +80,7 @@ if (isset($_GET['sort-category'])) {
 //default
 $sqlQuery = "SELECT * FROM furnitures
                     WHERE name LIKE '%$search%'
-                    ORDER BY id DESC";
+                    ORDER BY id ASC";
 
 //kiểm tra nếu 2 biến sort đã set giá trị là id (>0)
 //cả 2 đều set
@@ -270,16 +270,20 @@ if ($_SESSION['add-success'] === 1) {
                         <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="text-dark">
                             <div class="card-body text-center">
                                 <div class='cvp'>
-                                    <h4 id="itemName" class="card-title font-weight-bold"><?= $furniture['name'] ?></h4>
-                                    <p id="itemPrice" class="card-text"><?= currency_format($furniture['price']) ?></p>
+                                    <h3 id="itemName" class="card-title font-weight-bold"><?= $furniture['name'] ?></h3>
+                                    <p id="itemPrice" class="card-text" style="color: #3e9c35">
+                                        <?= currency_format($furniture['price']) ?>
+                                    </p>
                         </a>
                     </div>
+
                     <div class="d-flex justify-content-evenly align-items-center mt-5">
-                        <a href="furniture_detail.php?id=<?= $furniture['id'] ?>">View details</a><br/>
-                        <button class="btn btn-primary">
+                        <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="view-detail-btn"
+                        >View details</a>
+                        <button class="add-to-cart-btn">
                             <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>"
                                class="text-white">
-                                Add to cart
+                                Add to cart <span class="m-1 fa-solid fa-cart-plus"></span>
                             </a>
                         </button>
                     </div>

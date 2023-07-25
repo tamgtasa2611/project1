@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bộ sưu tập Crate & Barrel - Nội thất Beautiful House</title>
+    <title>Return Policy - Beautiful House</title>
 </head>
 <body style="background: white">
 <!-- Header -->
@@ -30,7 +30,7 @@ include("../../layout/header.php");
              style='background-image: url("../../main/media/images/return-order/return-order-header.jpg");
          height: 90vh'>
         <div class="left-container">
-            <h1 class="heading-left mb-5 text-uppercase">chính sách đổi trả hàng<span style="font-size: 48px">☻</span> <br>
+            <h1 class="heading-left mb-5 text-uppercase">return policy<span style="font-size: 48px">☻</span> <br>
             </h1>
         </div>
     </section>
@@ -43,30 +43,37 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div align="justify" class="m-lg-auto">
-                            <span class="display-5 fw-bold">CHÍNH SÁCH TRẢ VÀ ĐỔI HÀNG</span>
-                            <P class="my-md-4">Với mong muốn đảm bảo quyền lợi cho khách hàng và nâng cao chất lượng dịch vụ, quý khách có thể trả hoặc đổi hàng
-                                để có được sự thoải mái và hài lòng nhất tại Nhà Xinh.</P>
+                            <span class="display-5 fw-bold">PAYMENT AND EXCHANGE POLICY</span>
+                            <P class="my-md-4">With the desire to ensure the interests of customers and improve service
+                                quality, you can return or exchange the goods
+                                To get the most comfort and satisfaction at Beautiful House.</P>
 
                             <!-- ONE -->
-                            <p class="fw-bold fs-3">1. CÁC TRƯỜNG HỢP ĐƯỢC TRẢ HÀNG, ĐỔI HÀNG:</p>
-                            <li class="fs-3 mb-sm-3">Sản phẩm không thể đưa vào nhà được (cầu thang hẹp, cửa hẹp,…)</li>
-                            <li class="fs-3 mb-sm-3">Không đủ số lượng, không đủ bộ như trong đơn hàng.</li>
-                            <li class="fs-3 mb-sm-5">Hàng bị lỗi, không đạt chất lượng.</li>
+                            <p class="fw-bold fs-3">1. CASES OF RETURNED OR EXCHANGE:</p>
+                            <li class="fs-3 mb-sm-3">The product cannot be brought into the house (narrow stairs, narrow
+                                doors, ...)
+                            </li>
+                            <li class="fs-3 mb-sm-3">Not enough quantity, not enough set as in the order.</li>
+                            <li class="fs-3 mb-sm-5">Item is defective, not qualified.</li>
 
                             <!-- TWO -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                2. CÁC TRƯỜNG HỢP KHÔNG ĐƯỢC ĐỔI HOẶC TRẢ:</p>
-                            <li class="fs-3 mb-sm-3">Hàng đã sử dụng, dơ, cũ hoặc hư hại.</li>
-                            <li class="fs-3 mb-sm-3">Không có đầy đủ các hóa đơn, chứng từ.</li>
-                            <li class="fs-3 mb-sm-5">Hàng bán khuyến mãi.</li>
+                                2. CASES NOT REFUND OR REFUND:</p>
+                            <li class="fs-3 mb-sm-3">Item used, dirty, old or damaged.</li>
+                            <li class="fs-3 mb-sm-3">Invoices and documents are not available.</li>
+                            <li class="fs-3 mb-sm-5">Promotional sale.</li>
 
                             <!-- THREE -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                3. THỜI GIAN VÀ THỦ TỤC ĐỔI, TRẢ HÀNG:</p>
-                            <p class="fs-3 mb-sm-5">Thời gian được phép đổi, trả hàng: Trong vòng 3 ngày kể từ ngày giao hàng, trước khi xuất hóa đơn.</p>
-                            <p class="fs-3 mb-sm-5">Thủ tục đổi, trả hàng:</p>
-                            <li class="fs-3 mb-sm-2">– Khi có yêu cầu đổi, trả hàng xin quý khách vui lòng liên hệ với cửa hàng Nhà Xinh đã giao dịch hoặc qua hotline: 1800 7200</li>
-                            <li class="fs-3 mb-sm-2">– Nhà Xinh chịu chi phí phát sinh dịch vụ đổi, trả hàng.</li>
+                                3. TIME AND PROCEDURES FOR EXCHANGE AND RETURN:</p>
+                            <p class="fs-3 mb-sm-5">Allowed time for exchange and return: Within 3 days from the date of
+                                delivery, before the invoice is issued.</p>
+                            <p class="fs-3 mb-sm-5">Exchange and return procedures:</p>
+                            <li class="fs-3 mb-sm-2">– When you have a request for an exchange or return, please contact
+                                the shop Nha Xinh has transacted or via hotline: 1800 7200
+                            </li>
+                            <li class="fs-3 mb-sm-2">– Beautiful House bears the cost of exchange and return services.
+                            </li>
 
 
                         </div>

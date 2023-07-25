@@ -40,12 +40,14 @@ include("../../layout/header.php");
                         <div class="me-sm-5" align="justify">
                             <span class="display-5 fw-bold">Restoration Hardware – youth and personality</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                With a youthful and innovative personality, the Restoration Hardware Collection brings to the space the
+                                With a youthful and innovative personality, the Restoration Hardware Collection brings
+                                to the space the
                                 Compact, modern and quality products
                                 with bright, eye-catching colors.
                             </p>
                             <p class="fs-3" style="text-align: justify">
-                                Collection with a full range of products from living room to dining room and bedroom to make you comfortable
+                                Collection with a full range of products from living room to dining room and bedroom to
+                                make you comfortable
                                 Choose your decor style
                                 impressive and consistent.
                             </p>

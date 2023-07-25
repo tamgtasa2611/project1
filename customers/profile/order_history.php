@@ -55,7 +55,7 @@ $start = ($page - 1) * $recordOnePage;
 $sql = "SELECT orders.*, (SELECT SUM(quantity * price) FROM order_details 
             WHERE order_id = orders.id) AS total_cost
             FROM orders WHERE customer_id = '$userId'
-            ORDER BY orders.id
+            ORDER BY orders.status AND orders.date_buy
             LIMIT $start, $recordOnePage";
 $orderLists = mysqli_query($connect, $sql);
 
@@ -159,7 +159,7 @@ include("../../layout/header.php");
                             </td>
                             <td>
                                 <?php
-                                $totalCost = $orderList['total_cost'] + ($orderList['total_cost'] / 25);
+                                $totalCost = $orderList['total_cost'];
                                 echo currency_format($totalCost) ?>
                             </td>
                             <td>
@@ -178,19 +178,41 @@ include("../../layout/header.php");
             </div>
 
             <!-- for de hien thi so trang -->
-            <div class="text-center position-absolute" style="left: 0; right: 0; bottom: 50px">
+            <div class="text-center position-absolute" style="left: 0; right: 0; bottom: 50px;">
                 <ul class="pagination justify-content-center">
-                    <?php
-                    for ($i = 1; $i <= $countPage; $i++) {
-                        ?>
-                        <li class="page-item">
-                            <a class="page-link" href="?page=<?= $i ?>">
-                                <?= $i ?>
-                            </a>
-                        </li>
+                    <li class="page-item" style="width: 40px">
+                        <a class="page-link"
+                            <?php
+                            if ($page == 1) {
+                                echo 'href="#"';
+                            } else {
+                                echo 'href="?page=' . ($page - 1) . '"';
+                            }
+                            ?>>
+                            <span class="fa-solid fa-caret-left"></span>
+                        </a>
+                    </li>
+                    <li class="page-item" style="width: 120px">
                         <?php
-                    }
-                    ?>
+                        for ($i = 1; $i <= $countPage; $i++) {
+                        }
+                        ?>
+                        <span class="page-link">
+                            Page <?= $page ?>/<?= ($i - 1) ?>
+                        </span>
+                    </li>
+                    <li class="page-item" style="width: 40px">
+                        <a class="page-link"
+                            <?php
+                            if ($page == ($i - 1)) {
+                                echo 'href="#"';
+                            } else {
+                                echo 'href="?page=' . ($page + 1) . '"';
+                            }
+                            ?>>
+                            <span class="fa-solid fa-caret-right"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 

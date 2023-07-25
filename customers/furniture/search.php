@@ -247,15 +247,20 @@ include("../../layout/header.php");
                         <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="text-dark">
                             <div class="card-body text-center">
                                 <div class='cvp'>
-                                    <h4 class="card-title font-weight-bold"><?= $furniture['name'] ?></h4>
-                                    <p class="card-text"><?= currency_format($furniture['price']) ?></p>
+                                    <h3 class="card-title font-weight-bold"><?= $furniture['name'] ?></h3>
+                                    <p class="card-text" style="color: #3e9c35">
+                                        <?= currency_format($furniture['price']) ?>
+                                    </p>
                         </a>
                     </div>
+
                     <div class="d-flex justify-content-evenly align-items-center mt-5">
-                        <a href="furniture_detail.php?id=<?= $furniture['id'] ?>">View details</a><br/>
-                        <button class="btn btn-primary">
-                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>" class="text-white">
-                                Add to cart
+                        <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="view-detail-btn"
+                        >View details</a>
+                        <button class="add-to-cart-btn">
+                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>"
+                               class="text-white">
+                                Add to cart <span class="m-1 fa-solid fa-cart-plus"></span>
                             </a>
                         </button>
                     </div>

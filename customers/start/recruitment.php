@@ -30,8 +30,9 @@ include("../../layout/header.php");
              style='background-image: url("../../main/media/images/recruitment/recruiment-header.jpg");
          height: 90vh'>
         <div class="left-container">
-            <h1 class="heading-left mb-5 text-uppercase">tham gia cùng beautiful house <span style="font-size: 48px">☻</span> <br>
-                </h1>
+            <h1 class="heading-left mb-5 text-uppercase">join beautiful house <span style="font-size: 48px">☻</span>
+                <br>
+            </h1>
         </div>
     </section>
     <div class="text-center text-lg-start">
@@ -43,81 +44,90 @@ include("../../layout/header.php");
                     <!-- BODY 1 -->
                     <section class="d-sm-flex mx-sm-2 my-sm-5 pt-sm-5">
                         <div align="justify">
-                            <span class="display-5 fw-bold">NHÂN VIÊN TƯ VẤN BÁN HÀNG NỘI THẤT TẠI TP.HCM & HÀ NỘI</span>
+                            <span class="display-5 fw-bold">FURNITURE SALES OFFICER IN HCM CITY & HANOI</span>
 
                             <!-- ONE -->
-                            <p class="fw-bold fs-3">1. Yêu cầu:</p>
-                            <li class="fs-3 mb-sm-3">Đam mê nghề tư vấn bán hàng;</li>
-                            <li class="fs-3">Ưu tiên các ứng viên yêu thích ngành nội thất.</li>
+                            <p class="fw-bold fs-3">1. Request:</p>
+                            <li class="fs-3 mb-sm-3">Passion for consulting and sales;</li>
+                            <li class="fs-3">Preference will be given to candidates who are interested in the furniture
+                                industry.
+                            </li>
 
                             <!-- TWO -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                2. Trình độ:</p>
-                            <li class="fs-3">Tốt nghiệp từ trung cấp - Cao đẳng trở lên</li>
+                                2. Level:</p>
+                            <li class="fs-3">Graduated from high school - College or higher</li>
 
                             <!-- THREE -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                3. Năng lực, phẩm chất:</p>
-                            <li class="fs-3 mb-sm-3">Trung thực, luôn bảo vệ uy tín thương hiệu;</li>
-                            <li class="fs-3 mb-sm-3">Có tinh thần trách nhiệm, hợp tác;</li>
-                            <li class="fs-3 mb-sm-3">Yêu thích học hỏi, nâng cao trình độ;</li>
-                            <li class="fs-3 mb-sm-3">Năng động, chủ động trong công việc;</li>
-                            <li class="fs-3 mb-sm-3">Làm việc nhanh, hiệu quả;</li>
-                            <li class="fs-3 mb-sm-5">Sức khỏe tốt.</li>
+                                3. Abilities and qualities:</p>
+                            <li class="fs-3 mb-sm-3">Honesty, always protect brand reputation;</li>
+                            <li class="fs-3 mb-sm-3">Have a sense of responsibility and cooperation;</li>
+                            <li class="fs-3 mb-sm-3">Love to learn and improve;</li>
+                            <li class="fs-3 mb-sm-3">Dynamic and proactive at work;</li>
+                            <li class="fs-3 mb-sm-3">Work fast and efficiently;</li>
+                            <li class="fs-3 mb-sm-5">Good healthy.</li>
 
                             <!-- FOUR -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                4. Các kỹ năng:</p>
-                            <li class="fs-3 mb-sm-3">Thiết kế: ưu tiên có bằng thiết kế nội thất (mức lương tốt hơn);</li>
-                            <li class="fs-3 mb-sm-3">Ngoại ngữ: ưu tiên có khả năng giao tiếp tiếng Anh tốt (mức lương tốt hơn);</li>
-                            <li class="fs-3 mb-sm-3">Tin học văn phòng: Word, Excel,…</li>
-                            <li class="fs-3 mb-sm-5">Kỹ năng tư vấn, thuyết phục và làm hài lòng khách hàng.</li>
-
+                                4. Skills:</p>
+                            <li class="fs-3 mb-sm-3">Design: interior design degree preferred (better salary);</li>
+                            <li class="fs-3 mb-sm-3">Foreign language: good English communication ability (better
+                                salary);
+                            </li>
+                            <li class="fs-3 mb-sm-3">Office informatics: Word, Excel,…</li>
+                            <li class="fs-3 mb-sm-5">Skills to consult, persuade and satisfy customers.</li>
                             <!-- FIVE -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                5. Mô tả công việc:</p>
-                            <li class="fs-3 mb-sm-3">Tiếp đón, giới thiệu cho khách hàng về công năng và đặc điểm sản phẩm của công ty. Sau đó, tư vấn và thuyết phục khách mua hàng;</li>
-                            <li class="fs-3 mb-sm-3">Tiếp nhận thông tin, tư vấn khách hàng online;</li>
-                            <li class="fs-3 mb-sm-3">Thực hiện báo giá cho khách hàng;</li>
-                            <li class="fs-3 mb-sm-5">Các công việc khác được phân công từ cấp quản lý.</li>
+                                5. Job Description:</p>
+                            <li class="fs-3 mb-sm-3">Welcome, introduce to customers about the functions and features of
+                                the company's products. Then, advise and convince customers to buy;
+                            </li>
+                            <li class="fs-3 mb-sm-3">Receiving information, consulting customers online;</li>
+                            <li class="fs-3 mb-sm-3">Make quotation for customers;</li>
+                            <li class="fs-3 mb-sm-5">Other tasks assigned by management.</li>
 
                             <!-- SIX -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                 6. Quyền lợi:</p>
-                            <li class="fs-3 mb-sm-3">Được hưởng đầy đủ chế độ và quyền lợi theo quy định của Luật Lao động và Công ty;</li>
-                            <li class="fs-3 mb-sm-5">Được đào tạo các khóa học về kỹ năng bán hàng, tư vấn nội thất, thiết kế,…</li>
+                                6. Benefits:</p>
+                            <li class="fs-3 mb-sm-3">Enjoy full benefits and benefits as prescribed by Labor and Company
+                                Law;
+                            </li>
+                            <li class="fs-3 mb-sm-5">Trained courses on sales skills, interior consulting, design,…</li>
 
                             <!-- SEVEN -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                7. Mức lương: cơ bản, thưởng doanh số, doanh thu và các thưởng thi đua khác.</p>
-
+                                7. Salary: basic, sales bonus, revenue and other emulation bonuses.</p>
                             <!-- EIGHT -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                8. Mức thu nhập từ: 8tr – 20tr/tháng.</p>
+                                8. Income level: 8 million - 20 million / month.</p>
 
                             <!-- NINE -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                9. Địa điểm làm việc:</p>
+                                9. Work location:</p>
                             <!-- HÀ NỘI -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                Hà Nội
-                                <li class="fs-3">Beautiful House (Yên Hòa) - số lượng(1)</li>
-                                <p class="fs-3 my-md-5"> Địa chỉ: Lầu 1 – Tòa nhà F4, 112 Trung Kính, quận Cầu Giấy, Hà Nội. </p>
-                                <li class="fs-3 mb-sm-5"> Beautiful House (Smart City) – số lượng (1); </li>
-                                <p class="fs-3">Địa chỉ: Tầng 2, Vincom Mega Mall, KĐT Vinhomes Smart City, phường Đại Mỗ, quận Nam Từ Liêm, Hà Nội.</p>
+                                Hanoi
+                            <li class="fs-3">Beautiful House (Yen Hoa) - quantity(1)</li>
+                            <p class="fs-3 my-md-5"> Address: 1st Floor – F4 Building, 112 Trung Kinh, Cau Giay
+                                District, Hanoi. </p>
+                            <li class="fs-3 mb-sm-5"> Beautiful House (Smart City) – quantity (1);</li>
+                            <p class="fs-3">Address: 2nd Floor, Vincom Mega Mall, Vinhomes Smart City Urban Area, Dai Mo
+                                Ward, Nam Tu Liem District, Hanoi.</p>
                             </p>
 
                             <!-- TP HCM -->
                             <p class="fs-3 my-md-4 fw-bold">
-                                TP. Hồ Chí Minh
-                            <li class="fs-3">Beautiful House (Diamond) - số lượng(1)</li>
-                            <p class="fs-3 my-md-5"> Địa chỉ: 34 Lê Duẩn, phường Bến Nghé, quận 1, TP. HCM. </p>
-                            <li class="fs-3 mb-sm-5">Calligaris (Hai Bà Trưng) – số lượng (1);</li>
-                            <p class="fs-3">Địa chỉ: 187A Hai Bà Trưng, phường 6, quận 3, TP.HCM.</p>
+                                City. Ho Chi Minh
+                            <li class="fs-3">Beautiful House (Diamond) - quantity(1)</li>
+                            <p class="fs-3 my-md-5"> Address: 34 Le Duan, Ben Nghe Ward, District 1, City. HCM. </p>
+                            <li class="fs-3 mb-sm-5">Calligaris (Hai Ba Trung) – quantity (1);</li>
+                            <p class="fs-3">Address: 187A Hai Ba Trung, Ward 6, District 3, HCMC.</p>
                             </p>
 
                             <!-- ĐỊA CHỈ MAIL  -->
-                            <p class="fs-3 mt-md-4">  Hồ sơ gửi về địa chỉ mail: admintp@akacompany.com.vn – 0985457787. </p>
+                            <p class="fs-3 mt-md-4"> Profile sent to email address: admintp@akacompany.com.vn –
+                                0985457787. </p>
                         </div>
                         <div>
                             <a class="ms-md-5"><img src="../../main/media/images/recruitment/recruiment-body.jpg"

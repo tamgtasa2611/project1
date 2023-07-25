@@ -32,12 +32,13 @@ include("../../layout/header.php");
                 <!-- HEADER -->
                 <div class="row mx-sm-4">
                     <div class="col-md-3 col-lg-3 col-xl-auto mx-auto mt-3">
-                        <p class="display-4">BỘ SƯU TẬP</p>
+                        <p class="display-4">Collection</p>
                     </div>
                     <!-- BODY   -->
                     <section class="d-sm-flex">
                         <!-- LEFT SIDEBAR   -->
-                        <div class="d-block ms-md-2 me-md-5 my-lg-5 w-50 h-25" style="background-color: #CCFFCC">
+                        <div class="d-block ms-md-2 me-md-5 my-lg-5 w-50 h-25"
+                             style="background-color: lightsalmon; border-radius: 10px">
                             <div class="ms-md-5 my-lg-5 ">
                                 <span class="fw-bold">Beautiful House's Collection</span>
                                 <li> BST IKEA</li>
@@ -119,7 +120,8 @@ include("../../layout/header.php");
                                              height="270px">
                                         <p class="fw-bold text-center mt-md-4">Collection Restoration Hardware</p>
                                         <div class="is-diviver"></div>
-                                        <p>With its own youthful and innovative quality, the Restoration Hardware collection brings to
+                                        <p>With its own youthful and innovative quality, the Restoration Hardware
+                                            collection brings to
                                             The products are compact, modern [...]</p>
                                     </a>
                                 </div>

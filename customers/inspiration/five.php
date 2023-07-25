@@ -41,7 +41,8 @@ include("../../layout/header.php");
                         Being really high-class is definitely something that many people
                         Homeowners want when owning a mid-range or high-rise apartment. But where to start? With 5 hints
                         below, you will easily
-                        shape a design idea that is suitable for aesthetic taste and personality to implement a modern apartment
+                        shape a design idea that is suitable for aesthetic taste and personality to implement a modern
+                        apartment
                         your own luxury.
                     </p>
 
@@ -53,9 +54,11 @@ include("../../layout/header.php");
                                 actually a lot of interior design
                                 Furniture has become more luxurious when using these materials. Metal legs
                                 Gold plated or metallic rim
-                                When combined with wood color will help the room sparkle and stand out. In particular, <b
+                                When combined with wood color will help the room sparkle and stand out. In particular,
+                                <b
                                         class="fs-3">living room</b> is usually near the balcony, so it will be used
-                                make extremely good use of natural light sources, when making use of the decoration of interior products
+                                make extremely good use of natural light sources, when making use of the decoration of
+                                interior products
                                 metallic glitter will create accents
                                 for your apartment.
                             </p>
@@ -82,17 +85,21 @@ include("../../layout/header.php");
                         <div class="ms-md-5">
                             <span class="display-5 fw-bold">Modern dining room equipped with functional products</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                The kitchen is often focused on modernity in terms of function, because this is the heart
+                                The kitchen is often focused on modernity in terms of function, because this is the
+                                heart
                                 of the House. Therefore, you
                                 should consult with a consultant to make this space really harmonious and convenient
                                 best. As for the dining table,
                                 You can choose products that suit your preferences and still retain the quality
                                 luxury, aesthetics. Dinner table
-                                Expansion is a great option following recent trends for apartment spaces, because of its design
+                                Expansion is a great option following recent trends for apartment spaces, because of its
+                                design
                                 Modern, flexible design
-                                In use, it is easy to change the size of the table top according to your needs. Besides, choose
+                                In use, it is easy to change the size of the table top according to your needs. Besides,
+                                choose
                                 <b class="fs-3">dining chair</b> combined with the theme
-                                The living room will help the space to have a connection and transparency in terms of design ideas.
+                                The living room will help the space to have a connection and transparency in terms of
+                                design ideas.
                             </p>
 
                         </div>
@@ -107,7 +114,8 @@ include("../../layout/header.php");
                                 Neutral colors make you feel
                                 feel more relaxed. But that's not why <b class="fs-3">interior decoration
                                     the bedroom</b> becomes faded again: dark wall color
-                                Simple interior combination will be the optimal mainstream style choice, the first details
+                                Simple interior combination will be the optimal mainstream style choice, the first
+                                details
                                 bed or bedside table
                                 The melody will make a unique highlight for the whole room. You can choose a bed
                                 Soft fabric cover with push button
@@ -154,9 +162,11 @@ include("../../layout/header.php");
                                 reasonable, just right with the work
                                 make the most of their functions, especially in apartments with a large area
                                 The space is not too big. The
-                                Decorative items should be placed at eye-level positions, in sufficient quantity and suitable for
+                                Decorative items should be placed at eye-level positions, in sufficient quantity and
+                                suitable for
                                 space. Like this
-                                The interior of the room will not cause a feeling of constriction, but will become airy and light.
+                                The interior of the room will not cause a feeling of constriction, but will become airy
+                                and light.
                             </p>
                         </div>
                     </section>
@@ -189,9 +199,11 @@ include("../../layout/header.php");
                                 and external appearance.
                                 Beautiful is not enough, interior decorations also need to be very durable. So choose
                                 Choose products from the house
-                                Providing prestigious and quality furniture will help the space to be luxurious, literally "good for all".
+                                Providing prestigious and quality furniture will help the space to be luxurious,
+                                literally "good for all".
                                 wood and paint". Dishes
-                                Items that can be used for a long time will save you a great deal of money, this is also a
+                                Items that can be used for a long time will save you a great deal of money, this is also
+                                a
                                 Worthwhile investment for the home.
                             </p>
 

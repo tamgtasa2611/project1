@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
 
-    <title>Danh sách danh mục</title>
+    <title>Category manager</title>
 </head>
 <body>
 <?php
@@ -53,18 +53,22 @@ include_once('../../connect/close.php');
 ?>
 <div id="content" class="">
     <div class="wrapper d-flex align-items-stretch">
-        <?php
-        include("../../layout/admin_menu.php");
-        ?>
+        <div style="width: 250px"></div>
+        <div class="position-fixed" style="height: 100%">
+            <?php
+            include("../../layout/admin_menu.php");
+            ?>
+        </div>
 
+        <!--  content  -->
         <div class="content-container">
-            <h4 class="content-heading">Danh sách danh mục</h4>
+            <h4 class="content-heading">Category list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
                     <th>ID</th>
-                    <th>Tên danh mục</th>
-                    <th>Thao tác</th>
+                    <th>Name</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <?php
@@ -76,11 +80,11 @@ include_once('../../connect/close.php');
                         <td>
                             <button type="button" class="btn btn-primary border-primary">
                                 <a href="edit.php?id=<?= $category['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Sửa</a>
+                                   style="text-decoration: none">Edit</a>
                             </button>
                             <button type="button" class="btn bg-danger border-danger">
                                 <a href="destroy.php?id=<?= $category['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Xóa</a>
+                                   style="text-decoration: none">Delete</a>
                             </button>
                         </td>
 
@@ -91,7 +95,7 @@ include_once('../../connect/close.php');
             </table>
             <div style="display: flex; justify-content: space-between">
                 <button type="button" class="btn btn-primary nice-box-shadow">
-                    <a href="create.php" class="text-white" style="text-decoration: none">Thêm danh mục</a>
+                    <a href="create.php" class="text-white" style="text-decoration: none">Add a category</a>
                 </button>
                 <!-- for de hien thi so trang -->
                 <div class="text-center ">
@@ -109,10 +113,10 @@ include_once('../../connect/close.php');
                 </div>
 
                 <form class="search-form" action="" method="get">
-                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Tìm kiếm tại đây..."
+                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."
                            class="form-outline">
                     <button type="submit" class="btn btn-primary nice-box-shadow">
-                        <a href="" class="text-white" style="text-decoration: none">Tìm kiếm</a>
+                        <a href="" class="text-white" style="text-decoration: none">Search</a>
                     </button>
 
                 </form>

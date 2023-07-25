@@ -51,15 +51,48 @@ $sql = "SELECT furnitures.*, categories.name as category_name, producers.name as
          WHERE furnitures.id = '$id'";
 //Chạy query
 $furnitures = mysqli_query($connect, $sql);
+
+//query tinh so san pham da ban
+$soldQuery = "SELECT sum(order_details.quantity) AS sold_quantity
+                    FROM furnitures
+                    INNER JOIN order_details ON furnitures.id = order_details.furniture_id
+                    INNER JOIN orders ON orders.id = order_details.order_id
+                    WHERE (orders.status = 3) AND (furnitures.id = '$id')";
+$soldQuantities = mysqli_query($connect, $soldQuery);
+
 //Đóng kết nối
 include_once '../../connect/close.php';
 foreach ($furnitures as $furniture) {
     ?>
     <!--    san pham    -->
+    <!--Thong bao them sp vao gio hang-->
+    <?php
+    if (!isset($_SESSION['add-success'])) {
+        $_SESSION['add-success'] = 0;
+    }
+    if ($_SESSION['add-success'] === 1) {
+        echo '<div id="close-target" class="alert alert-success position-absolute success-alert" role="alert"
+                style="top: 14.5%">
+              Added to cart successfully! 
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px" onclick="closeMes()"></i>
+              </div>';
+        $_SESSION['add-success'] = 0;
+    }
+    ?>
+
+    <script>
+        let clickClose = document.getElementById('click-close');
+        let closeTarget = document.getElementById('close-target')
+
+        function closeMes() {
+            closeTarget.classList.add("d-none");
+        }
+    </script>
     <!-- content -->
     <div id="furniture-detail-container" class="mt-5">
         <div id="furniture-img">
-            <img style="max-height: 480px; margin: auto;" src="../../admins/images/<?= $furniture['image'] ?>"/>
+            <img style="margin: auto;" width="80%"
+                 src="../../admins/images/<?= $furniture['image'] ?>"/>
         </div>
         <div id="furniture-info">
             <div>
@@ -68,37 +101,42 @@ foreach ($furnitures as $furniture) {
                 </h1>
             </div>
 
-            <div class="">
+            <div class="d-flex justify-content-between">
                 <span class="text-muted">
                     <i class="fas fa-shopping-basket fa-sm mx-1">
-                    </i>Đã bán ... sản phẩm
+                    </i><?php
+                    foreach ($soldQuantities as $soldQuantity) {
+                        ?>
+                        <span><?= $soldQuantity['sold_quantity'] ?></span>
+                        <?php
+                    }
+                    ?>
+                    sold
                 </span>
+
+                <span style="color: #3e9c35"><?= currency_format($furniture['price']) ?></span>
             </div>
 
-            <div class="">
-                <span class=""><?= currency_format($furniture['price']) ?></span>
-            </div>
 
-            <div class="">
-                <dt class="">Danh mục:</dt>
-                <dd class=""><?= $furniture['category_name'] ?></dd>
-
-                <dt class="">Chất liệu:</dt>
+            <div class="d-flex justify-content-between">
+                <dt class="">Material:</dt>
                 <dd class=""><?= $furniture['material'] ?></dd>
-
-                <dt class="">Nhà sản xuất:</dt>
+            </div>
+            <div class="d-flex justify-content-between">
+                <dt class="">Category:</dt>
+                <dd class=""><?= $furniture['category_name'] ?></dd>
+            </div>
+            <div class="d-flex justify-content-between">
+                <dt class="">Producer:</dt>
                 <dd class=""><?= $furniture['producer_name'] ?></dd>
             </div>
 
-            <div class="">
-                <div class="">
-                    <label class="">Số lượng</label>
-                    <input type="number" placeholder="1">
-                </div>
+            <div class="d-flex justify-content-evenly align-items-center mt-5">
+                <a href="../carts/buy_now.php?id=<?= $id ?>" id="buy-now-btn" class="view-detail-btn">
+                    Buy now <span class="me-1 fa fa-shopping-basket"></span></a>
+                <a href="../carts/add_to_cart.php?id=<?= $id; ?>" id="add-to-cart-btn" class="add-to-cart-btn">
+                    Add to cart <span class="m-1 fa-solid fa-cart-plus"></a>
             </div>
-            <a href="../carts/buy_now.php?id=<?= $id ?>" id="buy-now-btn" class="btn">Mua ngay</a>
-            <a href="../carts/add_to_cart.php?id=<?= $id; ?>" id="add-to-cart-btn" class="btn">
-                <i class="me-1 fa fa-shopping-basket"></i>Thêm vào giỏ</a>
         </div>
     </div>
     <!-- content -->

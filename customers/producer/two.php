@@ -40,13 +40,16 @@ include("../../layout/header.php");
                         <div class="me-sm-5" align="justify">
                             <span class="display-5 fw-bold">Herman Miller – Elegant and sophisticated beauty</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                After a long time of cherishing, Beautiful House launches a new collection of Herman Miller from designer
+                                After a long time of cherishing, Beautiful House launches a new collection of Herman
+                                Miller from designer
                                 Famous Danish designer Mr. Hans
                                 Sandgren Jakobsen*. Inspired by sophisticated, light, basic but simple interiors
                                 Herman Miller is a great combination
-                                The perfect balance between ruggedness and minimal weight. The dining chairs are made of pine wood
+                                The perfect balance between ruggedness and minimal weight. The dining chairs are made of
+                                pine wood
                                 American skin with wood grafting method
-                                especially combining ropes imported from Germany, the finished product is only 2.1 kg combined with
+                                especially combining ropes imported from Germany, the finished product is only 2.1 kg
+                                combined with
                                 Exquisitely designed dining table will be
                                 accent in any interior space.
                             </p>
@@ -56,7 +59,8 @@ include("../../layout/header.php");
                                 Dining, Bench, Sofa, Coffee Table and TV Cabinet.
                             </p>
                             <p class="fs-3" style="text-align: justify">
-                                It can be said that the Herman Miller collection is the perfect measure for the harmonious combination of
+                                It can be said that the Herman Miller collection is the perfect measure for the
+                                harmonious combination of
                                 Durability, Lightness, Comfort and Aesthetics
                                 of the product.
                             </p>
@@ -119,8 +123,8 @@ include("../../layout/header.php");
 
                     <section id="section-1" class="ms-sm-3 mt-sm-5">
                         <img src="../../main/media/images/producers/body-4-of-two.jpg"
-                                        width="1240px"
-                                        height="850px">
+                             width="1240px"
+                             height="850px">
                         <div id="section-1-text">
                             <h1 class="align-left text-white mb-5">Elegant beauty</h1>
                         </div>

@@ -24,9 +24,14 @@ if (!isset($_SESSION['email'])) {
 
 <div id="content" class="">
     <div class="wrapper d-flex align-items-stretch">
-        <?php
-        include("../../layout/admin_menu.php");
-        ?>
+        <div style="width: 250px"></div>
+        <div class="position-fixed" style="height: 100%">
+            <?php
+            include("../../layout/admin_menu.php");
+            ?>
+        </div>
+
+        <!--  content  -->
 
         <div class="content-container">
             <h4 class="content-heading">Thêm sản phẩm</h4>

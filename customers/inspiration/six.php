@@ -36,11 +36,13 @@ include("../../layout/header.php");
 
                     </div>
                     <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
-                        <b class="fs-2">Dining room</b> is the place to create a cozy feeling for the apartment, so the comfort in the area
+                        <b class="fs-2">Dining room</b> is the place to create a cozy feeling for the apartment, so the
+                        comfort in the area
                         This area is always a priority
                         Top. Smart <b class="fs-2">dining table</b> models are packed with features and use
                         Used in a variety of spaces
-                        is a popular choice right now. So what are the advantages of a smart dining table compared to a dining table?
+                        is a popular choice right now. So what are the advantages of a smart dining table compared to a
+                        dining table?
                         traditional? Let's follow
                         Below is the article of <b class="fs-2">Beautiful House</b>.
                     </p>
@@ -53,13 +55,16 @@ include("../../layout/header.php");
                         <div>
                             <span class="display-5 fw-bold">1. Various materials and designs</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                Currently, there are many smart dining table models launched to meet the needs of customers.
+                                Currently, there are many smart dining table models launched to meet the needs of
+                                customers.
                                 With
                                 <b class="fs-3">many materials, colors and designs, </b> completely easy for homeowners
                                 choose the right product
-                                suitable for apartment space. There are many smart dining table designs like <b class="fs-3">table
+                                suitable for apartment space. There are many smart dining table designs like <b
+                                        class="fs-3">table
                                     expand ovals, rectangles, circles,… </b>
-                                Homeowners can choose from different materials such as extended tables <b class="fs-3"> stone top,
+                                Homeowners can choose from different materials such as extended tables <b class="fs-3">
+                                    stone top,
                                     ceramic, wood,... </b>
                             </p>
 
@@ -83,9 +88,11 @@ include("../../layout/header.php");
                                 Currently there are two forms of extension. One is,
                                 <b class="fs-3">expands just inside the center area,</b>ie after manipulation,
                                 The fixed tabletop area will spread evenly to
-                                make room for an extension in the middle. Second, <b class="fs-3">extends in the surrounding area
+                                make room for an extension in the middle. Second, <b class="fs-3">extends in the
+                                    surrounding area
                                     around,</b> the dining area is enlarged thanks to the displacement
-                                surface at the edge of the table. So <b class="fs-3">each shape will have an animated texture
+                                surface at the edge of the table. So <b class="fs-3">each shape will have an animated
+                                    texture
                                     different movements.</b>
                             </p>
                         </div>
@@ -105,9 +112,11 @@ include("../../layout/header.php");
                                 For households with modest kitchen space, a smart dining table is the choice
                                 choose the most optimal. Smart dining table can
                                 <b class="fs-3">flexibly adjust the size depending on the needs of use</b>
-                                of the homeowner, for example, the table top can expand from 4-6 people up to 8-10 people.
+                                of the homeowner, for example, the table top can expand from 4-6 people up to 8-10
+                                people.
                                 Therefore, the area
-                                <b class="fs-3"> the dining room will always be tidy and walking in the kitchen will be comfortable
+                                <b class="fs-3"> the dining room will always be tidy and walking in the kitchen will be
+                                    comfortable
                                     than. </b>
                             </p>
 
@@ -151,11 +160,14 @@ include("../../layout/header.php");
                         <div>
                             <span class="display-5 fw-bold">4. Cost reduction</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                All kinds of smart dining tables are now integrated with many conveniences by <b class="fs-3">
+                                All kinds of smart dining tables are now integrated with many conveniences by <b
+                                        class="fs-3">
                                     useful. </b>
-                                Homeowners can reduce the cost of buying shelves because some dining tables have been combined with the same taste
+                                Homeowners can reduce the cost of buying shelves because some dining tables have been
+                                combined with the same taste
                                 cup holder. </b>
-                                In addition, there are models of dining tables designed so that <b> when folded can be used as
+                                In addition, there are models of dining tables designed so that <b> when folded can be
+                                    used as
                                     a bookshelf or decorative shelf. </b>
                                 In case the family no longer needs this type of dining table, or wants to upgrade it
                                 a better product line is possible
@@ -180,14 +192,17 @@ include("../../layout/header.php");
                         <div class="ms-md-5">
                             <span class="display-5 fw-bold">5. Convenient function</span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                With a variety of dining tables designed seamlessly with kitchen cabinets, wine cabinets, decorative shelves or tables
+                                With a variety of dining tables designed seamlessly with kitchen cabinets, wine
+                                cabinets, decorative shelves or tables
                                 wall eat. The kitchen space will be
-                                Organized planning with scientific arrangement, <b class="fs-3"> ensures convenience, maximum
+                                Organized planning with scientific arrangement, <b class="fs-3"> ensures convenience,
+                                    maximum
                                     function advantage. </b>
                             </p>
 
                             <p class="fs-3 " style="text-align: justify">
-                                Some types of extended dining tables when collapsible can be used as tea tables to receive guests. Therefore,
+                                Some types of extended dining tables when collapsible can be used as tea tables to
+                                receive guests. Therefore,
                                 <b class="fs-3">some manufacturers will give priority to weight</b> products to
                                 client
                                 <b class="fs-3"> more convenient in moving </b> dining table to other areas
@@ -199,11 +214,13 @@ include("../../layout/header.php");
 
                     <p class="fs-1 mt-sm-5 pt-sm-5" style="text-align: justify">
                         <b class="fs-1"> Smart dining table </b> will be a great choice for <b
-                            class="fs-1"> space dining room </b>
-                        modern. With a luxurious design and multi-application, the extended dining table will fully meet the needs
+                                class="fs-1"> space dining room </b>
+                        modern. With a luxurious design and multi-application, the extended dining table will fully meet
+                        the needs
                         of most families.
                         Hope with the benefits that
-                        <b class="fs-1"> Beautiful House </b> provides, you already have the necessary information about the table
+                        <b class="fs-1"> Beautiful House </b> provides, you already have the necessary information about
+                        the table
                         eat this smart.
                     </p>
 

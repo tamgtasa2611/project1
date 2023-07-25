@@ -36,11 +36,14 @@ include("../../layout/header.php");
 
                     </div>
                     <p class="my-sm-5 h2 mx-sm-2" style="text-align: justify">
-                        For those <b class="fs-2">dining rooms</b> with a modest area, the arrangement of home appliances
+                        For those <b class="fs-2">dining rooms</b> with a modest area, the arrangement of home
+                        appliances
                         the kitchen so that it is safe
-                        function, both meeting the aesthetic factor and at the same time, creating an airy feeling for the space
+                        function, both meeting the aesthetic factor and at the same time, creating an airy feeling for
+                        the space
                         which is not easy. So
-                        let <b class="fs-2">Beautiful House</b> suggest you some ways to arrange a small dining room for dinner
+                        let <b class="fs-2">Beautiful House</b> suggest you some ways to arrange a small dining room for
+                        dinner
                         Optimize space.
                     </p>
                     <a class="mx-sm-2 mb-sm-5 pt-sm-5"><img src="../../main/media/images/inspiration/four.jpg"
@@ -87,7 +90,8 @@ include("../../layout/header.php");
                             <p class="fs-3" style="text-align: justify">
                                 Kitchen cabinets with separate drawers and drawers will be the ideal space
                                 for homeowners to store utensils.
-                                Items that are frequently used should be placed in an easy-to-access location. What about the items?
+                                Items that are frequently used should be placed in an easy-to-access location. What
+                                about the items?
                                 Rarely used, please keep it in the area
                                 hard to get or storage area.
                             </p>
@@ -102,7 +106,8 @@ include("../../layout/header.php");
                             <p class="fs-3 my-sm-4" style="text-align: justify">
                                 With a modest dining area, give priority to the use of dining tables
                                 Smart and collectible design
-                                Compact and easy to open. Expanded dining table with minimalist design will flexibly meet needs
+                                Compact and easy to open. Expanded dining table with minimalist design will flexibly
+                                meet needs
                                 family daily use
                                 and even when guests come to play.
                                 <b class="fs-3"> Table top size varies from area for 4-6 people up to 8
@@ -128,9 +133,11 @@ include("../../layout/header.php");
                                 If the owner <b class="fs-3"> both likes convenience and prioritizes versatility </b>
                                 then you should consider food trolley models. With movable wheel design
                                 active, when placed in the area
-                                kitchen, this will be a product used to store necessary utensils, and when the homeowner needs it
+                                kitchen, this will be a product used to store necessary utensils, and when the homeowner
+                                needs it
                                 bring food to the area
-                                dining table, this will be a means of transportation that is both compact and convenient.
+                                dining table, this will be a means of transportation that is both compact and
+                                convenient.
                             </p>
 
                         </div>

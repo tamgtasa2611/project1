@@ -8,55 +8,28 @@
     background-color: white;
 }
 
+#furniture-img {
+    width: 60%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#furniture-info {
+    width: 30%;
+}
 
 /* buy btn */
 #buy-now-btn {
-    display: inline-block;
-    outline: none;
     cursor: pointer;
-    font-size: 14px;
-    line-height: 1;
     border-radius: 8px;
-    transition-property: background-color, border-color, color, box-shadow, filter;
-    transition-duration: .3s;
-    border: 1px solid transparent;
-    letter-spacing: 1px;
-    min-width: 160px;
-    text-transform: uppercase;
-    white-space: normal;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: #fff;
-    background-color: var(--orange);
-    height: 48px;
+    padding: 12px 16px;
 }
-
-#buy-now-btn:hover {
-    background-color: #d36300;
-}
-
 
 #add-to-cart-btn {
-    display: inline-block;
-    outline: none;
     cursor: pointer;
-    font-size: 14px;
-    line-height: 1;
     border-radius: 8px;
-    transition-property: background-color, border-color, color, box-shadow, filter;
-    transition-duration: .3s;
-    border: 1px solid transparent;
-    letter-spacing: 1px;
-    min-width: 160px;
-    text-transform: uppercase;
-    white-space: normal;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: #fff;
-    background-color: var(--bs-blue);
-    height: 48px;
-}
-
-#add-to-cart-btn:hover {
-    background-color: #0052cb;
+    padding: 12px 16px;
+    color: white;
 }

@@ -52,12 +52,15 @@ if (!isset($_SESSION['user-email'])) {
                               ('$order_id', '$product_id', '$price', '$quantity')";
         //chay query insert order_details
         mysqli_query($connect, $sqlInsertOrderDetail);
+        //query -1 stock quantity furniture
+        $sqlStock = "UPDATE furnitures SET quantity = quantity - '$quantity' WHERE id = '$product_id'";
+        mysqli_query($connect, $sqlStock);
     }
 
     //xoa cart
     unset($_SESSION['cart']);
     //quay ve trang gio hang
-    header("Location: send_email.php");
+    header("Location: send_email_to_admin.php");
 }
 
 

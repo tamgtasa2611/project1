@@ -18,13 +18,13 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
-    <title>Chi tiết đơn hàng</title>
+    <title>Order browsing</title>
 </head>
 <body>
 <?php
 $id = $_GET['id'];
 $total_money = 0;
-
+$total_item = 0;
 include_once("../../connect/open.php");
 $sql = "SELECT order_details.*, furnitures.image as furniture_image, furnitures.name as furniture_name,
             orders.status as order_status      
@@ -33,7 +33,7 @@ $sql = "SELECT order_details.*, furnitures.image as furniture_image, furnitures.
          INNER JOIN furnitures ON order_details.furniture_id = furnitures.id
          WHERE order_details.order_id = '$id'";
 $order_details = mysqli_query($connect, $sql);
-include_once("../../connect/close.php");
+
 //format usd
 if (!function_exists('currency_format')) {
     function currency_format($number, $suffix = '$')
@@ -55,15 +55,15 @@ if (!function_exists('currency_format')) {
         </div>
         <!--  content  -->
         <div class="content-container">
-            <h4 class="content-heading">Duyệt đơn hàng #<?= $id ?></h4>
+            <h4 class="content-heading">Browsing order #<?= $id ?></h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
-                    <th>Sản phẩm</th>
+                    <th>Product</th>
                     <th>Image</th>
-                    <th>Số lượng</th>
-                    <th>Giá</th>
-                    <th>Thành tiền</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total price</th>
                 </tr>
                 </thead>
                 <tbody style="overflow-y: auto">
@@ -79,7 +79,9 @@ if (!function_exists('currency_format')) {
                                     width="100px"
                             >
                         </td>
-                        <td> <?= $order_detail['quantity'] ?> </td>
+                        <td> <?php
+                            $total_item += $order_detail['quantity'];
+                            echo $order_detail['quantity'] ?> </td>
                         <td> <?= currency_format($order_detail['price']) ?> </td>
                         <td> <?php
                             $sub_total = $order_detail['quantity'] * $order_detail['price'];
@@ -92,7 +94,7 @@ if (!function_exists('currency_format')) {
                 ?>
                 <tr>
                     <td colspan="3"></td>
-                    <td>Tổng cộng:</td>
+                    <td>Total cost:</td>
                     <td>
                         <?php
                         echo currency_format($total_money);
@@ -101,8 +103,8 @@ if (!function_exists('currency_format')) {
                 </tr>
                 </tbody>
             </table>
-            <div style="margin-bottom: 40px; display: flex; justify-content: space-between">
-                <a href="index.php" class="btn btn-primary nice-box-shadow">Quay lại</a>
+            <div style="margin-bottom: 40px; display: flex; justify-content: space-between; color: white">
+                <a onclick="window.history.go(-1)" class="btn btn-primary nice-box-shadow">Back</a>
                 <form action="update.php" method="post">
                     <?php
                     foreach ($order_details as $order_detail) {
@@ -112,20 +114,22 @@ if (!function_exists('currency_format')) {
                     }
                     ?>
                     <select name="status" id="status" class="form-select">
+
                         <option value="0"
                             <?php
                             if ($order_detail['order_status'] == 0) {
                                 echo 'selected';
                             }
-                            ?>>Chờ xác nhận
+                            ?>>Pending
                         </option>
+
 
                         <option value="1"
                             <?php
                             if ($order_detail['order_status'] == 1) {
                                 echo 'selected';
                             }
-                            ?>>Đã xác nhận
+                            ?>>Confirmed
                         </option>
 
                         <option value="2"
@@ -133,7 +137,7 @@ if (!function_exists('currency_format')) {
                             if ($order_detail['order_status'] == 2) {
                                 echo 'selected';
                             }
-                            ?>>Đang giao hàng
+                            ?>>Delivering
                         </option>
 
                         <option value="3"
@@ -141,7 +145,7 @@ if (!function_exists('currency_format')) {
                             if ($order_detail['order_status'] == 3) {
                                 echo 'selected';
                             }
-                            ?>>Đã giao hàng
+                            ?>>Completed
                         </option>
 
                         <option value="4"
@@ -149,15 +153,18 @@ if (!function_exists('currency_format')) {
                             if ($order_detail['order_status'] == 4) {
                                 echo 'selected';
                             }
-                            ?>>Đã hủy
+                            ?>>Cancelled
                         </option>
                     </select>
-                    <button href="" class="btn btn-primary nice-box-shadow">Cập nhật</button>
+                    <button href="" class="btn btn-primary nice-box-shadow">Update</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
+<?php
+include_once("../../connect/close.php");
+?>
 </body>
 </html>

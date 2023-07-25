@@ -86,6 +86,30 @@ include("../../layout/header.php");
     </div>
 </section>
 
+<!--Thong bao them sp vao gio hang-->
+<?php
+if (!isset($_SESSION['add-success'])) {
+    $_SESSION['add-success'] = 0;
+}
+if ($_SESSION['add-success'] === 1) {
+    echo '<div id="close-target" class="alert alert-success position-absolute success-alert" role="alert">
+              Added to cart successfully! 
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px" onclick="closeMes()"></i>
+              </div>';
+    $_SESSION['add-success'] = 0;
+}
+?>
+
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
+
+
 <!--  Categories  -->
 <section id="furnitures-list">
     <div id="category-section" class="container mt-5" style="border-radius: 1rem !important;">
@@ -151,15 +175,20 @@ include("../../layout/header.php");
                         <a href="../furniture/furniture_detail.php?id=<?= $furniture['id'] ?>" class="text-dark">
                             <div class="card-body text-center">
                                 <div class='cvp'>
-                                    <h4 class="card-title font-weight-bold"><?= $furniture['name'] ?></h4>
-                                    <p class="card-text"><?= currency_format($furniture['price']) ?></p>
+                                    <h3 class="card-title font-weight-bold"><?= $furniture['name'] ?></h3>
+                                    <p class="card-text" style="color: #3e9c35">
+                                        <?= currency_format($furniture['price']) ?>
+                                    </p>
                         </a>
                     </div>
+
                     <div class="d-flex justify-content-evenly align-items-center mt-5">
-                        <a href="../furniture/furniture_detail.php?id=<?= $furniture['id'] ?>">View details</a><br/>
-                        <button class="btn btn-primary">
-                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>" class="text-white">
-                                Add to cart
+                        <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="view-detail-btn"
+                        >View details</a>
+                        <button class="add-to-cart-btn">
+                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>"
+                               class="text-white">
+                                Add to cart <span class="m-1 fa-solid fa-cart-plus"></span>
                             </a>
                         </button>
                     </div>

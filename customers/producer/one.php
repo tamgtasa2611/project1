@@ -89,7 +89,8 @@ include("../../layout/header.php");
                             <p class="fs-3 my-sm-4" style="text-align: justify">
                                 The edges and handles of the collection are painted in a sheen by the artisans
                                 prominent needle. Main details
-                                This product has brought a luxurious and elegant look to all products with the same theme, creating a set
+                                This product has brought a luxurious and elegant look to all products with the same
+                                theme, creating a set
                                 Osaka collection is both strong and
                                 sturdy, both aesthetically pleasing and gives you a living space that you always
                                 desire.
@@ -113,7 +114,8 @@ include("../../layout/header.php");
                         <div align="justify">
                             <span class="display-5 fw-bold"></span>
                             <p class="fs-3 my-md-4" style="text-align: justify">
-                                The special feature of this collection comes from the special design of the door handles and
+                                The special feature of this collection comes from the special design of the door handles
+                                and
                                 drawer. With this design,
                                 The handle will become a beautiful highlight for the product, making the product
                                 unique and fancy, creating

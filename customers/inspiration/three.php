@@ -58,9 +58,11 @@ include("../../layout/header.php");
                             <p class="fs-3 my-md-4" style="text-align: justify">
                                 Behind the hustle and bustle of society, people often have a need to connect with
                                 more nature. So
-                                So the idea of bringing nature into the house is an optimal solution. For the apartment to have more life,
+                                So the idea of bringing nature into the house is an optimal solution. For the apartment
+                                to have more life,
                                 you can plant more trees
-                                green around the house campus and add a small beautiful potted plant in the corner <b class="fs-3">table
+                                green around the house campus and add a small beautiful potted plant in the corner <b
+                                        class="fs-3">table
                                     work. </b>
                                 Trees bring many benefits to people's health and spirit, for example
                                 <b class="fs-3">purifies the air, absorbs electronic radiation, relieves stress
@@ -107,14 +109,16 @@ include("../../layout/header.php");
                         <div class="pb-sm-5">
                             <span class="display-5 fw-bold">3. Focus on a dominant color</span>
                             <p class="fs-3 my-sm-4" style="text-align: justify">
-                                The main color is a transparent factor that affects the choice of furniture in the house.
+                                The main color is a transparent factor that affects the choice of furniture in the
+                                house.
                                 <b class="fs-3"> Each color brings different feelings and experiences
                                     together. </b>
                                 For example, ocher tones often bring a classic and luxurious feeling, while tones of
                                 green will bring
                                 feeling fresh, bright. So you need <b class="fs-3"> to specify the style
                                     and the purpose of each space in the house </b>
-                                to choose the right furniture color tone. Everything <b class="fs-3"> needs to harmonize and connect
+                                to choose the right furniture color tone. Everything <b class="fs-3"> needs to harmonize
+                                    and connect
                                     agree with each other. </b>
                             </p>
 
@@ -135,7 +139,8 @@ include("../../layout/header.php");
                                     add vibrancy, </b>
                                 you can arrange more pictures <b class="fs-3"> wall paintings </b> by theme, for example
                                 like nature paintings,
-                                sea paintings, minimalist paintings, abstract paintings, etc., depending on the taste and taste of each person
+                                sea paintings, minimalist paintings, abstract paintings, etc., depending on the taste
+                                and taste of each person
                                 People.
                             </p>
 
@@ -161,14 +166,16 @@ include("../../layout/header.php");
                                     for living space</b>
                                 mine. An unusual paint color, an experience that you have never seen before
                                 try. Please let me in
-                                that new time, because it will <b class="fs-3">give you a lot of interesting feelings</b> in
+                                that new time, because it will <b class="fs-3">give you a lot of interesting
+                                    feelings</b> in
                                 this life.
                             </p>
                         </div>
                     </section>
 
                     <p class="fs-1 mt-sm-5 pt-sm-5" style="text-align: justify">
-                        Besides, Beautiful House is having a program <b class="fs-1">gifting a 50m2 wall paint package</b>
+                        Besides, Beautiful House is having a program <b class="fs-1">gifting a 50m2 wall paint
+                            package</b>
                         for customers using <b class="fs-1"> interior design service (100% free layout design fee)
                             and 3D) </b> from date
                         <b class="fs-1"> May 19 to June 19, 2023 </b> at Beautiful House. If you have an idea to do

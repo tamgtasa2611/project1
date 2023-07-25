@@ -19,35 +19,10 @@
                         <div class="w-25 my-sm-4">
                             <div class="is-diviver"></div>
                         </div>
-                        <div style="background-color: #303036" class="w-50"><img src="../../main/media/images/logo_transparent.png"
-                                                                               width="150px"
-                                                                               height="60px">
+                        <div style="background-color: white; border-radius: 4px"
+                             class="w-100 d-flex justify-content-center">
+                            <img src="../../main/media/images/logo.png" width="90%" style="padding: 6%">
                         </div>
-                        <h4 class="text-uppercase mt-5">
-                            Follow us
-                        </h4>
-                        <a
-                                class="btn btn-outline-light btn-floating m-1"
-                                class="text-white"
-                                role="button"
-                        ><i class="fab fa-facebook-f"></i
-                            ></a>
-
-                        <!-- Google -->
-                        <a
-                                class="btn btn-outline-light btn-floating m-1"
-                                class="text-white"
-                                role="button"
-                        ><i class="fab fa-google"></i
-                            ></a>
-
-                        <!-- Instagram -->
-                        <a
-                                class="btn btn-outline-light btn-floating m-1"
-                                class="text-white"
-                                role="button"
-                        ><i class="fab fa-instagram"></i
-                            ></a>
                     </div>
                     <!-- Grid column -->
 
@@ -102,9 +77,9 @@
                         <div class="w-25 my-sm-4">
                             <div class="is-diviver"></div>
                         </div>
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-home mr-3"></i> 2004 Hai Ba Trung, Hanoi, VN</p>
+                        <p><i class="fas fa-envelope mr-3"></i> tam.ad.php@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 89</p>
                         <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
                     </div>
                     <!-- Grid column -->

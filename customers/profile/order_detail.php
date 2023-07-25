@@ -49,6 +49,7 @@ if (!function_exists('currency_format')) {
         }
     }
 }
+$count_item = 0;
 $total_money = 0;
 ?>
 
@@ -159,6 +160,7 @@ include("../../layout/header.php");
                                 </div>
                                 <div style="width: 136px">
                                     <?php
+                                    $count_item += $orderDetail['quantity'];
                                     $sub_total = $orderDetail['quantity'] * $orderDetail['price'];
                                     $total_money += $sub_total;
                                     echo currency_format($sub_total);
@@ -174,20 +176,20 @@ include("../../layout/header.php");
 
                 </div>
 
-                <?php
-                include_once("../../connect/close.php");
-                ?>
-
                 <div class="d-flex justify-content-between" style="margin-top: 28px;">
                     <a href="order_history.php" class="btn btn-primary"
                        style="font-size: 16px; padding-left :24px; padding-right: 24px">
                         Back
                     </a>
+                    <a href="#payment-modal" class="btn btn-success"
+                       style="font-size: 16px; padding-left :24px; padding-right: 24px">
+                        Payment details
+                    </a>
                     <?php
                     foreach ($statusOrders as $statusOrder) {
                         if ($statusOrder['status'] == 0) {
                             ?>
-                            <a href="#demo-modal" class="btn btn-danger"
+                            <a href="#cancel-modal" class="btn btn-danger"
                                style="font-size: 16px; padding-left :24px; padding-right: 24px">
                                 Cancel order
                             </a>
@@ -195,7 +197,6 @@ include("../../layout/header.php");
                         }
                     }
                     ?>
-
                 </div>
             </div>
         </div>
@@ -205,8 +206,44 @@ include("../../layout/header.php");
 <?php
 include_once("../../layout/footer.php");
 ?>
-<!--          modal          -->
-<div id="demo-modal" class="my-modal">
+
+<!--modal payment details-->
+<div id="payment-modal" class="my-modal">
+    <div class="modal__content">
+        <h1>Payment details</h1>
+        <hr>
+        <?php
+        $orderQuery = "SELECT * FROM orders WHERE id = '$orderId'";
+        $orders = mysqli_query($connect, $orderQuery);
+        foreach ($orders as $order) {
+            ?>
+            <div class="d-flex justify-content-between w-100">
+                <div class="w-50">
+                    <div>Receiver name: <?= $order['receiver_name'] ?></div>
+                    <div>Receiver phone: <?= $order['receiver_phone'] ?> </div>
+                    <div>Receiver address: <?= $order['receiver_address'] ?> </div>
+                </div>
+                <div class="w-50">
+                    <div>Total items: <?= $count_item ?></div>
+                    <div>Shipping cost: Free</div>
+                    <div>Payment method: Pay on delivery</div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+        <hr>
+        <div class="modal__footer">
+            <h3 class="fst-italic fw-bold">Total cost: <span
+                        style="color: #3e9c35"><?= currency_format($total_money) ?></span></h3>
+        </div>
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+<!--end modal payment-->
+
+<!--          modal  cancel        -->
+<div id="cancel-modal" class="my-modal">
     <div class="modal__content">
         <h2>Confirm cancellation</h2>
 
@@ -225,5 +262,8 @@ include_once("../../layout/footer.php");
     </div>
 </div>
 <!--          end modal          -->
+<?php
+include_once("../../connect/close.php");
+?>
 </body>
 </html>

@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
 
-    <title>Quản lý khách hàng</title>
+    <title>Customer manager</title>
 </head>
 <body>
 <?php
@@ -52,22 +52,27 @@ include_once('../../connect/close.php');
 ?>
 <div id="content" class="">
     <div class="wrapper d-flex align-items-stretch">
-        <?php
-        include("../../layout/admin_menu.php");
-        ?>
+        <div style="width: 250px"></div>
+        <div class="position-fixed" style="height: 100%">
+            <?php
+            include("../../layout/admin_menu.php");
+            ?>
+        </div>
+
+        <!--  content  -->
 
         <div class="content-container">
-            <h4 class="content-heading">Danh sách khách hàng</h4>
+            <h4 class="content-heading">Customer list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
                     <th>ID</th>
-                    <th>Tên khách hàng</th>
+                    <th>Name</th>
                     <th>Email</th>
-                    <th>SĐT</th>
-                    <th>Giới tính</th>
-                    <th>Địa chỉ</th>
-                    <th>Thao tác</th>
+                    <th>Phone number</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <?php
@@ -80,20 +85,20 @@ include_once('../../connect/close.php');
                         <td> <?= $customer['phone'] ?> </td>
                         <td> <?php
                             if ($customer['gender'] == 1) {
-                                echo 'Nam';
+                                echo 'Male';
                             } else {
-                                echo 'Nữ';
+                                echo 'Female';
                             }
                             ?> </td>
                         <td> <?= $customer['address'] ?> </td>
                         <td>
                             <button type="button" class="btn btn-primary">
                                 <a href="edit.php?id=<?= $customer['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Sửa</a>
+                                   style="text-decoration: none">Edit</a>
                             </button>
                             <button type="button" class="btn bg-danger border-danger">
                                 <a href="destroy.php?id=<?= $customer['id'] ?>" class="text-white"
-                                   style="text-decoration: none">Xóa</a>
+                                   style="text-decoration: none">Delete</a>
                             </button>
                         </td>
                     </tr>
@@ -105,7 +110,7 @@ include_once('../../connect/close.php');
 
             <div style="display: flex; justify-content: space-between">
                 <button type="button" class="btn btn-primary nice-box-shadow">
-                    <a href="create.php" class="text-white" style="text-decoration: none">Thêm khách hàng</a>
+                    <a href="create.php" class="text-white" style="text-decoration: none">Add a customer</a>
                 </button>
                 <!-- for de hien thi so trang -->
                 <div class="text-center">
@@ -122,10 +127,10 @@ include_once('../../connect/close.php');
                     </ul>
                 </div>
                 <form class="search-form" action="" method="get">
-                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Tìm kiếm tại đây..."
+                    <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."
                            class="form-outline">
                     <button type="submit" class="btn btn-primary nice-box-shadow">
-                        <a href="" class="text-white" style="text-decoration: none">Tìm kiếm</a>
+                        <a href="" class="text-white" style="text-decoration: none">Search</a>
                     </button>
                 </form>
             </div>

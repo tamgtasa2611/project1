@@ -52,11 +52,13 @@ include("../../layout/header.php");
                         <h2 class="mb-sm-5" style="text-align: justify">Welcome to our furniture sales website! We
                             proud to be a reliable address to bring you great interior design solutions
                             for your home.</h2>
-                        <h2 class="mb-sm-5" style="text-align: justify">With a passionate vision of living spaces and endless creativity, we
+                        <h2 class="mb-sm-5" style="text-align: justify">With a passionate vision of living spaces and
+                            endless creativity, we
                             Committed to providing you with high quality furniture products and best service. With one
                             Experienced team and deep understanding of design trends, we guarantee
                             that you will find products that suit your own style and needs.</h2>
-                        <h2 class="mb-sm-5" style="text-align: justify">On our website you will discover a diverse collection and
+                        <h2 class="mb-sm-5" style="text-align: justify">On our website you will discover a diverse
+                            collection and
                             Abundance of furniture from categories such as living room, bedroom, dining room, office
                             and more. We not only provide high quality products, but also guarantee
                             that each model embodies unique style and sophistication.</h2>
@@ -67,23 +69,30 @@ include("../../layout/header.php");
                 <!-- Body 2 -->
                 <div class="d-sm-flex pt-sm-5 ">
                     <div class="text-start col-md-8 mx-3 ms-sm-5">
-                        <h2 class="mb-sm-5" style="text-align: justify">Also, we understand that choosing the right furniture can be a process
+                        <h2 class="mb-sm-5" style="text-align: justify">Also, we understand that choosing the right
+                            furniture can be a process
                             complex process. So we provide you with guidance and suggestions from the experts
                             designers to help you create the perfect living space. We are always ready to listen
                             and fulfill all your requirements, ensuring that your shopping experience will be fulfilled
                             smoothly and enjoyable.</h2>
-                        <h2 class="mb-sm-5" style="text-align: justify">With a commitment to quality, variety and dedicated service, we hope
+                        <h2 class="mb-sm-5" style="text-align: justify">With a commitment to quality, variety and
+                            dedicated service, we hope
                             that you will find the right furniture and give your home a complete look
                             perfect and comfortable. Explore our website now and get started
                             Experience a wonderful living space!</h2>
-                        <h2 class="mb-sm-5" style="text-align: justify">With human-centered criteria for project design. replacement insurance
+                        <h2 class="mb-sm-5" style="text-align: justify">With human-centered criteria for project design.
+                            replacement insurance
                             Transform any environment into an ideal workplace, while ensuring harmony at all times
                             the highest level between the working environment and the surrounding environment.</h2>
-                        <h2 class="mb-sm-5" style="text-align: justify">The company uses raw materials purchased from reputable suppliers
-                            credibility, quality & is periodically appraised… so the insurance product can meet the requirements
+                        <h2 class="mb-sm-5" style="text-align: justify">The company uses raw materials purchased from
+                            reputable suppliers
+                            credibility, quality & is periodically appraised… so the insurance product can meet the
+                            requirements
                             strictest quality standards of Europe & the world.</h2>
-                        <h2 class="mb-sm-5" style="text-align: justify">BH's production system is built on a flexible customization platform with
-                            high response performance. With that production machine, the company can be very flexible in responding to
+                        <h2 class="mb-sm-5" style="text-align: justify">BH's production system is built on a flexible
+                            customization platform with
+                            high response performance. With that production machine, the company can be very flexible in
+                            responding to
                             meet the different high and low needs of customers. From customization to fulfilling orders
                             From quantity & time to customizing products according to your specific design needs
                             customers...Each of our products before being shipped must go through processes from

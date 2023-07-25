@@ -68,7 +68,14 @@
 
 .discover-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0% 9.5%;
+    border-radius: 10px;
+}
+
+.like-container {
+    display: flex;
+    flex-direction: column;
     margin: 0% 9.5%;
     background-color: white;
     border-radius: 10px;
@@ -84,15 +91,19 @@
 }
 
 .discover-item img {
-    width: 50%;
+    width: 100%;
     object-fit: cover;
     aspect-ratio: 1/1;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 30%;
+    border: 10px solid white;
+    border-radius: 28%;
 }
 
 .ditem-text {
-    width: 40%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* category css */
@@ -105,6 +116,24 @@
     width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
+}
+
+.button-more {
+    background-color: #303036;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 12px;
+    border-radius: 20px;
+    width: 16%;
+}
+
+.button-more:hover {
+    color: darkgrey;
+}
+
+.box-shadow-category {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 /* furniture css */
@@ -144,9 +173,33 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.view-detail-btn {
+    background-image: linear-gradient(to right, coral, orange);
+    box-shadow: rgba(255, 165, 0, 0.4) 0px 0.0625em 0.0625em, rgba(255, 165, 0, 0.4) 0px 0.125em 0.5em, rgba(255, 165, 0, 0.2) 0px 0px 0px 1px inset;
+    padding: 8px;
+    border-radius: 4px;
+    color: white;
+}
+
+.view-detail-btn:hover {
+    color: white;
+    background-image: linear-gradient(to right, coral, orangered);
+}
+
+.add-to-cart-btn {
+    background-image: linear-gradient(to right, dodgerblue, deepskyblue);
+    box-shadow: rgba(30, 144, 255, 0.4) 0px 0.0625em 0.0625em, rgba(30, 144, 255, 0.4) 0px 0.125em 0.5em, rgba(30, 144, 255, 0.2) 0px 0px 0px 1px inset;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.add-to-cart-btn:hover {
+    background-image: linear-gradient(to right, dodgerblue, steelblue);
+}
+
 /* producer css */
 /* inspiration css */
-.is-diviver-2 {
+.is-diviver {
     margin-left: auto;
     margin-right: auto;
     background-color: #bebebf;
@@ -155,20 +208,22 @@
     margin-bottom: 0.5em;
     height: 2px;
     width: 100%;
-    max-width: 95%;
+    max-width: 30px;
 }
 
-.bd-left{
-    border-radius: 100px 00px 00px 100px;;
+.transform-middle {
+    transform: translateX(136.8%) !important;
 }
 
-.bd-right{
-    border-radius: 00px 100px 100px 00px;;
+.flickity-page-dots {
+    position: initial !important;
+    margin-top: 20px !important;
 }
 
 .carousel {
     margin-top: 8%;
 }
+
 .carousel-cell {
     width: 66%;
     height: 500px;
@@ -178,6 +233,7 @@
     background-size: cover;
     background-position: center center;
 }
+
 .carousel-cell:before {
     display: block;
     content: '';
@@ -198,18 +254,6 @@
     border-radius: 100px 100px / 120px;
 }
 
-.is-diviver {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #bebebf;
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    height: 2px;
-    width: 100%;
-    max-width: 30px;
-}
-
 .w-s {
     width: 398px;
 }
@@ -219,7 +263,7 @@
 }
 
 .success-alert {
-    top: 100px;
+    top: 67%;
     right: 20px;
     box-shadow: 1px 1px green;
     animation: fadeOut 5s;
