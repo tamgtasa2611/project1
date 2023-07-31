@@ -15,7 +15,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
     <title>Edit a furniture</title>
@@ -31,6 +31,7 @@ $categories = mysqli_query($connect, $sql2);
 $sql3 = "SELECT * FROM producers";
 $producers = mysqli_query($connect, $sql3);
 include_once("../../connect/close.php");
+$imgSource = "";
 foreach ($furnitures as $furniture) {
     ?>
 
@@ -175,7 +176,11 @@ foreach ($furnitures as $furniture) {
                             <td colspan="2">
                                 <div class="form-outline mb-2">
                                     <label class="form-label align-left">Image</label>
-                                    <input name="image" type="file" value="<?= $furniture['image'] ?>"/>
+                                    <input name="image" type="file" value="../images/<?= $furniture['image'] ?>"
+                                           accept="image/*"/>
+                                    <?php
+                                    $imgSource = $furniture['image'];
+                                    ?>
                                     <img height="100px" src="../images/<?= $furniture['image'] ?>" alt="">
                                 </div>
                             </td>
@@ -196,5 +201,21 @@ foreach ($furnitures as $furniture) {
     <?php
 }
 ?>
+
+<script>
+    // Get a reference to our file input
+    const fileInput = document.querySelector('input[type="file"]');
+
+    // Create a new File object
+    const myFile = new File(['strings'], '<?=$imgSource?>', {
+        type: 'text/plain',
+        lastModified: new Date(),
+    });
+
+    // Now let's create a DataTransfer to get a FileList
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(myFile);
+    fileInput.files = dataTransfer.files;
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<div style="height: 100%; margin: 40px 20px">
+<div style="height: 100%; margin: 40px 20px;">
     <?php
     $userId = $_SESSION['user-id'];
     include_once("../../connect/open.php");

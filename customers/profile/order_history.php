@@ -55,7 +55,7 @@ $start = ($page - 1) * $recordOnePage;
 $sql = "SELECT orders.*, (SELECT SUM(quantity * price) FROM order_details 
             WHERE order_id = orders.id) AS total_cost
             FROM orders WHERE customer_id = '$userId'
-            ORDER BY orders.status AND orders.date_buy
+            ORDER BY (orders.status) ASC
             LIMIT $start, $recordOnePage";
 $orderLists = mysqli_query($connect, $sql);
 
@@ -178,7 +178,8 @@ include("../../layout/header.php");
             </div>
 
             <!-- for de hien thi so trang -->
-            <div class="text-center position-absolute" style="left: 0; right: 0; bottom: 50px;">
+            <div class="text-center position-absolute d-flex justify-content-center"
+                 style="left: 0; right: 0; bottom: 50px;">
                 <ul class="pagination justify-content-center">
                     <li class="page-item" style="width: 40px">
                         <a class="page-link"
@@ -214,6 +215,13 @@ include("../../layout/header.php");
                         </a>
                     </li>
                 </ul>
+                <div style="margin-left: 1rem; width: 20%">
+                    <form method="get">
+                        <input type="number" name="page" placeholder="Page..." class="page-link" min="1"
+                               max="<?= $i - 1 ?>"
+                               style="width: 40%; border-radius: 0.25rem; border: 1px solid #dee2e6; color: #0a58ca;">
+                    </form>
+                </div>
             </div>
 
             <?php

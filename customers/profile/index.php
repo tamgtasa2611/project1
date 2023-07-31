@@ -107,7 +107,7 @@ include("../../layout/header.php");
                         </div>
 
                         <div style="width: 40%">
-                            avatar
+                            <input type="file">
                         </div>
                     </div>
 

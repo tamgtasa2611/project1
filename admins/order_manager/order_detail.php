@@ -15,7 +15,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
     <title>Order details</title>
@@ -31,7 +31,7 @@ $sql = "SELECT order_details.*, furnitures.image as furniture_image, furnitures.
          INNER JOIN furnitures ON order_details.furniture_id = furnitures.id
          WHERE order_details.order_id = '$id'";
 $order_details = mysqli_query($connect, $sql);
-include_once("../../connect/close.php");
+
 //format usd
 if (!function_exists('currency_format')) {
     function currency_format($number, $suffix = '$')
@@ -41,6 +41,8 @@ if (!function_exists('currency_format')) {
         }
     }
 }
+
+$count_item = 0;
 ?>
 
 <div id="content">
@@ -77,7 +79,11 @@ if (!function_exists('currency_format')) {
                                     width="100px"
                             >
                         </td>
-                        <td> <?= $order_detail['quantity'] ?> </td>
+                        <td>
+                            <?php
+                            $count_item += $order_detail['quantity'];
+                            echo $order_detail['quantity']
+                            ?> </td>
                         <td> <?= currency_format($order_detail['price']) ?> </td>
                         <td> <?php
                             $sub_total = $order_detail['quantity'] * $order_detail['price'];
@@ -90,19 +96,96 @@ if (!function_exists('currency_format')) {
                 ?>
                 <tr>
                     <td colspan="3"></td>
-                    <td>Total cost:</td>
-                    <td>
+                    <td class="fw-bold">Total cost:</td>
+                    <td class="fw-bold" style="color: #3e9c35">
                         <?= currency_format($total_money) ?>
                     </td>
                 </tr>
                 </tbody>
             </table>
+            <div class="dashboard-block mb-4" style="height: 20vh">
+                <div class="db-title">
+                    Payment details
+                </div>
+                <div style="height: 100%; background-color: white; border-radius: 0px 0px 10px 10px; color: black"
+                     class="d-flex align-items-center justify-content-between">
+                    <?php
+                    $orderQuery = "SELECT * FROM orders WHERE id = '$id'";
+                    $payment_orders = mysqli_query($connect, $orderQuery);
+                    foreach ($payment_orders as $order) {
+                        ?>
+                        <div class="d-flex justify-content-between w-100">
+                            <div class="w-50">
+                                <div>Receiver name: <?= $order['receiver_name'] ?></div>
+                                <div>Receiver phone: <?= $order['receiver_phone'] ?> </div>
+                                <div>Receiver address: <?= $order['receiver_address'] ?> </div>
+                            </div>
+                            <div class="w-50">
+                                <div>Total items: <?= $count_item ?></div>
+                                <div>Shipping cost: Free</div>
+                                <div>Payment method: Pay on delivery</div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
             <div style="margin-bottom: 40px; color: white" class="d-flex justify-content-between">
-                <a onclick="window.history.go(-1)" class="btn btn-primary nice-box-shadow">Back</a>
+                <div>
+                    <a onclick="window.history.go(-1)" class="btn btn-primary nice-box-shadow">Back</a>
+                </div>
+                <div>
+                    <?php
+                    $statusSql = "SELECT status FROM orders WHERE id = '$id'";
+                    $orders = mysqli_query($connect, $statusSql);
+                    foreach ($orders as $order) {
+                        if ($order['status'] == 0) {
+                            ?>
+                            <div
+                                    class="btn btn-danger nice-box-shadow">
+                                <span>Pending</span>
+                            </div>
+                            <?php
+                        } else if ($order['status'] == 1) {
+                            ?>
+                            <div
+                                    class="btn btn-success nice-box-shadow">
+                                <span>Confirmed</span>
+                            </div>
+                            <?php
+                        } else if ($order['status'] == 2) {
+                            ?>
+                            <div
+                                    class="btn btn-primary nice-box-shadow">
+                                <span>Delivering</span>
+                            </div>
+                            <?php
+                        } else if ($order['status'] == 3) {
+                            ?>
+                            <div
+                                    class="btn btn-success nice-box-shadow">
+                                <span>Completed</span>
+                            </div>
+                            <?php
+                        } else if ($order['status'] == 4) {
+                            ?>
+                            <div
+                                    class="btn btn-danger nice-box-shadow">
+                                <span>Cancelled</span>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<?php
+include_once("../../connect/close.php");
+?>
 </body>
 </html>

@@ -14,34 +14,23 @@ if (isset($_SESSION['email'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
+    <link rel="stylesheet" href="../../main/css/admin_login.css">
 
     <title>Log in</title>
 </head>
 <body>
-<section class="vh-100" style="background-color: #2d2d2d;">
-    <div class="container vh-100">
-        <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="w-25">
-                <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-
-                        <h3 class="mb-5">Log in</h3>
-                        <form action="loginProcess.php" method="post">
-                            <div class="form-outline mb-2">
-                                <input name="email" type="email" placeholder="Email"
-                                       class="input-group"/>
-                            </div>
-
-                            <div class="form-outline mb-2">
-                                <input name="password" type="password" placeholder="Password"
-                                       class="input-group"/>
-                            </div>
-
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-                        </form>
-                    </div>
-                </div>
+<section class="vh-100" id="admin-login">
+    <div class="login-page">
+        <div class="form">
+            <div>
+                <img src="../../main/media/images/logo.png" alt="" style="width: 100%; padding: 0px 20px 48px 20px">
             </div>
+            <form class="register-form" method="post" action="loginProcess.php">
+                <input type="text" name="email" placeholder="Email" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+
+                <button type="submit">Login</button>
+            </form>
         </div>
     </div>
 </section>

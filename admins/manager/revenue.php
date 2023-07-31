@@ -40,9 +40,11 @@ if (!function_exists('currency_format')) {
     }
 }
 
+//bien ngay va thang
 $selectedYear = date('Y');
 $selectedMonth = date('m');
 
+//lay du lieu vao bien tu method get
 if (isset($_GET['buy-date-y'])) {
     $selectedYear = $_GET['buy-date-y'];
 }

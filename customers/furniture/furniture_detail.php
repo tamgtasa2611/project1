@@ -130,13 +130,31 @@ foreach ($furnitures as $furniture) {
                 <dt class="">Producer:</dt>
                 <dd class=""><?= $furniture['producer_name'] ?></dd>
             </div>
-
-            <div class="d-flex justify-content-evenly align-items-center mt-5">
-                <a href="../carts/buy_now.php?id=<?= $id ?>" id="buy-now-btn" class="view-detail-btn">
-                    Buy now <span class="me-1 fa fa-shopping-basket"></span></a>
-                <a href="../carts/add_to_cart.php?id=<?= $id; ?>" id="add-to-cart-btn" class="add-to-cart-btn">
-                    Add to cart <span class="m-1 fa-solid fa-cart-plus"></a>
+            <div class="d-flex justify-content-between">
+                <dt class="">In stock:</dt>
+                <dd class=""><?= $furniture['quantity'] ?></dd>
             </div>
+
+            <?php
+            if ($furniture['quantity'] == 0) {
+                ?>
+                <div class="mt-5 d-flex justify-content-center align-items-center">
+                    <div class="view-detail-btn text-center w-50">
+                        OUT OF STOCK
+                    </div>
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="d-flex justify-content-evenly align-items-center mt-5">
+                    <a href="../carts/buy_now.php?id=<?= $id ?>" id="buy-now-btn" class="view-detail-btn">
+                        Buy now <span class="me-1 fa fa-shopping-basket"></span></a>
+                    <a href="../carts/add_to_cart.php?id=<?= $id; ?>" id="add-to-cart-btn" class="add-to-cart-btn">
+                        Add to cart <span class="m-1 fa-solid fa-cart-plus"></a>
+                </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
     <!-- content -->

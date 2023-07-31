@@ -388,7 +388,7 @@ include_once("../../connect/close.php");
                                 </div>
                                 <div class="w-50 fw-bold font-italic" style="color: red">
                                     <a href="import.php" style="color: red">
-                                        Only <?= $stock['quantity'] ?> left
+                                        <?= $stock['quantity'] ?> left
                                     </a>
                                 </div>
                             </div>
@@ -399,7 +399,7 @@ include_once("../../connect/close.php");
                 </div>
             </div>
 
-            <!--        chart -->
+            <!--       bestseller chart -->
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">
                 google.charts.load('current', {'packages': ['bar']});

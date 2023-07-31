@@ -161,7 +161,8 @@ if (!function_exists('currency_format')) {
             <div style="display: flex; justify-content: space-between">
                 <div style="width: 160px"></div>
                 <!-- for de hien thi so trang -->
-                <div class="text-center" style="height: 38px">
+                <div class="text-center d-flex" style="height: 38px">
+
                     <ul class="pagination justify-content-center">
                         <li class="page-item" style="width: 40px">
                             <a class="page-link"
@@ -197,6 +198,12 @@ if (!function_exists('currency_format')) {
                             </a>
                         </li>
                     </ul>
+                    <div style="width: 40%; margin-left: 0.75rem">
+                        <form method="get">
+                            <input type="number" name="page" placeholder="Page" class="page-link"
+                                   style="width: 100%; border-radius: 0.25rem" min="1" max="<?= $countPage ?>">
+                        </form>
+                    </div>
                 </div>
                 <form class="search-form" action="" method="get">
                     <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."

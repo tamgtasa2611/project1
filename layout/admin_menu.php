@@ -1,4 +1,4 @@
-<nav id="sidebar" class="position-relative" style="height: 100%">
+<nav id="sidebar" class="position-relative nice-box-shadow" style="height: 100%">
     <h1><a href="../../customers/start/index.php" class="logo text-center">
             <img src="../../main/media/images/logo.png" width="100%" alt="">
         </a></h1>

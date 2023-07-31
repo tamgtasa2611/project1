@@ -20,6 +20,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
+
     <title>Order manager</title>
 </head>
 <body>
@@ -82,6 +83,19 @@ if (!function_exists('currency_format')) {
         <!--  content  -->
 
         <div class="content-container">
+            <?php
+            if (!isset($_SESSION['update-status'])) {
+                $_SESSION['update-status'] = 0;
+            }
+            if ($_SESSION['update-status'] === 1) {
+                echo '<div id="close-target" class="alert alert-success position-absolute success-alert" role="alert"
+                style="top: 11%; right: 10%; box-shadow: 1px 1px green; animation: fadeOut 5s;">
+              Update status successfully!
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; cursor: pointer" onclick="closeMes()"></i>
+              </div>';
+                $_SESSION['update-status'] = 0;
+            }
+            ?>
             <h4 class="content-heading">Order list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
@@ -163,7 +177,7 @@ if (!function_exists('currency_format')) {
                     <a href="create.php" class="text-white" style="text-decoration: none">Add an order</a>
                 </button>
                 <!-- for de hien thi so trang -->
-                <div class="text-center" style="height: 38px">
+                <div class="text-center d-flex" style="height: 38px">
                     <!--
                     <ul class="pagination justify-content-center">
                         <?php
@@ -212,6 +226,12 @@ if (!function_exists('currency_format')) {
                             </a>
                         </li>
                     </ul>
+                    <div style="width: 40%; margin-left: 0.75rem">
+                        <form method="get">
+                            <input type="number" name="page" placeholder="Page" class="page-link"
+                                   style="width: 100%; border-radius: 0.25rem" min="1" max="<?= $countPage ?>">
+                        </form>
+                    </div>
                 </div>
                 <form class="search-form" action="" method="get">
                     <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."

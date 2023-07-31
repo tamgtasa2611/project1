@@ -1,0 +1,72 @@
+/*admin login*/
+#admin-login {
+    background-image: url("../../main/media/images/admin/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.login-page {
+    width: 360px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 48px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 10px;
+}
+
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 32px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #1691d7;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+    background: #137ab5;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #137ab5;
+    text-decoration: none;
+}
+
+.error-alert {
+    top: 20px;
+    left: 20px;
+    box-shadow: 0.1px 0.1px red;
+}

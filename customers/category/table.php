@@ -182,17 +182,30 @@ if ($_SESSION['add-success'] === 1) {
                         </a>
                     </div>
 
-                    <div class="d-flex justify-content-evenly align-items-center mt-5">
-                        <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="view-detail-btn"
-                        >View details</a>
-                        <button class="add-to-cart-btn">
-                            <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>"
-                               class="text-white">
-                                Add to cart <span class="m-1 fa-solid fa-cart-plus"></span>
-                            </a>
-                        </button>
-                    </div>
-
+                    <?php
+                    if ($furniture['quantity'] == 0) {
+                        ?>
+                        <div class="mt-5 d-flex justify-content-center align-items-center">
+                            <div class="view-detail-btn text-center w-50">
+                                OUT OF STOCK
+                            </div>
+                        </div>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="d-flex justify-content-evenly align-items-center mt-5">
+                            <a href="furniture_detail.php?id=<?= $furniture['id'] ?>" class="view-detail-btn"
+                            >View details</a>
+                            <button class="add-to-cart-btn">
+                                <a href="../carts/add_to_cart.php?id=<?= $furniture['id'] ?>"
+                                   class="text-white">
+                                    Add to cart <span class="m-1 fa-solid fa-cart-plus"></span>
+                                </a>
+                            </button>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

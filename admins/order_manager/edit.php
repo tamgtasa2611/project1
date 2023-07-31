@@ -15,10 +15,10 @@ if (!isset($_SESSION['email'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
-    <title>Order browsing</title>
+    <title> Update order details</title>
 </head>
 <body>
 <?php
@@ -43,6 +43,7 @@ if (!function_exists('currency_format')) {
         }
     }
 }
+
 ?>
 
 <div id="content">
@@ -55,7 +56,7 @@ if (!function_exists('currency_format')) {
         </div>
         <!--  content  -->
         <div class="content-container">
-            <h4 class="content-heading">Browsing order #<?= $id ?></h4>
+            <h4 class="content-heading">Update order #<?= $id ?></h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
@@ -94,15 +95,41 @@ if (!function_exists('currency_format')) {
                 ?>
                 <tr>
                     <td colspan="3"></td>
-                    <td>Total cost:</td>
-                    <td>
-                        <?php
-                        echo currency_format($total_money);
-                        ?>
+                    <td class="fw-bold">Total cost:</td>
+                    <td class="fw-bold" style="color: #3e9c35">
+                        <?= currency_format($total_money) ?>
                     </td>
                 </tr>
                 </tbody>
             </table>
+            <div class="dashboard-block mb-4" style="height: 20vh">
+                <div class="db-title">
+                    Payment details
+                </div>
+                <div style="height: 100%; background-color: white; border-radius: 0px 0px 10px 10px; color: black"
+                     class="d-flex align-items-center justify-content-between">
+                    <?php
+                    $orderQuery = "SELECT * FROM orders WHERE id = '$id'";
+                    $payment_orders = mysqli_query($connect, $orderQuery);
+                    foreach ($payment_orders as $order) {
+                        ?>
+                        <div class="d-flex justify-content-between w-100">
+                            <div class="w-50">
+                                <div>Receiver name: <?= $order['receiver_name'] ?></div>
+                                <div>Receiver phone: <?= $order['receiver_phone'] ?> </div>
+                                <div>Receiver address: <?= $order['receiver_address'] ?> </div>
+                            </div>
+                            <div class="w-50">
+                                <div>Total items: <?= $total_item ?></div>
+                                <div>Shipping cost: Free</div>
+                                <div>Payment method: Pay on delivery</div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
             <div style="margin-bottom: 40px; display: flex; justify-content: space-between; color: white">
                 <a onclick="window.history.go(-1)" class="btn btn-primary nice-box-shadow">Back</a>
                 <form action="update.php" method="post">
@@ -156,12 +183,23 @@ if (!function_exists('currency_format')) {
                             ?>>Cancelled
                         </option>
                     </select>
-                    <button href="" class="btn btn-primary nice-box-shadow">Update</button>
+                    <button class="btn btn-primary nice-box-shadow">
+                        Update
+                    </button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
 
 <?php
 include_once("../../connect/close.php");

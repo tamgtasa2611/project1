@@ -15,10 +15,10 @@ if (!isset($_SESSION['email'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
-
     <title>Customer manager</title>
 </head>
 <body>
@@ -113,17 +113,41 @@ include_once('../../connect/close.php');
                     <a href="create.php" class="text-white" style="text-decoration: none">Add a customer</a>
                 </button>
                 <!-- for de hien thi so trang -->
-                <div class="text-center">
+                <div class="text-center" style="height: 38px">
                     <ul class="pagination justify-content-center">
-                        <?php
-                        for ($i = 1; $i <= $countPage; $i++) {
-                            ?>
-                            <a class="page-link" href="?page=<?= $i ?> & search=<?= $search ?>">
-                                <?= $i; ?>
+                        <li class="page-item" style="width: 40px">
+                            <a class="page-link"
+                                <?php
+                                if ($page == 1) {
+                                    echo 'href="#"';
+                                } else {
+                                    echo 'href="?page=' . ($page - 1) . ' & search=' . $search . '"';
+                                }
+                                ?>>
+                                <span class="fa-solid fa-caret-left"></span>
                             </a>
+                        </li>
+                        <li class="page-item" style="width: 120px">
                             <?php
-                        }
-                        ?>
+                            for ($i = 1; $i <= $countPage; $i++) {
+                            }
+                            ?>
+                            <span class="page-link">
+                            Page <?= $page ?>/<?= ($i - 1) ?>
+                        </span>
+                        </li>
+                        <li class="page-item" style="width: 40px">
+                            <a class="page-link"
+                                <?php
+                                if ($page == ($i - 1)) {
+                                    echo 'href="#"';
+                                } else {
+                                    echo 'href="?page=' . ($page + 1) . ' & search=' . $search . '"';
+                                }
+                                ?>>
+                                <span class="fa-solid fa-caret-right"></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <form class="search-form" action="" method="get">

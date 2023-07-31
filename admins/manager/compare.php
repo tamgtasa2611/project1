@@ -40,11 +40,13 @@ if (!function_exists('currency_format')) {
     }
 }
 
+//bien chua ngay va nam
 $selectedYear = date('Y');
 $selectedMonth = date('m');
 $selectedYear2 = date('Y');
 $selectedMonth2 = date('m') - 1;
 
+//lay du lieu vao bien tu method get
 if (isset($_GET['buy-date-y'])) {
     $selectedYear = $_GET['buy-date-y'];
 }
@@ -74,6 +76,7 @@ $sql2 = "SELECT date_buy, SUM(quantity * price) as sale_earn
                                 ORDER BY orders.date_buy DESC";
 $dates2 = mysqli_query($connect, $sql2);
 
+//tong sales tung thang
 $month1 = 0;
 $month2 = 0;
 foreach ($dates as $date) {
