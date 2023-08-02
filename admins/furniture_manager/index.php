@@ -115,8 +115,18 @@ if (!function_exists('currency_format')) {
                         <td>
                             <img height="60px" src="../images/<?= $furniture['image'] ?>" alt="">
                         </td>
-                        <td> <?= $furniture['quantity'] ?> </td>
-                        <td> <?= currency_format($furniture['price']) ?> </td>
+                        <td> <?php
+                            if ($furniture['quantity'] > 10) {
+                                ?>
+                                <a href="../manager/import.php"><?= $furniture['quantity'] ?></a>
+                                <?php
+                            } else {
+                                ?>
+                                <a href="../manager/import.php" style="color: red"><?= $furniture['quantity'] ?></a>
+                                <?php
+                            }
+                            ?> </td>
+                        <td><span style="color: #3e9c35"><?= currency_format($furniture['price']) ?></span></td>
                         <td> <?= $furniture['material'] ?> </td>
                         <td> <?= $furniture['length'] ?> </td>
                         <td> <?= $furniture['width'] ?> </td>

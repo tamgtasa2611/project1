@@ -244,6 +244,13 @@ if (!function_exists('currency_format')) {
         </div>
     </div>
 
+    <script>
+        let clickClose = document.getElementById('click-close');
+        let closeTarget = document.getElementById('close-target')
 
+        function closeMes() {
+            closeTarget.classList.add("d-none");
+        }
+    </script>
 </body>
 </html>

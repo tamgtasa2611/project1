@@ -47,4 +47,4 @@ $mail->Body = $bodyCus;
 $mail->send();
 
 //header
-header("Location: success.php");
+header("Location: ../success.php");
