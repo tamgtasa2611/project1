@@ -87,6 +87,43 @@ if (!function_exists('currency_format')) {
 
         <!--  content  -->
         <div class="content-container">
+            <!--            thong bao action -->
+            <?php
+            if (!isset($_SESSION['ad-destroy'])) {
+                $_SESSION['ad-destroy'] = 0;
+            }
+            if (!isset($_SESSION['ad-create'])) {
+                $_SESSION['ad-create'] = 0;
+            }
+            if (!isset($_SESSION['ad-edit'])) {
+                $_SESSION['ad-edit'] = 0;
+            }
+
+            if ($_SESSION['ad-destroy'] === 1) {
+                echo '<div id="close-target" class="alert alert-success position-absolute" role="alert"
+                style="top: 2%; right: 10%; box-shadow: 1px 1px green; animation: fadeOut 5s;">
+              Delete successfully!
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; cursor: pointer" onclick="closeMes()"></i>
+              </div>';
+                $_SESSION['ad-destroy'] = 0;
+            }
+            if ($_SESSION['ad-create'] === 1) {
+                echo '<div id="close-target" class="alert alert-success position-absolute" role="alert"
+                style="top: 2%; right: 10%; box-shadow: 1px 1px green; animation: fadeOut 5s;">
+              Create successfully!
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; cursor: pointer" onclick="closeMes()"></i>
+              </div>';
+                $_SESSION['ad-create'] = 0;
+            }
+            if ($_SESSION['ad-edit'] === 1) {
+                echo '<div id="close-target" class="alert alert-success position-absolute" role="alert"
+                style="top: 2%; right: 10%; box-shadow: 1px 1px green; animation: fadeOut 5s;">
+              Edit successfully!
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; cursor: pointer" onclick="closeMes()"></i>
+              </div>';
+                $_SESSION['ad-edit'] = 0;
+            }
+            ?>
             <h4 class="content-heading">Furniture list</h4>
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
@@ -140,11 +177,32 @@ if (!function_exists('currency_format')) {
                                    style="text-decoration: none">Edit</a>
                             </button>
                             <button type="button" class="btn bg-danger border-danger">
-                                <a href="destroy.php?id=<?= $furniture['id'] ?>" class="text-white"
+                                <a href="#delete-modal?fur=<?= $furniture['id'] ?>" class="text-white"
                                    style="text-decoration: none">Delete</a>
                             </button>
                         </td>
                     </tr>
+                    <!--          modal  delete        -->
+                    <div id="delete-modal?fur=<?= $furniture['id'] ?>" class="my-modal" style="z-index: 10">
+                        <div class="modal__content">
+                            <h2>Confirm delete</h2>
+
+                            <p>
+                                Do you really want to delete <span style="color: red"><?= $furniture['name'] ?></span>?
+                            </p>
+
+                            <div class="modal__footer">
+                                <div>
+                                    <a href="destroy.php?id=<?= $furniture['id'] ?>" class="btn btn-danger"
+                                       style="font-size: 16px;">
+                                        Delete</a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="modal__close">&times;</a>
+                        </div>
+                    </div>
+                    <!--          end modal          -->
                     <?php
                 }
                 ?>
@@ -211,6 +269,14 @@ if (!function_exists('currency_format')) {
         </div>
     </div>
 </div>
-</body>
+<!--  js close button modal  -->
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
 </body>
 </html>

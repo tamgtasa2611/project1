@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id = $_POST['id'];
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -17,4 +18,5 @@ $sql = "UPDATE customers SET name = '$name', email = '$email', password = '$pass
                      WHERE id = '$id'";
 mysqli_query($connect, $sql);
 include_once '../../connect/close.php';
+$_SESSION['ad-edit'] = 1;
 header('Location: index.php');

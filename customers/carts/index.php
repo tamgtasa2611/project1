@@ -283,13 +283,14 @@ if (isset($_SESSION['cart'])) {
                             </div>
                             <div>
                                 <h4>
-                                    <select name="payment-method" class="form-select-lg" disabled>
-                                        <option value="0">Pay on delivery</option>
-                                    </select>
+                                    <input type="radio" class="btn-check" id="pay-on-delivery" autocomplete="off"
+                                           checked>
+                                    <label class="btn btn-outline-primary" for="pay-on-delivery"
+                                           style="font-size: 1.5rem !important;">
+                                        Pay on delivery</label>
                                 </h4>
                             </div>
                         </div>
-
                     </div>
 
                     <hr>
@@ -309,6 +310,18 @@ if (isset($_SESSION['cart'])) {
                         Order
                     </button>
 
+                </form>
+                <form method="post" target="_blank" enctype="application/x-www-form-urlencoded"
+                      action="../../banking/momo_process.php" style="margin-top: 12px">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div style="font-size: 1rem;">Or pay via</div>
+                        <div style="width: 8px"></div>
+                        <input type="text" value="<?= $total_cost ?>" name="amount" style="display: none !important;">
+                        <button name="momo" style="border-radius: 10px">
+                            <img src="../../main/media/images/admin/momo-logo.png" alt="" style="width: 40px"
+                                 alt="button-png" style="border: 0; border-radius: 10px">
+                        </button>
+                    </div>
                 </form>
         </div>
     </div>

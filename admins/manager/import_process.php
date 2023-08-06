@@ -3,7 +3,7 @@ session_start();
 $furniture_id = $_POST['furniture-id'];
 $quantity = $_POST['quantity'];
 
-if($furniture_id == 0) {
+if ($furniture_id == 0) {
     $_SESSION['import'] = 0;
     header('Location: import.php');
 } else {

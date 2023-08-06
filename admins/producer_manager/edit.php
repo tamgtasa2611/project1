@@ -36,36 +36,40 @@ foreach ($producers as $producer) {
             ?>
 
             <div class="content-container">
-                <h4 class="content-heading">Sửa thông tin nhà sản xuất</h4>
-                <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
-                    <thead class="text-white">
-                    <tr>
-                        <th>Vui lòng điền thông tin</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <form action="update.php" method="post">
+                <h4 class="content-heading">Edit producer's information</h4>
+                <form action="update.php" method="post" class="w-50 m-auto">
+                    <div class="dashboard-block w-100 h-75 mb-3">
+                        <div class="db-title">
+                            Enter new producer's information
+                        </div>
 
-                                <div class="form-outline mb-2">
-                                    <label>ID</label>
+                        <div class="dashboard-body" style="height: 200px">
+                            <div class="d-flex justify-content-center h-50 align-items-center">
+                                <div style="width: 10%">
+                                    ID
+                                </div>
+                                <div class="w-50">
                                     <input readonly name="id" type="number" class="form-control-sm"
                                            value="<?= $producer['id'] ?>"/>
                                 </div>
-
-                                <div class="form-outline mb-2">
-                                    <label>Name</label>
-                                    <input name="name" type="text" class="form-control-sm"
-                                           value="<?= $producer['name'] ?>" required/>
+                            </div>
+                            <div class="d-flex justify-content-center h-50 align-items-center">
+                                <div style="width: 10%">
+                                    Name
                                 </div>
-                                <a class="btn btn-primary" href="index.php">Quay lại</a>
-                                <button class="btn btn-primary" type="submit">Cập nhật</button>
-                            </form>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                                <div class="w-50">
+                                    <input name="name" type="text" class="form-control-sm"
+                                           value="<?= $producer['name'] ?>"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-primary nice-box-shadow" href="index.php">Back</a>
+                        <button class="btn btn-primary nice-box-shadow" type="submit">Update</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

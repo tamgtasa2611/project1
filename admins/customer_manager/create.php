@@ -34,80 +34,87 @@ if (!isset($_SESSION['email'])) {
         <!--  content  -->
 
         <div class="content-container">
-            <h4 class="content-heading">Thêm sản phẩm</h4>
-            <form action="store.php" method="post" enctype="multipart/form-data">
-                <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
-                    <thead class="text-white">
-                    <tr>
-                        <th colspan="2">Vui lòng điền thông tin</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label>Tên</label>
-                                <input name="name" type="text" class="form-control-sm" required/>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label>Email</label>
-                                <input name="email" type="email" class="form-control-sm" required/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label>SĐT</label>
-                                <input name="phone" type="text" class="form-control-sm"/>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label>Mật khẩu</label>
-                                <input name="password" type="text" class="form-control-sm" required/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div class="form-outline mb-2">
-                                <label>Địa chỉ</label>
-                                <input name="address" type="text" class="form-control-sm" required/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div class="form-outline mb-2">
-                                <label style="margin-right: 24px;">Giới tính</label>
-                                <div style="display: inline-block">
-                                    <input class="form-check-input" type="radio" name="gender" value="Male"
-                                           id="flexRadioDefault1" checked>
-                                    Nam
-                                </div>
+            <h4 class="content-heading">Add a new customer</h4>
+            <form action="store.php" method="post" class="w-75 m-auto">
+                <div class="dashboard-block w-100 h-100 mb-3">
+                    <div class="db-title">
+                        Enter new customer's information
+                    </div>
 
-                                <div style="display: inline-block; margin-left: 24px">
-                                    <input class="form-check-input" type="radio" name="gender" value="Female"
-                                           id="flexRadioDefault2">
-                                    Nữ
+                    <div class="dashboard-body" style="height: 200px">
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 33.33%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Name
+                                </div>
+                                <div>
+                                    <input name="name" type="text" class="form-control-sm" required/>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Email
+                                </div>
+                                <div>
+                                    <input name="email" type="email" class="form-control-sm" required/>
+                                </div>
+                            </div>
+                        </div>
 
-                    <tr>
-                        <td colspan="2">
-                            <a class="btn btn-primary" href="index.php">Quay lại</a>
-                            <button class="btn btn-primary" type="submit">Thêm</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 33.33%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Phone
+                                </div>
+                                <div>
+                                    <input name="phone" type="text" class="form-control-sm" required/>
+                                </div>
+                            </div>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Password
+                                </div>
+                                <div>
+                                    <input name="password" type="text" class="form-control-sm" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 33.33%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Address
+                                </div>
+                                <div>
+                                    <input name="address" type="text" class="form-control-sm" required/>
+                                </div>
+                            </div>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 48px">
+                                    Gender
+                                </div>
+                                <div>
+                                    <div style="display: inline-block">
+                                        <input class="form-check-input" type="radio" name="gender" value="Male" checked>
+                                        Male
+                                    </div>
+
+                                    <div style="display: inline-block; margin-left: 24px">
+                                        <input class="form-check-input" type="radio" name="gender" value="Female">
+                                        Female
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a class="btn btn-primary nice-box-shadow" href="index.php">Back</a>
+                    <button class="btn btn-primary nice-box-shadow" type="submit">Add</button>
+                </div>
             </form>
         </div>
-
+    </div>
+</div>
 </body>
 </html>

@@ -42,121 +42,143 @@ include_once("../../connect/close.php");
         <!--  content  -->
 
         <div class="content-container">
-            <h4 class="content-heading">Thêm sản phẩm</h4>
-            <form action="store.php" method="post" enctype="multipart/form-data">
-                <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
-                    <thead class="text-white">
-                    <tr>
-                        <th colspan="2">Vui lòng điền thông tin</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label>Tên</label>
-                                <input name="name" type="text" class="form-control-sm" required/>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Tồn kho</label>
-                                <input name="quantity" type="number" class="form-control-sm" required/>
-                            </div>
-                        </td>
+            <h4 class="content-heading">Add a new furniture</h4>
+            <form action="store.php" method="post" class="w-75 m-auto" enctype="multipart/form-data">
+                <div class="dashboard-block w-100 h-100 mb-3">
+                    <div class="db-title">
+                        Enter new furniture's information
+                    </div>
 
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Giá</label>
-                                <input name="price" type="number" class="form-control-sm" required/>
+                    <div class="dashboard-body" style="height: 400px">
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Name
+                                </div>
+                                <div>
+                                    <input name="name" type="text" class="form-control-sm" required/>
+                                </div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Chất liệu</label>
-                                <input name="material" type="text" class="form-control-sm"/>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Quantity
+                                </div>
+                                <div>
+                                    <input name="quantity" type="number" class="form-control-sm" required/>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Dài (cm)</label>
-                                <input name="length" type="text" class="form-control-sm"/>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Price
+                                </div>
+                                <div>
+                                    <input name="price" type="number" class="form-control-sm" required/>
+                                </div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Rộng (cm)</label>
-                                <input name="width" type="text" class="form-control-sm"/>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Material
+                                </div>
+                                <div>
+                                    <input name="material" type="text" class="form-control-sm" required/>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Cao (cm)</label>
-                                <input name="height" type="text" class="form-control-sm"/>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Length (cm)
+                                </div>
+                                <div>
+                                    <input name="length" type="number" class="form-control-sm" required/>
+                                </div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Phòng</label>
-                                <input name="room" type="text" class="form-control-sm"/>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Width (cm)
+                                </div>
+                                <div>
+                                    <input name="width" type="number" class="form-control-sm" required/>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Danh mục</label>
-                                <select name="category_id" id="">
-                                    <?php
-                                    foreach ($categories as $producer) {
-                                        ?>
-                                        <option value="<?= $producer['id'] ?>">
-                                            <?= $producer['name'] ?> </option>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Height (cm)
+                                </div>
+                                <div>
+                                    <input name="height" type="number" class="form-control-sm" required/>
+                                </div>
+                            </div>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Room
+                                </div>
+                                <div>
+                                    <input name="room" type="text" class="form-control-sm" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Category
+                                </div>
+                                <div>
+                                    <select name="category_id" id="" class="form-select-sm">
                                         <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Nhà sản xuất</label>
-                                <select name="producer_id" id="">
-                                    <?php
-                                    foreach ($producers as $producer) {
+                                        foreach ($categories as $category) {
+                                            ?>
+                                            <option value="<?= $category['id'] ?>">
+                                                <?= $category['name'] ?> </option>
+                                            <?php
+                                        }
                                         ?>
-                                        <option value="<?= $producer['id'] ?>">
-                                            <?= $producer['name'] ?> </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex w-50 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Producer
+                                </div>
+                                <div>
+                                    <select name="producer_id" id="" class="form-select-sm">
                                         <?php
-                                    }
-                                    ?>
-                                </select>
+                                        foreach ($producers as $producer) {
+                                            ?>
+                                            <option value="<?= $producer['id'] ?>">
+                                                <?= $producer['name'] ?> </option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div class="form-outline mb-2">
-                                <label class="form-label align-left">Ảnh</label>
-                                <input name="image" type="file" class=""/>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                            <div class="d-flex w-100 justify-content-center align-items-center">
+                                <div style="margin-right: 12px">
+                                    Image
+                                </div>
+                                <div>
+                                    <input name="image" type="file"/>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <a class="btn btn-primary" href="index.php">Quay lại</a>
-                            <button class="btn btn-primary" type="submit">Thêm</button>
-                        </td>
-                    </tr>
-                    </tr>
-                    </tbody>
-                </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a class="btn btn-primary nice-box-shadow" href="index.php">Back</a>
+                    <button class="btn btn-primary nice-box-shadow" type="submit">Add</button>
+                </div>
             </form>
         </div>
     </div>

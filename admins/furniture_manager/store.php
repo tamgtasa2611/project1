@@ -1,4 +1,5 @@
 <?php
+session_start();
 $name = $_POST['name'];
 $quantity = $_POST['quantity'];
 $price = $_POST['price'];
@@ -30,4 +31,5 @@ if (!file_exists("../images/" . $image)) {
     move_uploaded_file($path, "../images/" . $image);
 }
 
+$_SESSION['ad-create'] = 1;
 header("Location: index.php");

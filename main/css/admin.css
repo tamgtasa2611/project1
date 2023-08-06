@@ -10576,6 +10576,13 @@ th {
     border: 1px solid #303036;
 }
 
+.dashboard-body {
+    height: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    color: black;
+}
+
 .apply-btn {
     margin: auto 12px;
     padding: 2px 6px;

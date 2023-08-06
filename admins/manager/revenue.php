@@ -55,7 +55,8 @@ if (isset($_GET['buy-date-m'])) {
 $sql = "SELECT date_buy, SUM(quantity * price) as sale_earn 
                                 FROM order_details
                                 INNER JOIN orders ON orders.id = order_details.order_id
-                                WHERE orders.date_buy LIKE '%$selectedYear%-%$selectedMonth-%%'
+                                WHERE (orders.date_buy LIKE '%$selectedYear%-%$selectedMonth-%%')
+                                AND (orders.status = 3)
                                 GROUP BY orders.date_buy
                                 ORDER BY orders.date_buy DESC";
 $dates = mysqli_query($connect, $sql);

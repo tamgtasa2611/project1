@@ -83,6 +83,7 @@ if (!function_exists('currency_format')) {
         <!--  content  -->
 
         <div class="content-container">
+            <!--            thong bao action-->
             <?php
             if (!isset($_SESSION['update-status'])) {
                 $_SESSION['update-status'] = 0;
@@ -244,6 +245,7 @@ if (!function_exists('currency_format')) {
         </div>
     </div>
 
+    <!--  js close button modal  -->
     <script>
         let clickClose = document.getElementById('click-close');
         let closeTarget = document.getElementById('close-target')

@@ -47,153 +47,170 @@ foreach ($furnitures as $furniture) {
             <!--  content  -->
 
             <div class="content-container">
-                <h4 class="content-heading">Edit</h4>
-                <form action="update.php" method="post" enctype="multipart/form-data">
-                    <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
-                        <thead class="text-white">
-                        <tr>
-                            <th colspan="2">Vui lòng điền thông tin</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label>Tên</label>
-                                    <input name="name" type="text" class="form-control-sm"
-                                           value="<?= $furniture['name'] ?>" required/>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Tồn kho</label>
-                                    <input name="quantity" type="number" class="form-control-sm"
-                                           value="<?= $furniture['quantity'] ?>" required/>
-                                </div>
-                            </td>
+                <h4 class="content-heading">Edit furniture's information</h4>
+                <form action="update.php" method="post" class="w-75 m-auto" enctype="multipart/form-data">
+                    <div class="dashboard-block w-100 h-100 mb-3">
+                        <div class="db-title">
+                            Enter new furniture's information
+                        </div>
 
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Giá</label>
-                                    <input name="price" type="number" class="form-control-sm"
-                                           value="<?= $furniture['price'] ?>" required/>
+                        <div class="dashboard-body" style="height: 400px">
+                            <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Name
+                                    </div>
+                                    <div>
+                                        <input name="id" type="number" class="form-control-sm d-none"
+                                               value="<?= $furniture['id'] ?>" readonly/>
+                                        <input name="name" type="text" class="form-control-sm"
+                                               value="<?= $furniture['name'] ?>" required/>
+                                    </div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Chất liệu</label>
-                                    <input name="material" type="text" class="form-control-sm"
-                                           value="<?= $furniture['material'] ?>"/>
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Quantity
+                                    </div>
+                                    <div>
+                                        <input name="quantity" type="number" class="form-control-sm"
+                                               value="<?= $furniture['quantity'] ?>" required/>
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Dài (cm)</label>
-                                    <input name="length" type="text" class="form-control-sm"
-                                           value="<?= $furniture['length'] ?>"/>
+                            </div>
+
+                            <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Price
+                                    </div>
+                                    <div>
+                                        <input name="price" type="number" class="form-control-sm"
+                                               value="<?= $furniture['price'] ?>" required/>
+                                    </div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Rộng (cm)</label>
-                                    <input name="width" type="text" class="form-control-sm"
-                                           value="<?= $furniture['width'] ?>"/>
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Material
+                                    </div>
+                                    <div>
+                                        <input name="material" type="text" class="form-control-sm"
+                                               value="<?= $furniture['material'] ?>" required/>
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Cao (cm)</label>
-                                    <input name="height" type="text" class="form-control-sm"
-                                           value="<?= $furniture['height'] ?>"/>
+                            </div>
+
+                            <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Length (cm)
+                                    </div>
+                                    <div>
+                                        <input name="length" type="number" class="form-control-sm"
+                                               value="<?= $furniture['length'] ?>" required/>
+                                    </div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Phòng</label>
-                                    <input name="room" type="text" class="form-control-sm"
-                                           value="<?= $furniture['room'] ?>"/>
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Width (cm)
+                                    </div>
+                                    <div>
+                                        <input name="width" type="number" class="form-control-sm"
+                                               value="<?= $furniture['width'] ?>" required/>
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Danh mục</label>
-                                    <select name="category_id" id="">
-                                        <?php
-                                        foreach ($categories as $category) {
-                                            ?>
-                                            <option value="<?= $category['id'] ?>"
-                                                <?php
-                                                if ($furniture['category_id'] == $category['id']) {
-                                                    echo 'selected';
-                                                }
-                                                ?>
-                                            >
-                                                <?= $category['name'] ?> </option>
+                            </div>
+
+                            <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Height (cm)
+                                    </div>
+                                    <div>
+                                        <input name="height" type="number" class="form-control-sm"
+                                               value="<?= $furniture['height'] ?>" required/>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Room
+                                    </div>
+                                    <div>
+                                        <input name="room" type="text" class="form-control-sm"
+                                               value="<?= $furniture['room'] ?>" required/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Category
+                                    </div>
+                                    <div>
+                                        <select name="category_id" id="" class="form-select-sm">
                                             <?php
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Nhà sản xuất</label>
-                                    <select name="producer_id" id="">
-                                        <?php
-                                        foreach ($producers as $producer) {
-                                            ?>
-                                            <option value="<?= $producer['id'] ?>"
-                                                <?php
-                                                if ($furniture['producer_id'] == $producer['id']) {
-                                                    echo 'selected';
-                                                }
+                                            foreach ($categories as $category) {
                                                 ?>
-                                            >
-                                                <?= $producer['name'] ?> </option>
+                                                <option value="<?= $category['id'] ?>"
+                                                    <?php
+                                                    if ($furniture['category_id'] == $category['id']) {
+                                                        echo 'selected';
+                                                    }
+                                                    ?>
+                                                >
+                                                    <?= $category['name'] ?> </option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex w-50 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Producer
+                                    </div>
+                                    <div>
+                                        <select name="producer_id" id="" class="form-select-sm">
                                             <?php
-                                        }
+                                            foreach ($producers as $producer) {
+                                                ?>
+                                                <option value="<?= $producer['id'] ?>"
+                                                    <?php
+                                                    if ($furniture['producer_id'] == $producer['id']) {
+                                                        echo 'selected';
+                                                    }
+                                                    ?>
+                                                >
+                                                    <?= $producer['name'] ?> </option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-evenly align-items-center" style="height: 16%">
+                                <div class="d-flex w-100 justify-content-center align-items-center">
+                                    <div style="margin-right: 12px">
+                                        Image
+                                    </div>
+                                    <div>
+                                        <input name="image" type="file" value="../images/<?= $furniture['image'] ?>"
+                                               accept="image/*"/>
+                                        <?php
+                                        $imgSource = $furniture['image'];
                                         ?>
-                                    </select>
+                                        <img height="80px" src="../images/<?= $furniture['image'] ?>" alt="">
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="0">
-                                <div class="form-outline mb-2 d-none">
-                                    <label>ID</label>
-                                    <input readonly name="id" type="text" class="form-control-sm"
-                                           value="<?= $furniture['id'] ?>"/>
-                                </div>
-                            </td>
-                            <td colspan="2">
-                                <div class="form-outline mb-2">
-                                    <label class="form-label align-left">Image</label>
-                                    <input name="image" type="file" value="../images/<?= $furniture['image'] ?>"
-                                           accept="image/*"/>
-                                    <?php
-                                    $imgSource = $furniture['image'];
-                                    ?>
-                                    <img height="100px" src="../images/<?= $furniture['image'] ?>" alt="">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <a class="btn btn-primary" href="index.php">Quay lại</a>
-                                <button class="btn btn-primary" type="submit">Sửa</button>
-                            </td>
-                        </tr>
-                        </tr>
-                        </tbody>
-                    </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-primary nice-box-shadow" href="index.php">Back</a>
+                        <button class="btn btn-primary nice-box-shadow" type="submit">Update</button>
+                    </div>
                 </form>
             </div>
         </div>

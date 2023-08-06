@@ -28,26 +28,29 @@ if (!isset($_SESSION['email'])) {
         ?>
 
         <div class="content-container">
-            <h4 class="content-heading">Thêm danh mục</h4>
-            <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
-                <thead class="text-white">
-                <tr>
-                    <th>Vui lòng điền thông tin</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <form action="store.php" method="post">
-                            <div class="form-outline mb-3 ">
-                                Tên <input name="name" type="text" class="form-control-sm" required/>
+            <h4 class="content-heading">Add a new producer</h4>
+            <form action="store.php" method="post" class="w-50 m-auto">
+                <div class="dashboard-block w-100 h-75 mb-3">
+                    <div class="db-title">
+                        Enter new producer's information
+                    </div>
+
+                    <div class="dashboard-body" style="height: 100px">
+                        <div class="d-flex justify-content-center h-100 align-items-center">
+                            <div>
+                                Name
                             </div>
-                            <a class="btn btn-primary" href="index.php">Quay lại</a>
-                            <button class="btn btn-primary" type="submit">Thêm</button>
-                        </form>
-                    </td>
-                </tr>
-                </tbody>
+                            <div class="w-50">
+                                <input name="name" type="text" class="form-control-sm" required/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a class="btn btn-primary nice-box-shadow" href="index.php">Back</a>
+                    <button class="btn btn-primary nice-box-shadow" type="submit">Add</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

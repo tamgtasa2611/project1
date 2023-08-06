@@ -179,7 +179,7 @@ include("../../layout/header.php");
 
             <!-- for de hien thi so trang -->
             <div class="text-center position-absolute d-flex justify-content-center"
-                 style="left: 0; right: 0; bottom: 50px;">
+                 style="left: 0; right: 0; bottom: 13px;">
                 <ul class="pagination justify-content-center">
                     <li class="page-item" style="width: 40px">
                         <a class="page-link"

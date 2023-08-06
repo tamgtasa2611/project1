@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id = $_POST['id'];
 $name = $_POST['name'];
 $quantity = $_POST['quantity'];
@@ -25,4 +26,6 @@ if (!file_exists("../images/" . $image)) {
     $path = $_FILES['image']['tmp_name'];
     move_uploaded_file($path, "../images/" . $image);
 }
+
+$_SESSION['ad-edit'] = 1;
 header("Location: index.php");
