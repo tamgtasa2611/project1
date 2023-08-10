@@ -105,10 +105,6 @@ include("../../layout/header.php");
                             </div>
 
                         </div>
-
-                        <div style="width: 40%">
-                            <input type="file">
-                        </div>
                     </div>
 
                     <?php

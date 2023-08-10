@@ -25,7 +25,7 @@ include("../../layout/header.php");
 <div id="about"></div>
 
 <section class="section-default"
-         style='background-image: url("../../main/media/images/inspiration/inspiration.jpeg");
+         style='background-image: url("../../main/media/images/inspiration/index.jpg");
          height: 90vh'>
     <div class="left-container">
         <h1 class="heading-left mb-5">INSPIRATION

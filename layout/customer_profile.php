@@ -34,8 +34,8 @@
             </li>
             <hr>
             <li>
-                <a href="../login_logout/logout.php"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Log
-                    out</a>
+                <a href="../login_logout/logout.php" style="color: red">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Log out</a>
             </li>
             <hr>
         </ul>

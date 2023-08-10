@@ -12,6 +12,7 @@ foreach ($accounts as $account) {
     $count_account = $account['count_account'];
 }
 if ($count_account == 0) {
+    $_SESSION['failed'] = 1;
     header("Location: login.php");
 } else {
     $_SESSION['id'] = $id;

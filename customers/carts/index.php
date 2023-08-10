@@ -311,18 +311,26 @@ if (isset($_SESSION['cart'])) {
                     </button>
 
                 </form>
-                <form method="post" target="_blank" enctype="application/x-www-form-urlencoded"
-                      action="../../banking/momo_process.php" style="margin-top: 12px">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div style="font-size: 1rem;">Or pay via</div>
-                        <div style="width: 8px"></div>
-                        <input type="text" value="<?= $total_cost ?>" name="amount" style="display: none !important;">
-                        <button name="momo" style="border-radius: 10px">
-                            <img src="../../main/media/images/admin/momo-logo.png" alt="" style="width: 40px"
-                                 alt="button-png" style="border: 0; border-radius: 10px">
-                        </button>
-                    </div>
-                </form>
+                <?php
+                if (isset($_SESSION['user-email'])) {
+                    ?>
+                    <form method="post" target="_blank" enctype="application/x-www-form-urlencoded"
+                          action="../../banking/momo_process.php" style="margin-top: 12px">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div style="font-size: 1rem;">Or pay via</div>
+                            <div style="width: 8px"></div>
+                            <input type="text" value="<?= $total_cost ?>" name="amount"
+                                   style="display: none !important;">
+                            <button name="momo" style="border-radius: 10px">
+                                <img src="../../main/media/images/admin/momo-logo.png" alt="" style="width: 40px"
+                                     alt="button-png" style="border: 0; border-radius: 10px">
+                            </button>
+                        </div>
+                    </form>
+                    <?php
+                }
+                ?>
+
         </div>
     </div>
 </div>

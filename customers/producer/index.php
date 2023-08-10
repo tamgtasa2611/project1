@@ -39,14 +39,26 @@ include("../../layout/header.php");
                         <!-- LEFT SIDEBAR   -->
                         <div class="d-block ms-md-2 me-md-5 my-lg-5 w-50 h-25"
                              style="background-color: lightsalmon; border-radius: 10px">
-                            <div class="ms-md-5 my-lg-5 ">
+                            <div class="ms-md-5 my-lg-5">
                                 <span class="fw-bold">Beautiful House's Collection</span>
-                                <li> BST IKEA</li>
-                                <li> BST Herman Miller</li>
-                                <li> BST Crate & Barrel</li>
-                                <li> BST Steelcase</li>
-                                <li> BST Restoration Hardware</li>
-                                <li> BST Okamura</li>
+                                <a href="one.php" style="color: black;">
+                                    <li>IKEA Collection
+                                </a>
+                                <a href="two.php" style="color: black;">
+                                    <li>Herman Miller Collection</li>
+                                </a>
+                                <a href="three.php" style="color: black;">
+                                    <li>Crate & Barrel Collection</li>
+                                </a>
+                                <a href="four.php" style="color: black;">
+                                    <li>Steelcase Collection</li>
+                                </a>
+                                <a href="five.php" style="color: black;">
+                                    <li>RH Collection</li>
+                                </a>
+                                <a href="six.php" style="color: black;">
+                                    <li>Okamura Collection</li>
+                                </a>
                             </div>
                         </div>
                         <!-- RIGHT SIDEBAR   -->

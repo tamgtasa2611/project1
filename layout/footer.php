@@ -43,6 +43,9 @@
                         <p>
                             <a class="text-white" href="../../customers/start/return-order.php">Order return</a>
                         </p>
+                        <p>
+                            <a class="text-white" href="../../customers/start/customer-support.php">Customer support</a>
+                        </p>
                     </div>
                     <!-- Grid column -->
 
