@@ -14,7 +14,7 @@
     <!-- header css file link -->
     <link rel="stylesheet" href="../../main/css/header_style.css">
 
-    <title>Bed - Beautiful House</title>
+    <title>Wardrobe - Beautiful House</title>
 </head>
 <body style="background-color: white">
 <?php

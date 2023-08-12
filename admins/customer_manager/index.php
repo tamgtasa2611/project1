@@ -191,7 +191,7 @@ include_once('../../connect/close.php');
                             }
                             ?>
                             <span class="page-link">
-                            Page <?= $page ?>/<?= ($i - 1) ?>
+                            Page <?= $page ?> / <?= ($i - 1) ?>
                         </span>
                         </li>
                         <li class="page-item" style="width: 40px">

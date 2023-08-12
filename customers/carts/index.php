@@ -5,10 +5,10 @@ session_start();
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!--font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- bootstrap file link -->
@@ -262,7 +262,7 @@ if (isset($_SESSION['cart'])) {
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-between mb-1 align-items-center">
+                        <div class="d-flex justify-content-between mb-2 align-items-center">
                             <div>
                                 <h4>
                                     Shipping cost:
@@ -271,23 +271,6 @@ if (isset($_SESSION['cart'])) {
                             <div>
                                 <h4>
                                     Free
-                                </h4>
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-between mb-2 align-items-center">
-                            <div>
-                                <h4>
-                                    Payment methods:
-                                </h4>
-                            </div>
-                            <div>
-                                <h4>
-                                    <input type="radio" class="btn-check" id="pay-on-delivery" autocomplete="off"
-                                           checked>
-                                    <label class="btn btn-outline-primary" for="pay-on-delivery"
-                                           style="font-size: 1.5rem !important;">
-                                        Pay on delivery</label>
                                 </h4>
                             </div>
                         </div>
@@ -302,32 +285,42 @@ if (isset($_SESSION['cart'])) {
                             </h3>
                         </div>
                         <div>
-                            <?= currency_format($total_cost) ?>
+                            <span style="color: #3e9c35"><?= currency_format($total_cost) ?></span>
                         </div>
                     </div>
 
-                    <button id="checkout-button">
-                        Order
+                    <button style="width: 100%; height: 49.1px; font-size: 16px" class="btn btn-primary">
+                        <input type="number" name="payment-method" value="0" style="display: none !important;">
+                        Pay on delivery
                     </button>
-
+                    <?php
+                    $startTime = date("YmdHis");
+                    $expire = date('YmdHis', strtotime('+15 minutes', strtotime($startTime)));
+                    ?>
                 </form>
                 <?php
                 if (isset($_SESSION['user-email'])) {
-                    ?>
-                    <form method="post" target="_blank" enctype="application/x-www-form-urlencoded"
-                          action="../../banking/momo_process.php" style="margin-top: 12px">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div style="font-size: 1rem;">Or pay via</div>
-                            <div style="width: 8px"></div>
-                            <input type="text" value="<?= $total_cost ?>" name="amount"
-                                   style="display: none !important;">
-                            <button name="momo" style="border-radius: 10px">
-                                <img src="../../main/media/images/admin/momo-logo.png" alt="" style="width: 40px"
-                                     alt="button-png" style="border: 0; border-radius: 10px">
-                            </button>
-                        </div>
-                    </form>
-                    <?php
+                    if (count($carts) > 0) {
+                        ?>
+                        <form method="post" target="_blank" enctype="application/x-www-form-urlencoded"
+                              action="../../banking/vnpay_process.php" style="margin-top: 12px">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="number" name="payment-method" value="1" style="display: none !important;">
+                                <input type="number" value="<?= $total_cost ?>" name="amount"
+                                       style="display: none !important;">
+                                <input type="number" value="<?= $startTime ?>" name="start-time"
+                                       style="display: none !important;">
+                                <input type="number" value="<?= $expire ?>" name="expire"
+                                       style="display: none !important;">
+                                <button type="submit" name="redirect" style="width: 100%; font-size: 16px" class="btn btn-info">
+                                    Pay via VNPAY
+                                    <img src="../../main/media/images/admin/vnpay.jpg" alt="" style="width: 40px"
+                                         alt="button-png" style="border: 0; border-radius: 10px">
+                                </button>
+                            </div>
+                        </form>
+                        <?php
+                    }
                 }
                 ?>
 

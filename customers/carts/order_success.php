@@ -43,8 +43,8 @@ include("../../layout/header.php");
                 We received your purchase request! <br>
                 We'll be in touch soon...
             </div>
-            <a href="../start/index.php" class="btn btn-order-success">
-                Go back home</a>
+            <a href="../profile/order_history.php" class="btn btn-order-success">
+                See my orders</a>
         </div>
     </div>
 </div>

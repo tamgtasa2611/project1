@@ -49,7 +49,7 @@ $message = $_POST['message'];
                             <tr>
                                 <td style="padding:0;width:50%;" align="left">
                                     <p style="margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;">
-                                        2023 Copyright: Trademarks belong to Beautiful House
+                                        © 2023 Copyright: Trademarks belong to Beautiful House
                                     </p>
                                 </td>
                             </tr>

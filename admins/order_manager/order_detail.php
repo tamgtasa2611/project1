@@ -123,7 +123,7 @@ $count_item = 0;
                             <div class="w-50">
                                 <div>Total items: <?= $count_item ?></div>
                                 <div>Shipping cost: Free</div>
-                                <div>Payment method: Pay on delivery</div>
+                                <div>Payment method: <?= $order['method'] ?></div>
                             </div>
                         </div>
                         <?php

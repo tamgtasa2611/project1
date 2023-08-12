@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION['direction'] = "completed.php";
 if (!isset($_SESSION['email'])) {
     header("Location: ../login_logout/login.php");
 }
@@ -180,7 +179,7 @@ if (!function_exists('currency_format')) {
                             }
                             ?>
                             <span class="page-link">
-                            Page <?= $page ?>/<?= ($i - 1) ?>
+                            Page <?= $page ?> / <?= ($i - 1) ?>
                         </span>
                         </li>
                         <li class="page-item" style="width: 40px">
@@ -198,8 +197,9 @@ if (!function_exists('currency_format')) {
                     </ul>
                     <div style="width: 40%; margin-left: 0.75rem">
                         <form method="get">
+                            <input type="hidden" class="d-none" name="search" value="<?= $search ?>">
                             <input type="number" name="page" placeholder="Page" class="page-link"
-                                   style="width: 100%; border-radius: 0.25rem" min="1" max="<?= $countPage ?>">
+                                   style="width: 100%; border-radius: 0.25rem" min="1" max="<?= $countPage ?>" required>
                         </form>
                     </div>
                 </div>

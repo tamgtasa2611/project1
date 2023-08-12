@@ -18,7 +18,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../main/css/bootstrap.css">
     <link rel="stylesheet" href="../../main/css/admin.css">
-    <title>Create new order</title>
+    <title>Create a new order</title>
 </head>
 <body>
 <?php
@@ -264,13 +264,18 @@ if (isset($_SESSION['admin_cart'])) {
                     <div class="w-25">
                         <img src="../images/<?= $furniture_list['image'] ?>" alt="" width="100px">
                     </div>
-                    <div class="w-50">
+                    <div style="width: 40%">
                         <a href="add_order/add_to_order.php?id=<?= $furniture_list['id'] ?>">
                             <?= $furniture_list['name'] ?>
                         </a>
                     </div>
-                    <div style="color: #3e9c35" class="w-25">
+                    <div style="color: #3e9c35; width: 10%">
                         <?= currency_format($furniture_list['price']) ?>
+                    </div>
+                    <div class="w-25">
+                        <a href="add_order/add_to_order.php?id=<?= $furniture_list['id'] ?>" class="btn btn-primary">
+                            Add
+                        </a>
                     </div>
                 </div>
                 <?php

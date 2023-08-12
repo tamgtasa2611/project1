@@ -366,12 +366,9 @@ include_once("../../connect/close.php");
                             Stock
                         </div>
                         <div class="w-100">
-                            <div class="d-flex align-items-center justify-content-evenly">
-                                <a class="apply-btn" href="import.php" style="margin: 0">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <a class="apply-btn" href="import.php" style="margin: 0 12px">
                                     Import
-                                </a>
-                                <a class="apply-btn" href="export.php" style="margin: 0">
-                                    Export
                                 </a>
                             </div>
                         </div>

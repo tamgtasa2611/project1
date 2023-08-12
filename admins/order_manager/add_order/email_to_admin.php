@@ -174,7 +174,13 @@ $total_cost = 0;
                                                     cost: <span style=" color: #3e9c35">
                                                     Free</p>
                                                 <p style="margin: 8px 0px; font-style: italic; display: block">Payment
-                                                    method: <span style="color: dodgerblue">Pay on delivery</span></p>
+                                                    method: <span style="color: dodgerblue">
+                                                        <?php
+                                                        foreach ($orders as $order) {
+                                                            echo $order['method'];
+                                                        }
+                                                        ?>
+                                                    </span></p>
                                                 <p style="font-style: italic; display: block; font-size: 20px; font-weight: 600">
                                                     Total cost: <span style="color: #3e9c35; font-weight: 700">
                                                         <?= currency_format($total_money) ?>

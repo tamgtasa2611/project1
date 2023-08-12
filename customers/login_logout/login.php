@@ -38,12 +38,26 @@ include("../../layout/header.php");
 <div id="outer-div" class="position-relative">
     <!-- Thong bao dang nhap-->
     <?php
-    if (isset($_SESSION['error-msg'])) {
-        echo '<div class="alert alert-danger position-absolute error-alert" role="alert">
+    if (!isset($_SESSION['error-msg'])) {
+        $_SESSION['error-msg'] = 0;
+    }
+    if ($_SESSION['error-msg'] == 1) {
+        echo '<div id="close-target" class="alert alert-danger position-absolute error-alert" role="alert">
               Wrong email or password!
+              <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px" onclick="closeMes()"></i>
               </div>';
+        $_SESSION['error-msg'] = 0;
     }
     ?>
+
+    <script>
+        let clickClose = document.getElementById('click-close');
+        let closeTarget = document.getElementById('close-target')
+
+        function closeMes() {
+            closeTarget.classList.add("d-none");
+        }
+    </script>
 
     <div class="login-page">
         <div class="form">
@@ -53,6 +67,7 @@ include("../../layout/header.php");
 
                 <button type="submit">Login</button>
                 <p class="message">New to Beautiful House? <a href="register.php">Register</a></p>
+                <p class="message"><a href="forget_pwd.php" style="font-size: 14px">Forgot password</a></p>
             </form>
 
         </div>

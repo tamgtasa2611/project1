@@ -14,7 +14,7 @@
     <!--  main css file link  -->
     <link rel="stylesheet" href="../../main/css/main_style.css">
 
-    <title>Home - Beautiful House</title>
+    <title>Support - Beautiful House</title>
 </head>
 <body style="background-color: #FFFFFF">
 <!-- Header -->

@@ -30,12 +30,16 @@ if (!isset($_SESSION['user-id'])) {
 <?php
 include_once("../../connect/open.php");
 $userId = $_SESSION['user-id'];
+$status = "";
+if (isset($_GET['status'])) {
+    $status = $_GET['status'];
+}
 
 //pagination
 $recordOnePage = 5;
 $sqlCountRecord = "SELECT COUNT(*) as count_record FROM orders 
                    INNER JOIN customers ON orders.customer_id = customers.id
-                   WHERE orders.customer_id = '$userId'";
+                   WHERE orders.customer_id = '$userId' AND orders.status LIKE '%$status%'";
 
 $countRecords = mysqli_query($connect, $sqlCountRecord);
 foreach ($countRecords as $countRecord) {
@@ -54,7 +58,8 @@ $start = ($page - 1) * $recordOnePage;
 //main
 $sql = "SELECT orders.*, (SELECT SUM(quantity * price) FROM order_details 
             WHERE order_id = orders.id) AS total_cost
-            FROM orders WHERE customer_id = '$userId'
+            FROM orders 
+            WHERE customer_id = '$userId' AND orders.status LIKE '%$status%'
             ORDER BY (orders.status) ASC
             LIMIT $start, $recordOnePage";
 $orderLists = mysqli_query($connect, $sql);
@@ -88,16 +93,67 @@ include("../../layout/header.php");
 
     <div id="right-container" class="position-relative">
         <div style="height: auto; margin: 40px">
-            <div>
-                <h2>
-                    My orders
-                </h2>
-                <h4 style="color: slategray; margin-bottom: 40px">
-                    View and manage your order history
-                </h4>
-                <hr>
-            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2>
+                        My orders
+                    </h2>
+                    <h4 style="color: slategray; margin-bottom: 40px">
+                        View and manage your order history
+                    </h4>
+                </div>
+                <div style="width: 20%">
+                    <form action="" method="get" class="d-flex justify-content-between">
+                        <div>
+                            <select name="status" id="status" class="form-select" style="font-size: 16px">
+                                <option value="0"
+                                    <?php
+                                    if ($status == 0) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Pending
+                                </option>
 
+                                <option value="1"
+                                    <?php
+                                    if ($status == 1) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Confirmed
+                                </option>
+
+                                <option value="2"
+                                    <?php
+                                    if ($status == 2) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Delivering
+                                </option>
+
+                                <option value="3"
+                                    <?php
+                                    if ($status == 3) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Completed
+                                </option>
+
+                                <option value="4"
+                                    <?php
+                                    if ($status == 4) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Cancelled
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" style="font-size: 16px">Sort</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr style="margin: 0 !important;">
             <div style="margin-top: 28px; width: 100%">
                 <table class="table table-striped table-bordered align-middle w-100">
                     <thead class="fw-bold table-dark align-middle" style="height: 60px">
@@ -187,7 +243,7 @@ include("../../layout/header.php");
                             if ($page == 1) {
                                 echo 'href="#"';
                             } else {
-                                echo 'href="?page=' . ($page - 1) . '"';
+                                echo 'href="?page=' . ($page - 1) . '& status=' . ($status) . '"';
                             }
                             ?>>
                             <span class="fa-solid fa-caret-left"></span>
@@ -199,7 +255,7 @@ include("../../layout/header.php");
                         }
                         ?>
                         <span class="page-link">
-                            Page <?= $page ?>/<?= ($i - 1) ?>
+                            Page <?= $page ?> / <?= ($i - 1) ?>
                         </span>
                     </li>
                     <li class="page-item" style="width: 40px">
@@ -208,7 +264,7 @@ include("../../layout/header.php");
                             if ($page == ($i - 1)) {
                                 echo 'href="#"';
                             } else {
-                                echo 'href="?page=' . ($page + 1) . '"';
+                                echo 'href="?page=' . ($page + 1) . '& status=' . ($status) . '"';
                             }
                             ?>>
                             <span class="fa-solid fa-caret-right"></span>
@@ -218,8 +274,9 @@ include("../../layout/header.php");
                 <div style="margin-left: 1rem; width: 20%">
                     <form method="get">
                         <input type="number" name="page" placeholder="Page..." class="page-link" min="1"
-                               max="<?= $i - 1 ?>"
+                               max="<?= $i - 1 ?>" required
                                style="width: 40%; border-radius: 0.25rem; border: 1px solid #dee2e6; color: #0a58ca;">
+                        <input type="hidden" class="d-none" name="status" value="<?= $status ?>">
                     </form>
                 </div>
             </div>

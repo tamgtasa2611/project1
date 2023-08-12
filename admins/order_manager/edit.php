@@ -122,7 +122,7 @@ if (!function_exists('currency_format')) {
                             <div class="w-50">
                                 <div>Total items: <?= $total_item ?></div>
                                 <div>Shipping cost: Free</div>
-                                <div>Payment method: Pay on delivery</div>
+                                <div>Payment method: <?= $order['method'] ?></div>
                             </div>
                         </div>
                         <?php
@@ -136,56 +136,63 @@ if (!function_exists('currency_format')) {
                     <?php
                     foreach ($order_details as $order_detail) {
                         ?>
-                        <input class="d-none" name="order-id" value="<?= $order_detail['order_id'] ?>">
+                        <input class="d-none" type="hidden" name="order-id" value="<?= $order_detail['order_id'] ?>">
+                        <?php
+                    }
+                    //neu status = 3 hoac 4 thi ko the huy
+                    if ($order_detail['order_status'] == 0 or $order_detail['order_status'] == 1
+                        or $order_detail['order_status'] == 2) {
+                        ?>
+                        <select name="status" id="status" class="form-select">
+
+                            <option value="0"
+                                <?php
+                                if ($order_detail['order_status'] == 0) {
+                                    echo 'selected';
+                                }
+                                ?>>Pending
+                            </option>
+
+
+                            <option value="1"
+                                <?php
+                                if ($order_detail['order_status'] == 1) {
+                                    echo 'selected';
+                                }
+                                ?>>Confirmed
+                            </option>
+
+                            <option value="2"
+                                <?php
+                                if ($order_detail['order_status'] == 2) {
+                                    echo 'selected';
+                                }
+                                ?>>Delivering
+                            </option>
+
+                            <option value="3"
+                                <?php
+                                if ($order_detail['order_status'] == 3) {
+                                    echo 'selected';
+                                }
+                                ?>>Completed
+                            </option>
+
+                            <option value="4"
+                                <?php
+                                if ($order_detail['order_status'] == 4) {
+                                    echo 'selected';
+                                }
+                                ?>>Cancelled
+                            </option>
+                        </select>
+                        <button class="btn btn-primary nice-box-shadow">
+                            Update
+                        </button>
                         <?php
                     }
                     ?>
-                    <select name="status" id="status" class="form-select">
 
-                        <option value="0"
-                            <?php
-                            if ($order_detail['order_status'] == 0) {
-                                echo 'selected';
-                            }
-                            ?>>Pending
-                        </option>
-
-
-                        <option value="1"
-                            <?php
-                            if ($order_detail['order_status'] == 1) {
-                                echo 'selected';
-                            }
-                            ?>>Confirmed
-                        </option>
-
-                        <option value="2"
-                            <?php
-                            if ($order_detail['order_status'] == 2) {
-                                echo 'selected';
-                            }
-                            ?>>Delivering
-                        </option>
-
-                        <option value="3"
-                            <?php
-                            if ($order_detail['order_status'] == 3) {
-                                echo 'selected';
-                            }
-                            ?>>Completed
-                        </option>
-
-                        <option value="4"
-                            <?php
-                            if ($order_detail['order_status'] == 4) {
-                                echo 'selected';
-                            }
-                            ?>>Cancelled
-                        </option>
-                    </select>
-                    <button class="btn btn-primary nice-box-shadow">
-                        Update
-                    </button>
                 </form>
             </div>
         </div>

@@ -17,14 +17,21 @@ if (!isset($_SESSION['user-email'])) {
     $re_name = $_POST['re-name'];
     $re_phone = $_POST['re-phone'];
     $re_address = $_POST['re-address'];
-
+    //phuong thuc thanh toan
+    $method = "VNPAY";
+    if ($_POST['payment-method'] == 0){
+        $method = "Pay on delivery";
+    }
+    if(isset($_SESSION['payment-method'])) {
+        $method = "VNPAY";
+    }
     //mo ket noi
     include_once("../../connect/open.php");
 
     //query insert vao bang orders
     $sqlInsertOrder =
-        "INSERT INTO orders(date_buy, status, customer_id, receiver_name, receiver_phone, receiver_address) 
-        VALUES ('$dateBuy', '$status', '$customer_id', '$re_name', '$re_phone', '$re_address')";
+        "INSERT INTO orders(date_buy, status, customer_id, receiver_name, receiver_phone, receiver_address, method) 
+        VALUES ('$dateBuy', '$status', '$customer_id', '$re_name', '$re_phone', '$re_address', '$method')";
     mysqli_query($connect, $sqlInsertOrder);
 
     //query la order_id lon nhat cua customer dang login hien tai
@@ -59,6 +66,7 @@ if (!isset($_SESSION['user-email'])) {
 
     //xoa cart
     unset($_SESSION['cart']);
+    unset($_SESSION['payment-method']);
     //quay ve trang gio hang
     header("Location: send_email_to_admin.php");
 }

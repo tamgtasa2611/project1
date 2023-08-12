@@ -73,7 +73,7 @@ include("../../layout/header.php");
 <div id="about"></div>
 
 <!-- main -->
-<div id="outer-div" class="position-relative">
+<div id="outer-div" class="position-relative" style="height: 95vh">
     <!-- Thong bao dang ky-->
     <?php
     if ($user) {

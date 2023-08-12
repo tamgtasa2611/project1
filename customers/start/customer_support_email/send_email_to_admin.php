@@ -31,7 +31,7 @@ $mail->Port = 465;
 $mail->setFrom('tam.ad.php@gmail.com');
 $mail->addAddress('tam.ad.php@gmail.com');
 $mail->isHTML(true);
-$mail->Subject = "Customer support letter";
+$mail->Subject = "CUSTOMER SUPPORT LETTER";
 $mail->Body = $bodyAdmin;
 
 $mail->send();
