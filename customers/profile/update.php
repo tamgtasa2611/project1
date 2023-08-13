@@ -27,4 +27,5 @@ $sql = "UPDATE customers SET name = '$name', email = '$email', phone = '$phone',
 mysqli_query($connect, $sql);
 include_once '../../connect/close.php';
 
+$_SESSION['update_profile'] = 1;
 header("Location: index.php");

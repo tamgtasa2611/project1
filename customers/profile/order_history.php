@@ -27,6 +27,7 @@ if (!isset($_SESSION['user-id'])) {
     <title>Order history - Beautiful House</title>
 </head>
 <body>
+
 <?php
 include_once("../../connect/open.php");
 $userId = $_SESSION['user-id'];
@@ -92,6 +93,20 @@ include("../../layout/header.php");
     </div>
 
     <div id="right-container" class="position-relative">
+        <?php
+        if (!isset($_SESSION['cancel_order'])) {
+            $_SESSION['cancel_order'] = 0;
+        }
+        if ($_SESSION['cancel_order'] === 1) {
+            echo '<div id="close-target" class="alert alert-success position-absolute" role="alert"
+        style="right: 0; width: 260px">
+        Cancel order successfully! 
+        <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; margin-left: 20px" 
+        onclick="closeMes()"></i>
+        </div>';
+            $_SESSION['cancel_order'] = 0;
+        }
+        ?>
         <div style="height: auto; margin: 40px">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
@@ -106,6 +121,9 @@ include("../../layout/header.php");
                     <form action="" method="get" class="d-flex justify-content-between">
                         <div>
                             <select name="status" id="status" class="form-select" style="font-size: 16px">
+                                <option value="">
+                                    All
+                                </option>
                                 <option value="0"
                                     <?php
                                     if ($status == 0) {
@@ -292,5 +310,13 @@ include("../../layout/header.php");
 include_once("../../layout/footer.php");
 ?>
 
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
 </body>
 </html>

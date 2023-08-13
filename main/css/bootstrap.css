@@ -3693,7 +3693,7 @@ COMMENT: Loi login customer
     z-index: 1000;
     display: none;
     min-width: 10rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 10px;
     margin: 0;
     font-size: 1rem;
     color: #212529;
@@ -11435,4 +11435,17 @@ COMMENT: Loi login customer
     text-align: left;
 }
 
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+orange-hover:hover {
+    color: var(--orange);
+    background-color: #e9ecef;
+}
 /*# sourceMappingURL=bootstrap.css.map */

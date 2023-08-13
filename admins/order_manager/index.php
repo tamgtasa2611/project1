@@ -28,12 +28,16 @@ $search = "";
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
+$status = "";
+if (isset($_GET['status'])) {
+    $status = $_GET['status'];
+}
 include_once('../../connect/open.php');
 //pagination
 $recordOnePage = 5;
 $sqlCountRecord = "SELECT COUNT(*) as count_record FROM orders 
                                 INNER JOIN customers ON orders.customer_id = customers.id
-                                WHERE customers.name LIKE '%$search%'";
+                                WHERE customers.name LIKE '%$search%' AND orders.status LIKE '%$status%'";
 $countRecords = mysqli_query($connect, $sqlCountRecord);
 foreach ($countRecords as $countRecord) {
     $records = $countRecord['count_record'];
@@ -53,7 +57,7 @@ $sql1 = "SELECT orders.*, customers.name as cus_name,
             WHERE order_id = orders.id) AS total_cost
             FROM orders 
             INNER JOIN customers ON orders.customer_id = customers.id
-             WHERE customers.name LIKE '%$search%' 
+             WHERE customers.name LIKE '%$search%' AND orders.status LIKE '%$status%'
              ORDER BY orders.status ASC, orders.date_buy ASC
              LIMIT $start, $recordOnePage";
 
@@ -96,7 +100,65 @@ if (!function_exists('currency_format')) {
                 $_SESSION['update-status'] = 0;
             }
             ?>
-            <h4 class="content-heading">Order list</h4>
+            <div class="d-flex justify-content-between align-items-center">
+                <div></div>
+                <h4 class="content-heading">Order list</h4>
+                <div style="width: 20%; margin-top: 20px">
+                    <form action="" method="get" class="d-flex justify-content-between">
+                        <div>
+                            <input type="hidden" class="d-none" name="search" value="<?= $search ?>">
+                            <select name="status" id="status" class="form-select" style="font-size: 16px">
+                                <option value="">
+                                    All
+                                </option>
+                                <option value="0"
+                                    <?php
+                                    if ($status == 0) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Pending
+                                </option>
+
+                                <option value="1"
+                                    <?php
+                                    if ($status == 1) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Confirmed
+                                </option>
+
+                                <option value="2"
+                                    <?php
+                                    if ($status == 2) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Delivering
+                                </option>
+
+                                <option value="3"
+                                    <?php
+                                    if ($status == 3) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Completed
+                                </option>
+
+                                <option value="4"
+                                    <?php
+                                    if ($status == 4) {
+                                        echo 'selected';
+                                    }
+                                    ?>>Cancelled
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" style="font-size: 16px">Sort</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <table class="table table-striped table-hover table-borderless align-middle text-center nice-box-shadow">
                 <thead class="text-white">
                 <tr>
@@ -198,7 +260,7 @@ if (!function_exists('currency_format')) {
                                 if ($page == 1) {
                                     echo 'href="#"';
                                 } else {
-                                    echo 'href="?page=' . ($page - 1) . ' & search=' . $search . '"';
+                                    echo 'href="?page=' . ($page - 1) . ' & search=' . $search . '& status=' . ($status) . '"';
                                 }
                                 ?>>
                                 <span class="fa-solid fa-caret-left"></span>
@@ -219,7 +281,7 @@ if (!function_exists('currency_format')) {
                                 if ($page == ($i - 1)) {
                                     echo 'href="#"';
                                 } else {
-                                    echo 'href="?page=' . ($page + 1) . ' & search=' . $search . '"';
+                                    echo 'href="?page=' . ($page + 1) . ' & search=' . $search . '& status=' . ($status) . '"';
                                 }
                                 ?>>
                                 <span class="fa-solid fa-caret-right"></span>
@@ -229,6 +291,7 @@ if (!function_exists('currency_format')) {
                     <div style="width: 40%; margin-left: 0.75rem">
                         <form method="get">
                             <input type="hidden" class="d-none" name="search" value="<?= $search ?>">
+                            <input type="hidden" class="d-none" name="status" value="<?= $status ?>">
                             <input type="number" name="page" placeholder="Page" class="page-link"
                                    style="width: 100%; border-radius: 0.25rem" min="1" max="<?= $countPage ?>" required>
                         </form>
@@ -237,6 +300,7 @@ if (!function_exists('currency_format')) {
                 <form class="search-form" action="" method="get">
                     <input type="text" name="search" value="<?= $search; ?>" placeholder="Search here..."
                            class="form-outline">
+                    <input type="hidden" class="d-none" name="status" value="<?= $status ?>">
                     <button type="submit" class="btn btn-primary nice-box-shadow text-white">
                         Search
                     </button>

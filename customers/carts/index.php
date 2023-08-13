@@ -172,7 +172,7 @@ if (isset($_SESSION['cart'])) {
                     <?php
                     }
                     ?>
-                    <div class="align-left mb-5">
+                    <div class="align-left mb-4">
                         <div id="right-heading">
                             Summary
                         </div>
@@ -199,7 +199,7 @@ if (isset($_SESSION['cart'])) {
                                 <div>
                                     <h4>
                                         <input type="text" class="form-control" name="re-name" id="re-name"
-                                               value="<?= $information['name'] ?>">
+                                               value="<?= $information['name'] ?>" required disabled>
                                     </h4>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@ if (isset($_SESSION['cart'])) {
                                 <div>
                                     <h4>
                                         <input type="text" class="form-control" name="re-phone" id="re-phone"
-                                               value="<?= $information['phone'] ?>">
+                                               value="<?= $information['phone'] ?>" required disabled>
                                     </h4>
                                 </div>
                             </div>
@@ -227,11 +227,16 @@ if (isset($_SESSION['cart'])) {
                                 <div>
                                     <h4>
                                         <input type="text" class="form-control" name="re-address" id="re-address"
-                                               value="<?= $information['address'] ?>">
+                                               value="<?= $information['address'] ?>" required disabled>
                                     </h4>
                                 </div>
                             </div>
 
+                            <div class="d-flex justify-content-center mb-1 align-items-center">
+                                <div>
+                                    <a href="../profile/index.php" style="font-size: 12px">Change receiver's information</a>
+                                </div>
+                            </div>
                             <?php
                         }
                         ?>
@@ -262,7 +267,7 @@ if (isset($_SESSION['cart'])) {
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-between mb-2 align-items-center">
+                        <div class="d-flex justify-content-between mb-1 align-items-center">
                             <div>
                                 <h4>
                                     Shipping cost:
@@ -288,11 +293,22 @@ if (isset($_SESSION['cart'])) {
                             <span style="color: #3e9c35"><?= currency_format($total_cost) ?></span>
                         </div>
                     </div>
-
-                    <button style="width: 100%; height: 49.1px; font-size: 16px" class="btn btn-primary">
-                        <input type="number" name="payment-method" value="0" style="display: none !important;">
-                        Pay on delivery
-                    </button>
+                    <?php
+                    if (isset($_SESSION['user-email'])) {
+                        if (count($carts) > 0) {
+                            ?>
+                            <button style="width: 100%; height: 49.1px; font-size: 16px" class="btn btn-primary">
+                                <input type="number" name="payment-method" value="0" style="display: none !important;">
+                                Pay on delivery
+                            </button>
+                            <?php
+                        }
+                    } else {
+                        ?>
+                        <div class="text-center w-100 fst-italic">Please login to order</div>
+                        <?php
+                    }
+                    ?>
                     <?php
                     $startTime = date("YmdHis");
                     $expire = date('YmdHis', strtotime('+15 minutes', strtotime($startTime)));
@@ -312,7 +328,9 @@ if (isset($_SESSION['cart'])) {
                                        style="display: none !important;">
                                 <input type="number" value="<?= $expire ?>" name="expire"
                                        style="display: none !important;">
-                                <button type="submit" name="redirect" style="width: 100%; font-size: 16px" class="btn btn-info">
+
+                                <button type="submit" name="redirect" style="width: 100%; font-size: 16px"
+                                        class="btn btn-dark">
                                     Pay via VNPAY
                                     <img src="../../main/media/images/admin/vnpay.jpg" alt="" style="width: 40px"
                                          alt="button-png" style="border: 0; border-radius: 10px">

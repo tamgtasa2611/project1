@@ -1,6 +1,8 @@
 <?php
 //    chay session
 session_start();
+//mo ket noi
+include_once("../../connect/open.php");
 
 //kiem tra da login chua
 if (!isset($_SESSION['user-email'])) {
@@ -13,20 +15,27 @@ if (!isset($_SESSION['user-email'])) {
     $status = 0;
     //lay id cua customer
     $customer_id = $_SESSION['user-id'];
-    //thong tin nhan hang
-    $re_name = $_POST['re-name'];
-    $re_phone = $_POST['re-phone'];
-    $re_address = $_POST['re-address'];
+
+//    thong tin nhan hang
+    $re_name = "";
+    $re_phone = "";
+    $re_address = "";
+    $re_sql = "SELECT name, phone, address FROM customers WHERE id = '$customer_id'";
+    $re_infos = mysqli_query($connect, $re_sql);
+    foreach ($re_infos as $re_info) {
+        $re_name = $re_info['name'];
+        $re_phone = $re_info['phone'];
+        $re_address = $re_info['address'];
+    }
+
     //phuong thuc thanh toan
     $method = "VNPAY";
-    if ($_POST['payment-method'] == 0){
+    if ($_POST['payment-method'] == 0) {
         $method = "Pay on delivery";
     }
-    if(isset($_SESSION['payment-method'])) {
+    if (isset($_SESSION['payment-method'])) {
         $method = "VNPAY";
     }
-    //mo ket noi
-    include_once("../../connect/open.php");
 
     //query insert vao bang orders
     $sqlInsertOrder =

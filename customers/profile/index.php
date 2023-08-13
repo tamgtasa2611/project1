@@ -105,6 +105,21 @@ include("../../layout/header.php");
                             </div>
 
                         </div>
+                        <div style="width: 30%">
+                            <?php
+                            if (!isset($_SESSION['update_profile'])) {
+                                $_SESSION['update_profile'] = 0;
+                            }
+                            if ($_SESSION['update_profile'] === 1) {
+                                echo '<div id="close-target" class="alert alert-success" role="alert">
+                                Update profile successfully! 
+                                <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; margin-left: 24px" 
+                                onclick="closeMes()"></i>
+                                </div>';
+                                $_SESSION['update_profile'] = 0;
+                            }
+                            ?>
+                        </div>
                     </div>
 
                     <?php
@@ -124,5 +139,14 @@ include("../../layout/header.php");
 <?php
 include_once("../../layout/footer.php");
 ?>
+
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
 </body>
 </html>
