@@ -197,9 +197,8 @@ if (isset($_SESSION['cart'])) {
                                     </h4>
                                 </div>
                                 <div>
-                                    <h4>
-                                        <input type="text" class="form-control" name="re-name" id="re-name"
-                                               value="<?= $information['name'] ?>" required disabled>
+                                    <h4 class="fw-bold">
+                                        <?= $information['name'] ?>
                                     </h4>
                                 </div>
                             </div>
@@ -211,9 +210,8 @@ if (isset($_SESSION['cart'])) {
                                     </h4>
                                 </div>
                                 <div>
-                                    <h4>
-                                        <input type="text" class="form-control" name="re-phone" id="re-phone"
-                                               value="<?= $information['phone'] ?>" required disabled>
+                                    <h4 class="fw-bold">
+                                        <?= $information['phone'] ?>
                                     </h4>
                                 </div>
                             </div>
@@ -225,16 +223,16 @@ if (isset($_SESSION['cart'])) {
                                     </h4>
                                 </div>
                                 <div>
-                                    <h4>
-                                        <input type="text" class="form-control" name="re-address" id="re-address"
-                                               value="<?= $information['address'] ?>" required disabled>
+                                    <h4 class="fw-bold">
+                                        <?= $information['address'] ?>
                                     </h4>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-center mb-1 align-items-center">
                                 <div>
-                                    <a href="../profile/index.php" style="font-size: 12px">Change receiver's information</a>
+                                    <a href="../profile/index.php" style="font-size: 12px">Change receiver's
+                                        information</a>
                                 </div>
                             </div>
                             <?php
@@ -305,7 +303,7 @@ if (isset($_SESSION['cart'])) {
                         }
                     } else {
                         ?>
-                        <div class="text-center w-100 fst-italic">Please login to order</div>
+                        <div class="text-center w-100 fst-italic">Please <a href="../login_logout/login.php">login</a> to order</div>
                         <?php
                     }
                     ?>
