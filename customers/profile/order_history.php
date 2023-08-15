@@ -61,7 +61,7 @@ $sql = "SELECT orders.*, (SELECT SUM(quantity * price) FROM order_details
             WHERE order_id = orders.id) AS total_cost
             FROM orders 
             WHERE customer_id = '$userId' AND orders.status LIKE '%$status%'
-            ORDER BY (orders.status) ASC
+            ORDER BY (orders.status) ASC, (orders.id) DESC
             LIMIT $start, $recordOnePage";
 $orderLists = mysqli_query($connect, $sql);
 

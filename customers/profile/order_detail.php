@@ -82,6 +82,33 @@ include("../../layout/header.php");
                             #<?= $orderId ?>
                         </h4>
                     </div>
+                    <?php
+                    if (!isset($_SESSION['cant-cancel'])) {
+                        $_SESSION['cant-cancel'] = 0;
+                    }
+                    if ($_SESSION['cant-cancel'] === 1) {
+                        echo '<div id="close-target" class="alert alert-danger position-absolute" role="alert"
+        style="right: 25%; width: 482px">
+        You cannot cancel this order! Its status has been changed
+        <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; margin-left: 20px" 
+        onclick="closeMes()"></i>
+        </div>';
+                        $_SESSION['cant-cancel'] = 0;
+                    }
+
+                    if (!isset($_SESSION['already-cancel'])) {
+                        $_SESSION['already-cancel'] = 0;
+                    }
+                    if ($_SESSION['already-cancel'] === 1) {
+                        echo '<div id="close-target" class="alert alert-danger position-absolute" role="alert"
+        style="right: 32%; width: 348px">
+        This order has already been cancelled!
+        <i id="click-close" class="fa-solid fa-x" style="font-size: 12px; padding: 8px; margin-left: 20px" 
+        onclick="closeMes()"></i>
+        </div>';
+                        $_SESSION['already-cancel'] = 0;
+                    }
+                    ?>
                     <div>
                         <?php
                         $orderStatusQuery = "SELECT status FROM orders WHERE id = '$orderId'";
@@ -253,7 +280,7 @@ include_once("../../layout/footer.php");
 
         <div class="modal__footer">
             <div>
-                <a href="cancel_order.php?id=<?= $orderId ?>" class="btn btn-danger" style="font-size: 16px;">
+                <a href="validate_status.php?id=<?= $orderId ?>" class="btn btn-danger" style="font-size: 16px;">
                     Cancel order</a>
             </div>
         </div>
@@ -265,5 +292,14 @@ include_once("../../layout/footer.php");
 <?php
 include_once("../../connect/close.php");
 ?>
+
+<script>
+    let clickClose = document.getElementById('click-close');
+    let closeTarget = document.getElementById('close-target')
+
+    function closeMes() {
+        closeTarget.classList.add("d-none");
+    }
+</script>
 </body>
 </html>

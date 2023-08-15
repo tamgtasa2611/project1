@@ -35,6 +35,7 @@ if (!isset($_SESSION['user-email'])) {
     }
     if (isset($_SESSION['payment-method'])) {
         $method = "VNPAY";
+        $status = 1;
     }
 
     //query insert vao bang orders

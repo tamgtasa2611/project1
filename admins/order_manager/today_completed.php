@@ -57,7 +57,7 @@ $sql1 = "SELECT orders.*, customers.name as cus_name,
             FROM orders 
             INNER JOIN customers ON orders.customer_id = customers.id
              WHERE customers.name LIKE '%$search%' AND orders.date_buy = '$todayDate' AND orders.status = 3
-             ORDER BY orders.status ASC, orders.date_buy ASC
+             ORDER BY orders.id DESC
              LIMIT $start, $recordOnePage";
 
 $orders = mysqli_query($connect, $sql1);
