@@ -300,6 +300,29 @@ include("../../layout/header.php");
 <?php
 include("../../layout/footer.php");
 ?>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyBohaJOilhRQN16U07t5ov2569nwHntwYY",
+        authDomain: "beautiful-house-2611.firebaseapp.com",
+        projectId: "beautiful-house-2611",
+        storageBucket: "beautiful-house-2611.appspot.com",
+        messagingSenderId: "576434167108",
+        appId: "1:576434167108:web:4dc034846e34b7ee118b11",
+        measurementId: "G-1TH2W5CCNH"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
 </body>
 <!-- header js file link   -->
 <script src="../../main/js/script.js"></script>
